@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>15 Hardy-Weinberg equilibrium | BB512 - Instructor Resources</title>
+  <meta name="description" content="Instructors Resources for BB512 at the Biology Department, University of Southern Denmark" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="15 Hardy-Weinberg equilibrium | BB512 - Instructor Resources" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Instructors Resources for BB512 at the Biology Department, University of Southern Denmark" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="15 Hardy-Weinberg equilibrium | BB512 - Instructor Resources" />
+  
+  <meta name="twitter:description" content="Instructors Resources for BB512 at the Biology Department, University of Southern Denmark" />
+  
+
+<meta name="author" content="Owen R. Jones (Course Coordinator)" />
+
+
+<meta name="date" content="2024-09-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="trade-offs-and-the-declining-force-of-selection.html"/>
+<link rel="next" href="the-gene-pool-model.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<style type="text/css">
+
+.warning-box {
+  border: 3px solid #e60000;
+  margin:  25px;
+  padding: 10px 10px 5px 10px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.advanced-box {
+  border: 3px solid #268bd2;
+  margin:  25px;
+  padding: 10px 10px 5px 10px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.do-something {
+  border: 3px solid #803e00;
+  margin:  25px;
+  padding: 10px 10px 5px 10px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+</style>
+
+
+
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">BB512 Instructor Resources</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> This website and other course materials</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#software"><i class="fa fa-check"></i><b>1.1</b> Software</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#excel"><i class="fa fa-check"></i><b>1.1.1</b> Excel</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#r-and-rstudio"><i class="fa fa-check"></i><b>1.1.2</b> R and RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>I Evolution by Natural Selection</b></span></li>
+<li class="chapter" data-level="2" data-path="the-blind-watchmaker.html"><a href="the-blind-watchmaker.html"><i class="fa fa-check"></i><b>2</b> The Blind Watchmaker</a></li>
+<li class="chapter" data-level="3" data-path="bug-hunt-camouflage-netlogo.html"><a href="bug-hunt-camouflage-netlogo.html"><i class="fa fa-check"></i><b>3</b> Bug hunt camouflage (Netlogo)</a></li>
+<li class="part"><span><b>II Population Growth Models</b></span></li>
+<li class="chapter" data-level="4" data-path="geometric-growth.html"><a href="geometric-growth.html"><i class="fa fa-check"></i><b>4</b> Geometric growth</a></li>
+<li class="chapter" data-level="5" data-path="estimating-population-growth-rate.html"><a href="estimating-population-growth-rate.html"><i class="fa fa-check"></i><b>5</b> Estimating Population Growth Rate</a></li>
+<li class="chapter" data-level="6" data-path="stochastic-population-growth.html"><a href="stochastic-population-growth.html"><i class="fa fa-check"></i><b>6</b> Stochastic population growth</a></li>
+<li class="chapter" data-level="7" data-path="basic-logistic-population-growth.html"><a href="basic-logistic-population-growth.html"><i class="fa fa-check"></i><b>7</b> Basic logistic population growth</a></li>
+<li class="chapter" data-level="8" data-path="deeper-into-logistic-growth.html"><a href="deeper-into-logistic-growth.html"><i class="fa fa-check"></i><b>8</b> Deeper into logistic growth</a></li>
+<li class="chapter" data-level="9" data-path="life-tables-and-survivorship-types.html"><a href="life-tables-and-survivorship-types.html"><i class="fa fa-check"></i><b>9</b> Life tables and survivorship types</a></li>
+<li class="chapter" data-level="10" data-path="matrix-population-modelling.html"><a href="matrix-population-modelling.html"><i class="fa fa-check"></i><b>10</b> Matrix population modelling</a></li>
+<li class="chapter" data-level="11" data-path="pre--and-post-reproduction-census.html"><a href="pre--and-post-reproduction-census.html"><i class="fa fa-check"></i><b>11</b> Pre- and Post-reproduction census</a></li>
+<li class="chapter" data-level="12" data-path="life-table-response-experiments.html"><a href="life-table-response-experiments.html"><i class="fa fa-check"></i><b>12</b> Life Table Response Experiments</a></li>
+<li class="chapter" data-level="13" data-path="how-many-eggs-should-a-bird-lay.html"><a href="how-many-eggs-should-a-bird-lay.html"><i class="fa fa-check"></i><b>13</b> How many eggs should a bird lay?</a></li>
+<li class="chapter" data-level="14" data-path="trade-offs-and-the-declining-force-of-selection.html"><a href="trade-offs-and-the-declining-force-of-selection.html"><i class="fa fa-check"></i><b>14</b> Trade-offs and the declining force of selection</a></li>
+<li class="part"><span><b>III Population Genetics and Evolution</b></span></li>
+<li class="chapter" data-level="15" data-path="hardy-weinberg-equilibrium.html"><a href="hardy-weinberg-equilibrium.html"><i class="fa fa-check"></i><b>15</b> Hardy-Weinberg equilibrium</a></li>
+<li class="chapter" data-level="16" data-path="the-gene-pool-model.html"><a href="the-gene-pool-model.html"><i class="fa fa-check"></i><b>16</b> The Gene Pool Model</a></li>
+<li class="chapter" data-level="17" data-path="neutral-or-adaptive-evolution-in-humans-what-drives-evolution-of-our-traits.html"><a href="neutral-or-adaptive-evolution-in-humans-what-drives-evolution-of-our-traits.html"><i class="fa fa-check"></i><b>17</b> Neutral or Adaptive Evolution in Humans: What Drives Evolution of Our Traits?</a></li>
+<li class="chapter" data-level="18" data-path="heritability-from-a-linear-regression.html"><a href="heritability-from-a-linear-regression.html"><i class="fa fa-check"></i><b>18</b> Heritability from a linear regression</a></li>
+<li class="part"><span><b>IV Interactions Between Species and Community Structure</b></span></li>
+<li class="chapter" data-level="19" data-path="lotka-volterra-competition.html"><a href="lotka-volterra-competition.html"><i class="fa fa-check"></i><b>19</b> Lotka-Volterra competition</a></li>
+<li class="chapter" data-level="20" data-path="lotka-volterra-predator-prey-dynamics.html"><a href="lotka-volterra-predator-prey-dynamics.html"><i class="fa fa-check"></i><b>20</b> Lotka-Volterra predator-prey dynamics</a></li>
+<li class="part"><span><b>V Animal behaviour, altruism and sexual selection</b></span></li>
+<li class="chapter" data-level="21" data-path="game-theory-hawks-and-doves.html"><a href="game-theory-hawks-and-doves.html"><i class="fa fa-check"></i><b>21</b> Game theory: Hawks and doves</a></li>
+<li class="part"><span><b>VI Appendix - extras</b></span></li>
+<li class="chapter" data-level="22" data-path="exponential-growth-in-detail.html"><a href="exponential-growth-in-detail.html"><i class="fa fa-check"></i><b>22</b> Exponential growth in detail</a></li>
+<li class="chapter" data-level="23" data-path="the-legend-of-ambalapuzha.html"><a href="the-legend-of-ambalapuzha.html"><i class="fa fa-check"></i><b>23</b> The legend of Ambalapuzha</a></li>
+<li class="chapter" data-level="24" data-path="from-population-biology-to-fitness.html"><a href="from-population-biology-to-fitness.html"><i class="fa fa-check"></i><b>24</b> From population biology to fitness</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">BB512 - Instructor Resources</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="hardy-weinberg-equilibrium" class="section level1 hasAnchor" number="15">
+<h1><span class="header-section-number">15</span> Hardy-Weinberg equilibrium<a href="hardy-weinberg-equilibrium.html#hardy-weinberg-equilibrium" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Coming soon…</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="trade-offs-and-the-declining-force-of-selection.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-gene-pool-model.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/jonesor/BB512_Instructor/edit/master/3_01_HardyWeinberg.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"split_by": "section"
+});
+});
+</script>
+
+</body>
+
+</html>
