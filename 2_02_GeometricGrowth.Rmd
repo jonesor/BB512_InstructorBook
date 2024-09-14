@@ -1,3 +1,46 @@
 # Geometric growth
 
-Coming soon...
+This exercise explores the geometric growth model in discrete time steps, focusing on how different values of $\lambda$ affect population dynamics. It aims to develop students’ understanding of growth models, the effects of log transformations, and the limitations of simple models.
+
+## Key Concepts:
+- Geometric growth assumes constant $\lambda$, leading to exponential growth or decline.
+- Plotting log-transformed population sizes allows easier visualisation of trends.
+- Limitations of the model include the assumption of infinite resources and lack of environmental constraints.
+
+## Model Answers
+
+### 1. **How does the population size change with time for different values of $\lambda$?**
+- For $\lambda > 1$, the population size increases exponentially.
+- For $\lambda = 1$, the population size remains constant.
+- For $\lambda < 1$, the population size decreases exponentially.
+
+**Explanation**: The growth rate $\lambda$ drives the population’s exponential increase or decrease. $\lambda = 1$ represents equilibrium.
+
+### 2. **Why is it useful to plot log-transformed population size?**
+- Log-transformation converts exponential growth into a straight line, simplifying the interpretation of growth rates.
+
+**Explanation**: Log-transformations linearise exponential relationships, allowing for easier interpretation of the growth rate, as the slope corresponds to $\log(\lambda)$.
+
+### 3. **What are the limitations of the geometric growth model?**
+- The model assumes infinite resources, no competition, or environmental constraints, making it unrealistic for real-world populations.
+
+**Explanation**: Real-world populations face density-dependent factors and environmental stochasticity, which the geometric model does not account for.
+
+### 4. **What would happen if we introduced a carrying capacity to this model?**
+- The population would follow a logistic growth model, where growth slows as the population nears the carrying capacity.
+
+**Explanation**: A carrying capacity introduces limits to population size, stabilising it after an initial period of exponential growth.
+
+## Teaching Tips:
+
+1. **Excel Guidance**: Ensure students understand how to perform log transformations and add trendlines.
+2. **Conceptual Understanding**: Clarify the assumptions of the model (no immigration, emigration, or environmental changes).
+3. **Real-World Application**: Use examples like invasive species or epidemics to explain how geometric growth can be observed in certain scenarios.
+4. **Class Discussion**: Engage students in discussions about how the model could be adapted to account for real-world variables like environmental factors or density dependence.
+
+### Additional Resources
+
+- **Excel Tutorial**: If students are unfamiliar with Excel's log transformation and trendline features, provide a walkthrough.
+
+
+
