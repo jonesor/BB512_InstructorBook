@@ -1,0 +1,60 @@
+--- 
+title: "BB512 - Instructor Resources"
+author: "Owen R. Jones (Course Coordinator)"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+pandoc_args: --listings
+output:
+  bookdown::gitbook:
+    config:
+      toc:
+        collapse: section
+    includes:
+      in_header: extras.css
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+    papersize: a4
+  pdf_document:
+    includes:
+      in_header: preamble.tex
+classoption: a4paper
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Instructors Resources for BB512 at the Biology Department, University of Southern Denmark"
+
+---
+
+```{r setOptions, include=FALSE}
+knitr::opts_chunk$set(
+  warning = FALSE, message = FALSE
+)
+```
+
+# This website and other course materials
+
+This website contains resources for instructors in BB512.
+
+**We may not do ALL of these exercises, but you are welcome to do ones we miss in your own time.**
+
+
+## Software
+
+We will use Excel and R/RStudio during this course.
+
+### Excel
+
+I expect you will already have Excel installed, so there is not much to say here.
+
+Be aware that Excel differs depending on the language it is localised in. For example, Danish vs. English. This means that some of the commands might differ between version. 
+See [here](https://easy-excel.com/excel-in-other-languages/excel-formulas-in-danish/) for examples.
+
+### R and RStudio
+
+R and RStudio are two separate pieces of software. RStudio is a user-friendly interface to talk to R, it cannot work if you have not got R installed. So, when you install these two programs, install R first, then RStudio.
+
+Already have them installed?  I strongly recommend to update to the latest versions of R, which you can download [here](https://cran.r-project.org) and RStudio Desktop, which you can find [here](https://www.rstudio.com/products/rstudio/). 
+
+
