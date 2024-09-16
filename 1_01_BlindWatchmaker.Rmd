@@ -1,3 +1,64 @@
 # The Blind Watchmaker
 
-Coming soon...
+## Introduction
+
+This exercise simulates evolutionary processes using an algorithm inspired by *The Blind Watchmaker*. Students will observe how random mutations and selection pressure shape the evolution of a target phrase from an initial random string. By altering parameters of selection and phrase length, students will explore the balance between randomness (mutation) and determinism (selection) in evolutionary processes. This exercise provides insight into natural selection and highlights the filtering nature of natural selection.
+
+## Key concepts
+
+- **Random Mutation**: Each generation introduces random changes (mutations) in the string.
+- **Selection Pressure**: When active, selection favours letters that match the target phrase, simulating the process of natural selection.
+- **Stochasticity vs Determinism**: Evolution combines random mutations and deterministic selection, resulting in gradual adaptation toward a specific goal (in this case, a predefined phrase).
+
+## Learning outcomes
+- Greater understanding of adaptive evolution via natural selection.
+- Understanding that random change does NOT result in disorder, if paired with selection.
+- Use of R for exploring biological phenomenon.
+
+## Activity Overview
+
+### Time: 30 minutes
+1. **Introduction (5-10 min)**: Explain the activity, including the basic concepts of natural selection.
+2. **Loading RStudio, Script setup (5 min)**: Students load RStudio, create a new script and paste the exercise script into it.
+3. **Main Activity (15 min)**: Students may use their own phrase, they should use the script and then answer the questions.
+5. **Discussion and Wrap-Up (5-10 min)**: Run through the questions and answers. Reflect on how the simulation demonstrates key concepts of selection, adaptation, and evolution.
+
+
+## Instructions for facilitating
+
+### Code Setup
+1. **Preparation**: Ensure students have R and RStudio installed. If needed, provide assistance with installation or setting up the R environment.
+2. **Running the Code**: Students open a new R script, paste the provided code, and save it.
+   - Explain that the simulation uses random letter generation to mimic mutations, and selection fixes correct letters over time, just as beneficial traits are selected in nature.
+3. **Modifying Parameters**: Have students edit parameters like `phrase`, `nGenerations`, and `selection`, observing the effects.
+
+### Key Observation
+- When **selection is ON**, the phrase gradually becomes more similar to the target, showing how selection can direct random mutations toward a specific outcome.
+- When **selection is OFF**, the output remains random, illustrating that random changes without selection do not lead to order or meaningful results.
+
+
+## Questions and model answers
+
+ **Question 1: What happens if selection is turned OFF?**
+- Without selection, mutations accumulate randomly without any guidance, resulting in no directional progress toward the target phrase.
+
+ **Question 2: Does the number of generations affect whether the target phrase is reached?**
+- Yes, more generations allow more opportunities for mutations and selection to work, increasing the chances of reaching the target phrase, but there is no absolute guarantee.
+
+ **Question 3: Does the speed of reaching the target phrase depend on the length of the phrase?**
+- Yes, longer phrases require more steps to match each letter, meaning the process takes more time and generations due to the greater complexity.
+
+ **Question 4: How does this simulation differ from real natural selection?**
+- Real natural selection is not driven by a specific goal. It is shaped by environmental pressures and the organisms' fitness relative to their surroundings, rather than aiming for a specific outcome like in this simulation.
+
+## Teaching Tips
+1. **Clarify the Role of Selection**: Emphasise that selection drives the evolutionary process toward the target, while random mutations provide the variation necessary for evolution.
+2. **R Programming Guidance**: Assist students in modifying parameters like mutation rate, number of generations, and selection to observe different outcomes.
+3. **Link to Real Evolution**: Discuss how real-world evolution is more complex and involves multiple factors such as genetic drift, environmental changes, and does not have a predetermined goal like the target phrase.
+
+## Common Pitfalls to Watch For
+- **Misunderstanding Selection**: Students might think that selection always chooses perfect sequences. Clarify that selection favours the closest match, not necessarily perfection.
+- **R Script Issues**: Ensure students accurately modify the code to adjust parameters like the mutation rate and number of generations.
+- **Misinterpretation of the Target Concept**: Make sure students understand that real natural selection does not work toward a fixed outcome like in this simulation.
+
+

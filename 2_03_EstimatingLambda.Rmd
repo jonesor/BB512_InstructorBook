@@ -1,43 +1,76 @@
 # Estimating Population Growth Rate
 
+## Introduction
 
-## Overview:
-This exercise allows students to work with real population data to estimate the population growth rate (\(\lambda\)) by applying log transformation and linear regression in Excel. It reinforces concepts of geometric growth, exponential growth, and practical skills in data analysis using Excel. Students will learn how to interpret log-transformed data, calculate the growth rate, and understand model assumptions and real-world factors that may affect population growth.
+This exercise allows students to work with real population data to estimate the population growth rate ($\lambda$) by applying log transformation and linear regression in Excel. It reinforces concepts of geometric growth, exponential growth, and practical skills in data analysis using Excel. Students will learn how to interpret log-transformed data, calculate the growth rate, and understand model assumptions and real-world factors that may affect population growth.
 
-## Learning Outcomes:
-- Competence in using Excel formulae for data transformation and regression analysis.
-- Understanding the role of \(\lambda\) in population growth and how to estimate it using log-transformed data.
-- Awareness of how log transformations linearize exponential growth data for easier analysis.
-- Knowledge that the slope of the \(\ln(N_t)\) vs. time relationship represents \(\log(\lambda)\), which can be used to estimate the population growth rate.
-- Competence in applying mathematical models in Excel to analyse biological data.
-- Awareness of the limitations of simple geometric growth models when applied to real-world data.
-
-## Key Concepts:
-- **Exponential Growth**: Populations grow by a constant rate (\(\lambda\)) each time step, leading to exponential growth. Log-transforming the data linearizes this relationship.
-- **Log Transformation**: Applying \(\log_e\) to population size makes it possible to fit a linear model to exponential growth data. The slope of this line gives \(\log(\lambda)\), and exponentiating this value yields \(\lambda\), the population growth rate.
+## Key Concepts
+- **Exponential Growth**: Populations grow by a constant rate ($\lambda$) each time step, leading to exponential growth. Log-transforming the data linearizes this relationship.
+- **Log Transformation**: Applying $\log_e$ to population size makes it possible to fit a linear model to exponential growth data. The slope of this line gives $\log(\lambda)$, and exponentiating this value yields $\lambda$, the population growth rate.
 - **Limitations of the Model**: The exercise uses a geometric growth model, which assumes a constant growth rate. Real-world populations often deviate from this due to environmental variability, competition, and other factors.
 
-## Questions (for Students):
-1. **Interpret the Plot**: What does the log-transformed plot of population size over time tell you about the population's growth trend? Does the population appear to grow exponentially?
-   
-2. **Estimate Growth Rate**: What is the estimated population growth rate (\(\lambda\)) based on your linear regression analysis?
-   
-3. **Model Assumptions**: What assumptions does this model make about population growth? Discuss any potential real-world factors that might affect the accuracy of your estimate for \(\lambda\).
+## Learning outcomes
 
-## Model Answers:
-**Question 1: Interpret the Plot**:
+- Competence in using Excel formulae for data transformation and regression analysis.
+- Understanding the role of $\lambda$ in population growth and its estimation through log-transformed data.
+- Competence in applying mathematical models in Excel to analyse real biological data.
+- Awareness of how log transformations can linearise exponential growth data for easier interpretation.
+- Knowing that the slope of the $ln(N)$ vs. time relationship represents $ln(\lambda)$ and can be used to estimate population growth rate.
+
+
+## Activity Overview
+
+### Time: 20 minutes
+- 1-2 minutes: Introduce the exercise
+- 2-3 minutes: Students read the exercise introduction and instructions.
+- 10 minutes: Students do the exercise. Check on them as you walk around the class.
+- 5 minutes: Wrap up and go through answers to questions.
+
+## Instructions for Facilitating
+
+### Step 1: Download and Open the Data
+1. Ensure students download the provided Excel file [`EstimatingGrowth.xlsx`](https://www.dropbox.com/scl/fi/k9z32wndllofihsyhj728/EstimatingGrowth.xlsx?rlkey=7gukyzvdm4pv1wsbnljfymvx1&dl=1).
+2. Once students open the file, explain that the dataset contains population sizes recorded annually over 25 years.
+
+### Step 2: Plot the Population Size Over Time
+- In Excel, have students create an x-y scatter plot of **population size** $N_t$ against **time** (Year).
+- Ensure students correctly label the axes and choose an appropriate chart type.
+
+### Step 3: Log-Transform the Population Size
+1. Guide students to create a new column for the **natural logarithm** of the population size by using the Excel formula `=LN(cell)` where `cell` refers to the population size at a specific time step.
+2. Students should then create a second scatter plot using the **log-transformed population size** on the y-axis and **time** on the x-axis.
+
+### Step 4: Fit a Linear Regression Model
+1. In the log-transformed scatter plot, students will add a **linear trendline**.
+   - Right-click on the data points and select "Add Trendline."
+   - Choose "Linear" and check the box for "Display Equation on Chart."
+2. Explain that the **slope** of the trendline represents $\log(\lambda)$.
+
+### Step 5: Calculate $\lambda$
+- Once students have the slope from the trendline, they will calculate $\lambda$ using the formula $\lambda = e^{\text{slope}}$, which can be done in Excel with the formula `=EXP(cell)`.
+
+
+## Questions & Model Answers
+
+**1. Interpret the Plot: What does the log-transformed plot of population size over time tell you about the population's growth trend? Does the population appear to grow exponentially?**
+
 - The log-transformed plot should show a straight line if the population is growing exponentially, because the natural logarithm of an exponentially growing population will linearize the exponential curve. A positively sloped line indicates growth, a flat line suggests stability, and a negatively sloped line indicates population decline.
 
-**Question 2: Estimate Growth Rate**:
-- The slope of the regression line from the log-transformed plot corresponds to \(\log(\lambda)\). To find \(\lambda\), students should exponentiate the slope: \(\lambda = e^{\text{slope}}\).
-- Example: If the slope of the regression line is 0.086, then \(\lambda = e^{0.086} \approx 1.09\), meaning the population grows by approximately 9% per year.
+   
+**Estimate Growth Rate: What is the estimated population growth rate ($\lambda$) based on your linear regression analysis?**
 
-**Question 3: Model Assumptions**:
-- The model assumes that population growth follows a constant rate (\(\lambda\)) over time, without any external influences such as migration, resource limitations, or environmental changes. In the real world, population growth rates can fluctuate due to factors such as weather, food availability, disease, or human intervention.
+- The slope of the regression line from the log-transformed plot corresponds to $\log(\lambda)$. To find $\lambda$, students one can exponentiate the slope: $\lambda = e^{\text{slope}}$.
+- Example: If the slope of the regression line is 0.086, then $\lambda = e^{0.086} \approx 1.09$, meaning the population grows by approximately 9% per year.
+   
+**Model Assumptions: What assumptions does this model make about population growth? Discuss any potential real-world factors that might affect the accuracy of your estimate for $\lambda$.**
+
+- The model assumes that population growth follows a constant rate ($\lambda$) over time, without any external influences such as migration, resource limitations, or environmental changes. In the real world, population growth rates can fluctuate due to factors such as weather, food availability, disease, or human intervention.
 - Other factors, like density dependence (competition for resources), may also affect the accuracy of the model. The geometric model does not account for a carrying capacity, which limits population growth in real ecosystems.
 
+
 ## Teaching Tips:
-1. **Ensure Students Understand Log Transformations**: Emphasize why log transformation linearizes the exponential growth model, making it easier to interpret the population's growth trend. A short explanation of the mathematics behind this is helpful.
+
+1. **Ensure Students Understand Log Transformations**: Emphasize why log transformation linearises the exponential growth model, making it easier to interpret the population's growth trend. A short explanation of the mathematics behind this is helpful. Explain that exponential growth is linear in log space because $\log(N_t) = \log(N_0) + t\log(\lambda)$, which is analagous to the standard equation for a straight line $y = ax \times b$.
    
 2. **Excel Skills**: Ensure students know how to use Excel for log transformations (`LN` function), plot data, add trendlines, and display the regression equation on their charts. Consider providing a walkthrough if they are not familiar with Excel’s plotting tools.
 
@@ -47,9 +80,10 @@ This exercise allows students to work with real population data to estimate the 
 
 5. **Comparing to Year-over-Year Estimates**: Have students compare the growth rate they estimate from the regression model to a simple year-over-year ratio estimate of population growth. Discuss why these values might differ, particularly in the presence of noise or irregularities in the data.
 
-## Common Pitfalls to Watch For:
-- **Confusion with Log Transformation**: Students may not understand why log transformation creates a straight line from exponential data. Explain that exponential growth is linear in log space because \(\log(N_t) = \log(N_0) + t\log(\lambda)\).
-- **Exponentiating the Slope**: Remind students that the slope of the regression line represents \(\log(\lambda)\), and they need to calculate \(\lambda = e^{\text{slope}}\) to find the actual growth rate.
-- **Interpreting \(\lambda\)**: Make sure students understand that \(\lambda > 1\) indicates growth, \(\lambda = 1\) indicates a stable population, and \(\lambda < 1\) indicates population decline.
+## Common Pitfalls
+
+- **Confusion with Log Transformation**: Students may not understand why log transformation creates a straight line from exponential data. 
+- **Exponentiating the Slope**: Remind students that the slope of the regression line represents $\log(\lambda)$, and they need to calculate $\lambda = e^{\text{slope}}$ to find the actual growth rate.
+- **Interpreting $\lambda$**: Make sure students understand that $\lambda > 1$ indicates growth, $\lambda = 1$ indicates a stable population, and $\lambda < 1$ indicates population decline.
 
 

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Blind Watchmaker Simulation | BB512 - Instructor Resources</title>
+  <meta name="description" content="Instructors Resources for BB512 at the Biology Department, University of Southern Denmark" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Blind Watchmaker Simulation | BB512 - Instructor Resources" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Instructors Resources for BB512 at the Biology Department, University of Southern Denmark" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Blind Watchmaker Simulation | BB512 - Instructor Resources" />
+  
+  <meta name="twitter:description" content="Instructors Resources for BB512 at the Biology Department, University of Southern Denmark" />
+  
+
+<meta name="author" content="Owen R. Jones (Course Coordinator)" />
+
+
+<meta name="date" content="2024-09-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="instructor-notes-bug-hunt-camouflage-netlogo.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<style type="text/css">
+
+.warning-box {
+  border: 3px solid #e60000;
+  margin:  25px;
+  padding: 10px 10px 5px 10px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.advanced-box {
+  border: 3px solid #268bd2;
+  margin:  25px;
+  padding: 10px 10px 5px 10px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.do-something {
+  border: 3px solid #803e00;
+  margin:  25px;
+  padding: 10px 10px 5px 10px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+</style>
+
+
+
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">BB512 Instructor Resources</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> This website and other course materials</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#software"><i class="fa fa-check"></i><b>1.1</b> Software</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#excel"><i class="fa fa-check"></i><b>1.1.1</b> Excel</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#r-and-rstudio"><i class="fa fa-check"></i><b>1.1.2</b> R and RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>I Evolution by Natural Selection</b></span></li>
+<li class="chapter" data-level="2" data-path="blind-watchmaker-simulation.html"><a href="blind-watchmaker-simulation.html"><i class="fa fa-check"></i><b>2</b> Blind Watchmaker Simulation</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="blind-watchmaker-simulation.html"><a href="blind-watchmaker-simulation.html#key-concepts"><i class="fa fa-check"></i><b>2.1</b> Key Concepts:</a></li>
+<li class="chapter" data-level="2.2" data-path="blind-watchmaker-simulation.html"><a href="blind-watchmaker-simulation.html#questions-for-students"><i class="fa fa-check"></i><b>2.2</b> Questions (for Students):</a></li>
+<li class="chapter" data-level="2.3" data-path="blind-watchmaker-simulation.html"><a href="blind-watchmaker-simulation.html#model-answers"><i class="fa fa-check"></i><b>2.3</b> Model Answers:</a></li>
+<li class="chapter" data-level="2.4" data-path="blind-watchmaker-simulation.html"><a href="blind-watchmaker-simulation.html#teaching-tips"><i class="fa fa-check"></i><b>2.4</b> Teaching Tips:</a></li>
+<li class="chapter" data-level="2.5" data-path="blind-watchmaker-simulation.html"><a href="blind-watchmaker-simulation.html#common-pitfalls-to-watch-for"><i class="fa fa-check"></i><b>2.5</b> Common Pitfalls to Watch For:</a></li>
+<li class="chapter" data-level="2.6" data-path="blind-watchmaker-simulation.html"><a href="blind-watchmaker-simulation.html#discussion-of-model-assumptions"><i class="fa fa-check"></i><b>2.6</b> Discussion of Model Assumptions:</a></li>
+<li class="chapter" data-level="2.7" data-path="blind-watchmaker-simulation.html"><a href="blind-watchmaker-simulation.html#assessment-criteria"><i class="fa fa-check"></i><b>2.7</b> Assessment Criteria:</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html"><i class="fa fa-check"></i><b>3</b> Instructor Notes: Bug Hunt Camouflage (NetLogo)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#key-concepts-1"><i class="fa fa-check"></i><b>3.1</b> Key Concepts</a></li>
+<li class="chapter" data-level="3.2" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#learning-outcomes"><i class="fa fa-check"></i><b>3.2</b> Learning Outcomes</a></li>
+<li class="chapter" data-level="3.3" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#activity-overview"><i class="fa fa-check"></i><b>3.3</b> Activity Overview</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#time-45-minutes"><i class="fa fa-check"></i><b>3.3.1</b> Time: 45 minutes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#instructions-for-facilitating"><i class="fa fa-check"></i><b>3.4</b> Instructions for Facilitating</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#simulation-setup"><i class="fa fa-check"></i><b>3.4.1</b> Simulation Setup</a></li>
+<li class="chapter" data-level="3.4.2" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#running-the-simulation"><i class="fa fa-check"></i><b>3.4.2</b> Running the Simulation</a></li>
+<li class="chapter" data-level="3.4.3" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#key-observations"><i class="fa fa-check"></i><b>3.4.3</b> Key Observations</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#common-pitfalls"><i class="fa fa-check"></i><b>3.5</b> Common Pitfalls</a></li>
+<li class="chapter" data-level="3.6" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#discussion-questions-model-answers"><i class="fa fa-check"></i><b>3.6</b> Discussion Questions &amp; Model Answers</a></li>
+<li class="chapter" data-level="3.7" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#teaching-tips-1"><i class="fa fa-check"></i><b>3.7</b> Teaching Tips</a></li>
+<li class="chapter" data-level="3.8" data-path="instructor-notes-bug-hunt-camouflage-netlogo.html"><a href="instructor-notes-bug-hunt-camouflage-netlogo.html#additional-resources"><i class="fa fa-check"></i><b>3.8</b> Additional Resources</a></li>
+</ul></li>
+<li class="part"><span><b>II Population Growth Models</b></span></li>
+<li class="chapter" data-level="4" data-path="geometric-growth.html"><a href="geometric-growth.html"><i class="fa fa-check"></i><b>4</b> Geometric growth</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="geometric-growth.html"><a href="geometric-growth.html#key-concepts-2"><i class="fa fa-check"></i><b>4.1</b> Key Concepts:</a></li>
+<li class="chapter" data-level="4.2" data-path="geometric-growth.html"><a href="geometric-growth.html#model-answers-1"><i class="fa fa-check"></i><b>4.2</b> Model Answers</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="geometric-growth.html"><a href="geometric-growth.html#how-does-the-population-size-change-with-time-for-different-values-of-lambda"><i class="fa fa-check"></i><b>4.2.1</b> 1. <strong>How does the population size change with time for different values of <span class="math inline">\(\lambda\)</span>?</strong></a></li>
+<li class="chapter" data-level="4.2.2" data-path="geometric-growth.html"><a href="geometric-growth.html#why-is-it-useful-to-plot-log-transformed-population-size"><i class="fa fa-check"></i><b>4.2.2</b> 2. <strong>Why is it useful to plot log-transformed population size?</strong></a></li>
+<li class="chapter" data-level="4.2.3" data-path="geometric-growth.html"><a href="geometric-growth.html#what-are-the-limitations-of-the-geometric-growth-model"><i class="fa fa-check"></i><b>4.2.3</b> 3. <strong>What are the limitations of the geometric growth model?</strong></a></li>
+<li class="chapter" data-level="4.2.4" data-path="geometric-growth.html"><a href="geometric-growth.html#what-would-happen-if-we-introduced-a-carrying-capacity-to-this-model"><i class="fa fa-check"></i><b>4.2.4</b> 4. <strong>What would happen if we introduced a carrying capacity to this model?</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="geometric-growth.html"><a href="geometric-growth.html#teaching-tips-2"><i class="fa fa-check"></i><b>4.3</b> Teaching Tips:</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="geometric-growth.html"><a href="geometric-growth.html#additional-resources-1"><i class="fa fa-check"></i><b>4.3.1</b> Additional Resources</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="estimating-population-growth-rate.html"><a href="estimating-population-growth-rate.html"><i class="fa fa-check"></i><b>5</b> Estimating Population Growth Rate</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="estimating-population-growth-rate.html"><a href="estimating-population-growth-rate.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="estimating-population-growth-rate.html"><a href="estimating-population-growth-rate.html#learning-outcomes-1"><i class="fa fa-check"></i><b>5.2</b> Learning outcomes:</a></li>
+<li class="chapter" data-level="5.3" data-path="estimating-population-growth-rate.html"><a href="estimating-population-growth-rate.html#key-concepts-3"><i class="fa fa-check"></i><b>5.3</b> Key Concepts:</a></li>
+<li class="chapter" data-level="5.4" data-path="estimating-population-growth-rate.html"><a href="estimating-population-growth-rate.html#timings"><i class="fa fa-check"></i><b>5.4</b> Timings</a></li>
+<li class="chapter" data-level="5.5" data-path="estimating-population-growth-rate.html"><a href="estimating-population-growth-rate.html#questions-for-students-1"><i class="fa fa-check"></i><b>5.5</b> Questions (for Students):</a></li>
+<li class="chapter" data-level="5.6" data-path="estimating-population-growth-rate.html"><a href="estimating-population-growth-rate.html#teaching-tips-3"><i class="fa fa-check"></i><b>5.6</b> Teaching Tips:</a></li>
+<li class="chapter" data-level="5.7" data-path="estimating-population-growth-rate.html"><a href="estimating-population-growth-rate.html#common-pitfalls-to-watch-for-1"><i class="fa fa-check"></i><b>5.7</b> Common Pitfalls to Watch For:</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="stochastic-population-growth.html"><a href="stochastic-population-growth.html"><i class="fa fa-check"></i><b>6</b> Stochastic population growth</a></li>
+<li class="chapter" data-level="7" data-path="basic-logistic-population-growth.html"><a href="basic-logistic-population-growth.html"><i class="fa fa-check"></i><b>7</b> Basic logistic population growth</a></li>
+<li class="chapter" data-level="8" data-path="deeper-into-logistic-growth.html"><a href="deeper-into-logistic-growth.html"><i class="fa fa-check"></i><b>8</b> Deeper into logistic growth</a></li>
+<li class="chapter" data-level="9" data-path="life-tables-and-survivorship-types.html"><a href="life-tables-and-survivorship-types.html"><i class="fa fa-check"></i><b>9</b> Life tables and survivorship types</a></li>
+<li class="chapter" data-level="10" data-path="matrix-population-modelling.html"><a href="matrix-population-modelling.html"><i class="fa fa-check"></i><b>10</b> Matrix population modelling</a></li>
+<li class="chapter" data-level="11" data-path="pre--and-post-reproduction-census.html"><a href="pre--and-post-reproduction-census.html"><i class="fa fa-check"></i><b>11</b> Pre- and Post-reproduction census</a></li>
+<li class="chapter" data-level="12" data-path="life-table-response-experiments.html"><a href="life-table-response-experiments.html"><i class="fa fa-check"></i><b>12</b> Life Table Response Experiments</a></li>
+<li class="chapter" data-level="13" data-path="how-many-eggs-should-a-bird-lay.html"><a href="how-many-eggs-should-a-bird-lay.html"><i class="fa fa-check"></i><b>13</b> How many eggs should a bird lay?</a></li>
+<li class="chapter" data-level="14" data-path="trade-offs-and-the-declining-force-of-selection.html"><a href="trade-offs-and-the-declining-force-of-selection.html"><i class="fa fa-check"></i><b>14</b> Trade-offs and the declining force of selection</a></li>
+<li class="part"><span><b>III Population Genetics and Evolution</b></span></li>
+<li class="chapter" data-level="15" data-path="hardy-weinberg-equilibrium.html"><a href="hardy-weinberg-equilibrium.html"><i class="fa fa-check"></i><b>15</b> Hardy-Weinberg equilibrium</a></li>
+<li class="chapter" data-level="16" data-path="the-gene-pool-model.html"><a href="the-gene-pool-model.html"><i class="fa fa-check"></i><b>16</b> The Gene Pool Model</a></li>
+<li class="chapter" data-level="17" data-path="neutral-or-adaptive-evolution-in-humans-what-drives-evolution-of-our-traits.html"><a href="neutral-or-adaptive-evolution-in-humans-what-drives-evolution-of-our-traits.html"><i class="fa fa-check"></i><b>17</b> Neutral or Adaptive Evolution in Humans: What Drives Evolution of Our Traits?</a></li>
+<li class="chapter" data-level="18" data-path="heritability-from-a-linear-regression.html"><a href="heritability-from-a-linear-regression.html"><i class="fa fa-check"></i><b>18</b> Heritability from a linear regression</a></li>
+<li class="part"><span><b>IV Interactions Between Species and Community Structure</b></span></li>
+<li class="chapter" data-level="19" data-path="lotka-volterra-competition.html"><a href="lotka-volterra-competition.html"><i class="fa fa-check"></i><b>19</b> Lotka-Volterra competition</a></li>
+<li class="chapter" data-level="20" data-path="lotka-volterra-predator-prey-dynamics.html"><a href="lotka-volterra-predator-prey-dynamics.html"><i class="fa fa-check"></i><b>20</b> Lotka-Volterra predator-prey dynamics</a></li>
+<li class="part"><span><b>V Animal behaviour, altruism and sexual selection</b></span></li>
+<li class="chapter" data-level="21" data-path="game-theory-hawks-and-doves.html"><a href="game-theory-hawks-and-doves.html"><i class="fa fa-check"></i><b>21</b> Game theory: Hawks and doves</a></li>
+<li class="part"><span><b>VI Appendix - extras</b></span></li>
+<li class="chapter" data-level="22" data-path="exponential-growth-in-detail.html"><a href="exponential-growth-in-detail.html"><i class="fa fa-check"></i><b>22</b> Exponential growth in detail</a></li>
+<li class="chapter" data-level="23" data-path="the-legend-of-ambalapuzha.html"><a href="the-legend-of-ambalapuzha.html"><i class="fa fa-check"></i><b>23</b> The legend of Ambalapuzha</a></li>
+<li class="chapter" data-level="24" data-path="from-population-biology-to-fitness.html"><a href="from-population-biology-to-fitness.html"><i class="fa fa-check"></i><b>24</b> From population biology to fitness</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">BB512 - Instructor Resources</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="blind-watchmaker-simulation" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Blind Watchmaker Simulation<a href="blind-watchmaker-simulation.html#blind-watchmaker-simulation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This exercise simulates evolutionary processes using an algorithm inspired by <em>The Blind Watchmaker</em>. Students will observe how random mutations and selection pressure shape the evolution of a target phrase from an initial random string. By altering parameters of selection and phrase length, students will explore the balance between randomness (mutation) and determinism (selection) in evolutionary processes. This exercise provides insight into natural selection and highlights the filtering nature of natural selection.</p>
+<div id="key-concepts" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Key Concepts:<a href="blind-watchmaker-simulation.html#key-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Random Mutation</strong>: Each generation introduces random changes (mutations) in the string.</li>
+<li><strong>Selection Pressure</strong>: When active, selection favours letters that match the target phrase, simulating the process of natural selection.</li>
+<li><strong>Stochasticity vs Determinism</strong>: Evolution combines random mutations and deterministic selection, resulting in gradual adaptation toward a specific goal (in this case, a predefined phrase).</li>
+</ul>
+</div>
+<div id="questions-for-students" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Questions (for Students):<a href="blind-watchmaker-simulation.html#questions-for-students" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><strong>What happens if selection is turned OFF?</strong>
+<ul>
+<li>Observe how the lack of selection results in random mutations without any directed improvement toward the target.</li>
+</ul></li>
+<li><strong>Does the number of generations affect whether the target phrase is reached?</strong>
+<ul>
+<li>Explore how more generations increase the likelihood of reaching the target, but success is not guaranteed.</li>
+</ul></li>
+<li><strong>Does the speed of reaching the target phrase depend on the length of the phrase?</strong>
+<ul>
+<li>Investigate how longer phrases take more time and generations to evolve due to the increased complexity of matching more characters.</li>
+</ul></li>
+<li><strong>How does this simulation differ from real natural selection?</strong>
+<ul>
+<li>Reflect on the fixed target in the simulation, contrasting it with the more dynamic and open-ended nature of real-world natural selection, which does not work toward a predetermined goal.</li>
+</ul></li>
+</ol>
+</div>
+<div id="model-answers" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Model Answers:<a href="blind-watchmaker-simulation.html#model-answers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Question 1: What happens if selection is turned OFF?</strong>
+- Without selection, mutations accumulate randomly without any guidance, resulting in no directional progress toward the target phrase.</p>
+<p><strong>Question 2: Does the number of generations affect whether the target phrase is reached?</strong>
+- Yes, more generations allow more opportunities for mutations and selection to work, increasing the chances of reaching the target phrase, but there is no absolute guarantee.</p>
+<p><strong>Question 3: Does the speed of reaching the target phrase depend on the length of the phrase?</strong>
+- Yes, longer phrases require more steps to match each letter, meaning the process takes more time and generations due to the greater complexity.</p>
+<p><strong>Question 4: How does this simulation differ from real natural selection?</strong>
+- Real natural selection is not driven by a specific goal. It is shaped by environmental pressures and the organisms’ fitness relative to their surroundings, rather than aiming for a specific outcome like in this simulation.</p>
+</div>
+<div id="teaching-tips" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Teaching Tips:<a href="blind-watchmaker-simulation.html#teaching-tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><strong>Clarify the Role of Selection</strong>: Emphasise that selection drives the evolutionary process toward the target, while random mutations provide the variation necessary for evolution.</li>
+<li><strong>R Programming Guidance</strong>: Assist students in modifying parameters like mutation rate, number of generations, and selection to observe different outcomes.</li>
+<li><strong>Link to Real Evolution</strong>: Discuss how real-world evolution is more complex and involves multiple factors such as genetic drift, environmental changes, and does not have a predetermined goal like the target phrase.</li>
+</ol>
+</div>
+<div id="common-pitfalls-to-watch-for" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Common Pitfalls to Watch For:<a href="blind-watchmaker-simulation.html#common-pitfalls-to-watch-for" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Misunderstanding Selection</strong>: Students might think that selection always chooses perfect sequences. Clarify that selection favours the closest match, not necessarily perfection.</li>
+<li><strong>R Script Issues</strong>: Ensure students accurately modify the code to adjust parameters like the mutation rate and number of generations.</li>
+<li><strong>Misinterpretation of the Target Concept</strong>: Make sure students understand that real natural selection does not work toward a fixed outcome like in this simulation.</li>
+</ul>
+</div>
+<div id="discussion-of-model-assumptions" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Discussion of Model Assumptions:<a href="blind-watchmaker-simulation.html#discussion-of-model-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Fixed Target</strong>: The model assumes evolution works toward a fixed target, which differs from the open-ended and context-driven nature of natural selection.</li>
+<li><strong>Random Mutation</strong>: Highlight how the simulation simplifies mutation and selection, while real evolution involves more complex dynamics such as environmental pressures and genetic drift.</li>
+</ul>
+</div>
+<div id="assessment-criteria" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Assessment Criteria:<a href="blind-watchmaker-simulation.html#assessment-criteria" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Students should demonstrate an understanding of how mutation rate, selection pressure, and phrase length affect the evolutionary process.</li>
+<li>Their reflections should critically engage with how this simulation simplifies real-world evolutionary dynamics and provide insights into the limitations of the model.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="instructor-notes-bug-hunt-camouflage-netlogo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/jonesor/BB512_Instructor/edit/master/1_01_BlindWatchmaker.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"split_by": "section"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

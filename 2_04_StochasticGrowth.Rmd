@@ -1,3 +1,106 @@
 # Stochastic population growth
 
-Coming soon...
+## Introduction
+
+This exercise introduces students to the stochastic version of population growth models, focusing on how randomness and variability can influence population dynamics over time. By working with both Excel and R, students will explore the differences between deterministic and stochastic population models, specifically applying them to geometric (discrete) growth models. The exercise allows students to build skills in mathematical modeling, data analysis, and stochastic simulation, all of which are essential for understanding real-world ecological systems and predicting population trajectories under uncertainty.
+
+
+## Key Concepts
+
+- **Deterministic vs. Stochastic Models:**  
+  Deterministic models assume a fixed growth rate, while stochastic models incorporate randomness, leading to more realistic projections.
+  
+- **Geometric Growth Model:**  
+  The model is expressed as $N_{t+1} = \lambda N_t$, where $\lambda = e^{r_m}$ and $r_m = \ln(\lambda)$. It is used to predict population size in the next generation.
+
+- **Stochasticity:**  
+  Variability in growth rates, often modeled by drawing random values from a normal distribution for $r_m$. This randomness reflects environmental fluctuations and individual-level variation.
+
+- **Extinction Risk:**  
+  As stochasticity increases, populations are more likely to decline or go extinct. Extinction risk depends on factors such as variance in $r_m$, initial population size, and mean growth rate.
+
+---
+
+## Learning Outcomes
+
+- Understand and apply stochastic models to population dynamics.
+- Build competence in using Excel for mathematical modeling and simulations.
+- Grasp the relationship between stochasticity, extinction risk, and environmental variability.
+- Use R to simulate population growth and estimate extinction risk.
+
+---
+
+## Activity Overview
+
+**Suggested Timings:**
+
+- **5 minutes:** Introduce the concept of stochastic population growth.
+- **5 minutes:** Students read through the background and instructions.
+- **20 minutes:** Students work on Excel-based deterministic and stochastic population growth modeling. Students with R experience may also explore stochastic simulations using R.
+- **10 minutes:** Wrap up discussion and review key takeaways.
+
+---
+
+## Instructions for Facilitating
+
+1. **Introduction:**  
+   Briefly explain the difference between deterministic and stochastic models, focusing on why stochasticity is more reflective of real-world populations. Emphasize how the exercise will involve building models in Excel (and optionally R).
+
+2. **Excel Modeling:**  
+   Guide students through calculating deterministic population growth first, then introduce stochastic variation in growth rates by using the provided formula [English Excel: `=NORMINV(RAND(),$F$10,SQRT($F$11))`/ Danish Excel: `=NORMINV(SLUMP();$F$10;KVROD($F$11))`. If you get errors, check whether Excel is expecting commas or semi-colons].
+
+3. **R Simulation:**  
+   For the R component, ensure students understand the basic structure of the code and how the simulation works. Encourage them to modify parameters like `mean.r` and `var.r` to observe different outcomes.
+
+4. **Discussion:**  
+   Facilitate a discussion on extinction risk, the impact of variability, and how different levels of stochasticity affect population trajectories.
+
+---
+
+## Questions & Model Answers
+
+**1. What is the main difference between deterministic and stochastic population growth models?**
+   - Deterministic models use fixed growth rates, while stochastic models incorporate random variability, making them more realistic for representing natural populations.
+
+**2. Describe how incorporating randomness into the stochastic model makes it more realistic for understanding real-world populations.**
+   - Real-world populations face unpredictable environmental conditions and other factors that influence growth. Stochastic models account for these fluctuations, better mimicking actual population dynamics.
+
+**3. Simulate a scenario where two populations with identical growth rates experience different outcomes due to stochastic factors. Explain the implications of these findings.**
+   - Due to randomness, populations with the same initial conditions can diverge significantly over time. This demonstrates how chance events can lead to different outcomes, including extinction for one population and growth for another.
+
+**4. What can this stochastic model tell us about extinction risk and population size?**
+   - Smaller populations are more vulnerable to extinction in stochastic models because random negative growth events can have a greater impact.
+
+**5. What can this stochastic model tell us about extinction risk and environmental variation?**
+   - As environmental variability (represented by increased stochasticity) increases, populations face a higher risk of extinction due to more frequent poor years.
+
+---
+
+## Teaching Tips
+
+- **Stochasticity:**  
+   Ensure students understand that stochasticity represents environmental and biological variability. Highlight how the normal distribution used to model $r_m$ generates different growth rates across generations.
+   
+- **Excel Formulae:**  
+   Some students may struggle with Excel formula syntax, particularly in different language settings. Double-check that students are using the correct formula (e.g., commas vs. semicolons).
+
+- **R Simulations:**  
+   Not all students may be familiar with R, so you may need to provide extra guidance on running the simulations and interpreting results.
+
+- **Comparing Models:**  
+   Emphasize the importance of comparing deterministic and stochastic models using visual charts. This comparison helps students see how randomness impacts long-term population trends.
+
+---
+
+## Common Pitfalls
+
+- **Formula Errors in Excel:**  
+   Ensure students understand how to use the Excel function to generate stochastic $r_m$ values. Remind them that Excel might expect different delimiters (commas or semicolons).
+   
+- **Misinterpreting Stochasticity:**  
+   Students may confuse the effects of stochasticity with systematic trends. Clarify that stochasticity introduces random fluctuations that are just as likely to be negative as positive, not directional trends.
+
+- **R Familiarity:**  
+   If students are unfamiliar with R, they may find the simulation code challenging. Ensure they don’t modify critical parts of the script unnecessarily. 
+
+```

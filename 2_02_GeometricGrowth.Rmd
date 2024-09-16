@@ -1,46 +1,100 @@
 # Geometric growth
 
+## Introduction
+
 This exercise explores the geometric growth model in discrete time steps, focusing on how different values of $\lambda$ affect population dynamics. It aims to develop students’ understanding of growth models, the effects of log transformations, and the limitations of simple models.
 
-## Key Concepts:
+## Key Concepts
+
 - Geometric growth assumes constant $\lambda$, leading to exponential growth or decline.
 - Plotting log-transformed population sizes allows easier visualisation of trends.
 - Limitations of the model include the assumption of infinite resources and lack of environmental constraints.
 
-## Model Answers
+## Learning outcomes
 
-### 1. **How does the population size change with time for different values of $\lambda$?**
+- Competence in using Excel formulae for mathematical modeling.
+- Understanding the the parameters of exponential/geometric growth.
+- Competence in using mathematical models in Excel to strengthen own understanding of biological processes.
+- Awareness of rearranging of mathematical formulae to produce different forms of models.
+- Knowing that the slope of the $ln(N_t)$ vs. $t$ relationship can tell you about population growth rate (it is $ln(\lambda)$).
+
+## Activity Overview
+
+### Time: 40-45 minutes
+1. **Introduction (5 min)**: Explain the activity, including the basic concepts of geometric growth
+2. **Main Activity (25 min)**: Students complete the Excel sheet and answer the questions provided.
+3. **Discussion and Wrap-Up (5-10 min)**: Run throught the questions and discuss answers.
+
+## Instructions for Facilitating
+
+### Excel Setup
+1. **Download File**: Ensure students have downloaded the provided Excel file [`GeometricGrowth.xlsx`](https://www.dropbox.com/s/xxx05sckvop5i52/GeometricGrowth.xlsx?dl=1).
+2. **Initial Setup**: 
+   - Start with an initial population size ($N_0$) of 10 and a growth rate ($\lambda$) of 1.1.
+   - Use Excel formulas to calculate population size at each time step from $t = 1$ to $t = 20$.
+   - Example formula: `=B8*$F$8`, where `B8` is the population at time `t` and `$F$8` is the growth rate $\lambda$.
+   
+3. **Creating Charts**: 
+   - Plot the population size against time using an x-y scatterplot. 
+   - Create a second plot using the natural logarithm of population size (`LN()`) on the y-axis.
+
+### Key Observations
+- **Plot Comparison**: The linear plot will show exponential (curved) growth, while the log-transformed plot should display a straight line, where the slope represents $ln(\lambda)$.
+- **Altering $\lambda$**: As students experiment with different values for $\lambda$ (e.g., 0.8, 1, 1.2), they will observe changes in the steepness of the population growth curve. A $\lambda$ of 1 results in no population growth, while $\lambda$ values below 1 indicate population decline.
+- **Trendline Slope**: Adding a trendline to the log-transformed graph and determining its slope will give $ln(\lambda)$. Students can use this slope to compute $\lambda$ using the Excel function `EXP()`.
+
+### Geometric Series Calculation
+- **Geometric Series Formula**: Introduce students to the geometric series formula, $N_t = N_0 \lambda^t$. This formula provides a shortcut to calculate population size at any given time without stepping through each time point manually.
+- **Application**: Use this formula to calculate population size for $t = 5$ and compare it to earlier manual calculations. Then extend it to predict population size after a large number of generations (e.g., $t = 900$).
+- **Where does that equation come from?**
+
+As a starting point, consider this equation: $N_{t+1} = \lambda N_t$.
+
+If we want to calculate $N_{t+2}$, we would need to plug in $N_{t+1}$ instead of $N_t$: $N_{t+2} = \lambda N_{t+1}$, 
+
+and, since we know that $N_{t+1} = \lambda N_t$,: $N_{t+2} = \lambda   \lambda N_t$.
+
+Similarly, if we wanted to calculate $N_{t+2}$, we'd end up with:  $N_{t+3} = \lambda \lambda \lambda N_t$.
+
+This can be simplified by raising $\lambda$ to a suitable power, and using the starting population at time = 0, $N_0$:
+
+**eqn. 9.**  $N_{t} = \lambda ^tN_0$.
+
+This should be familiar to those of you that did (or remember!) the concept of geometric series which you have likely covered in earlier maths classes.
+
+
+## Questions & Model Answers
+
+**1. How does the population size change with time for different values of $\lambda$?**
+
+The growth rate $\lambda$ drives the population’s exponential increase or decrease.
+
 - For $\lambda > 1$, the population size increases exponentially.
 - For $\lambda = 1$, the population size remains constant.
 - For $\lambda < 1$, the population size decreases exponentially.
 
-**Explanation**: The growth rate $\lambda$ drives the population’s exponential increase or decrease. $\lambda = 1$ represents equilibrium.
 
-### 2. **Why is it useful to plot log-transformed population size?**
-- Log-transformation converts exponential growth into a straight line, simplifying the interpretation of growth rates.
+**2. Why is it useful to plot log-transformed population size?**
 
-**Explanation**: Log-transformations linearise exponential relationships, allowing for easier interpretation of the growth rate, as the slope corresponds to $\log(\lambda)$.
+Log-transformations linearise exponential relationships. Therefore, the transformation converts the exponential growth trajectory into a straight line allowing for easier interpretation of the growth rate, as the slope corresponds to $\log(\lambda)$. You can get the $\lambda$ value by taking the exponential of $\log(\lambda)$ (in Excel `=EXP()`).
 
-### 3. **What are the limitations of the geometric growth model?**
-- The model assumes infinite resources, no competition, or environmental constraints, making it unrealistic for real-world populations.
+**3. What are the limitations of the geometric growth model?**
+- The model assumes infinite resources, no competition, or environmental constraints, making it unrealistic for real-world populations. Real-world populations face density-dependent factors and environmental stochasticity, which the geometric model does not account for.
 
-**Explanation**: Real-world populations face density-dependent factors and environmental stochasticity, which the geometric model does not account for.
-
-### 4. **What would happen if we introduced a carrying capacity to this model?**
+**4. What would happen if we introduced a carrying capacity to this model?**
 - The population would follow a logistic growth model, where growth slows as the population nears the carrying capacity.
 
-**Explanation**: A carrying capacity introduces limits to population size, stabilising it after an initial period of exponential growth.
 
 ## Teaching Tips:
 
-1. **Excel Guidance**: Ensure students understand how to perform log transformations and add trendlines.
-2. **Conceptual Understanding**: Clarify the assumptions of the model (no immigration, emigration, or environmental changes).
-3. **Real-World Application**: Use examples like invasive species or epidemics to explain how geometric growth can be observed in certain scenarios.
-4. **Class Discussion**: Engage students in discussions about how the model could be adapted to account for real-world variables like environmental factors or density dependence.
+- **Reinforce Mathematical Understanding**: Emphasize how rearranging and transforming formulas, such as logarithmic transformations, are useful tools for interpreting population growth models.
+- **Visual Learning**: Encourage students to compare the linear and log-transformed plots side by side to see how exponential growth behaves differently in each case.
+- **Connect to Ecology**: When discussing real-world applications, introduce concepts like carrying capacity and logistic growth to contrast with geometric growth.
+-. **Model limitations**: Engage students in discussions about how the model could be adapted to account for real-world variables like environmental factors or density dependence.
 
-### Additional Resources
+## Additional Resources
 
-- **Excel Tutorial**: If students are unfamiliar with Excel's log transformation and trendline features, provide a walkthrough.
+- **Excel Tutorial**: If students are unfamiliar with Excel's log transformation and trendline features, provide a walkthrough. They should use natural log (`=LN`).
 
 
 

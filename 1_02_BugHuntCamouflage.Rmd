@@ -1,3 +1,87 @@
-# Bug hunt camouflage (Netlogo)
+# Bug Hunt Camouflage (NetLogo)
 
-Coming soon...
+## Introduction 
+
+This exercise demonstrates adaptive evolution and natural selection using a predator-prey simulation in NetLogo. Students take on the role of a predator (a bird) and hunt bugs to observe how the bug population evolves in response to selective pressures. The key concept is the relationship between camouflage and predator efficiency, mirroring real-world natural selection.
+
+
+## Key Concepts
+
+- **Natural Selection**: The process where individuals with traits better suited to the environment survive and reproduce, passing those traits to the next generation.
+- **Adaptive Evolution**: Changes in populations over time that enhance survival and reproduction in a given environment.
+- **Selection Pressure**: The environmental factors that influence which individuals survive and reproduce.
+- **Heritability**: A measure of the fraction of phenotype that can be attributed to genetic variation.
+
+
+## Learning Outcomes
+
+- Understanding adaptive evolution via natural selection.
+- Understanding how fitness depends on the environment.
+- Understanding the terms adaptation, selection, selection pressure, heritability.
+
+## Activity Overview
+
+### Time: 45 minutes
+1. **Introduction (5 min)**: Explain the activity, including the basic concepts of natural selection and camouflage.
+2. **Simulation Setup (5-10 min)**: Students log into NetLogo and load the Bug Hunt Camouflage model.
+3. **Main Activity (25 min)**: Students play the role of a predator, hunting bugs and observing how the bug population evolves over time. Students pause and analyse the graphs to assess hunting efficiency and bug color evolution.
+4. **Discussion and Wrap-Up (5-10 min)**: Reflect on how the simulation demonstrates key concepts of selection, adaptation, and evolution.
+
+
+## Instructions for Facilitating
+
+### Simulation Setup
+1. Guide students to open NetLogo and find the "Bug Hunt Camouflage" model.  
+   * **Tip**: If using UCloud, ensure students are familiar with the platform steps outlined in the task description.
+2. Explain the interface: sliders control population and mutation rates, while the graphs provide real-time feedback on bug traits and hunting efficiency.
+
+### Running the Simulation
+- Students begin by adjusting the population sise to 30 bugs using the "carrying-capacity" slider.
+- Students click "set up", then start the simulation with "Go". They then hunt bugs by clicking on them. Encourage them to hunt quickly to avoid bias in their selection process.
+- Students observe how their hunting impacts the bug population, paying attention to changes in color traits (hue, saturation, brightness) and hunting efficiency (the slope of the graph showing number of bugs caught) over time.
+- After 5 minutes of hunting, students should pause the simulation and examine the graphs.
+     1. **Bugs Caught vs. Time**: Steep slopes indicate high hunting efficiency.
+     2. **Color Distribution**: This will show the shift in color traits due to selective pressures from hunting.
+- Encourage students to reflect on how the bug population becomes better adapted to their environment over successive generations.
+- After about 10 minutes, get them to pause (by pressing "Go") and change the background picture.
+
+## Questions & Model Answers
+
+**1. What happens to the average color of the bug population with time as you hunt?**  
+Over time, the average color of the bug population tends to shift towards colors that blend in better with the environment. As you hunt, bugs with less effective camouflage are caught more easily, while those that are harder to spot survive and pass on their traits to their offspring. This results in a gradual change in the population's average color.
+
+**2. What happens to your hunting efficiency?**  
+Initially, hunting efficiency is high, as the bugs are easy to spot. However, as the population evolves and the bugs’ colors become better camouflaged with the environment, hunting efficiency decreases. This reflects natural selection, where better-adapted individuals (bugs) are harder to catch.
+
+**3. Would you say that the bug population becomes worse or better adapted to their environment?**  
+The bug population becomes better adapted to their environment. As selective pressure is applied (through predation), bugs with colors that offer better camouflage survive and reproduce, increasing the frequency of these adaptive traits in the population.
+
+**4. Can you explain how this happens?**  
+This is a result of natural selection. Bugs with colors that provide better camouflage have a higher chance of survival because they are harder to detect by predators. These surviving bugs reproduce, passing on their coloration traits to their offspring. Over generations, the population's coloration shifts to match the environment better, increasing the population’s overall fitness in that habitat.
+
+**5. After simulating in one environment (e.g. poppy field) for a few minutes, pause then switch to another environment. Are the bugs now well- or poorly-adapted to their new environment?**  
+When the environment is changed, the bugs are usually poorly adapted to the new environment initially. The traits that made them well-camouflaged in the previous environment may now stand out, making them more visible to predators. This change highlights the importance of the environment in determining what traits are beneficial for survival.
+
+**6. Do the genotypes of individuals change (e.g., with individual age)?**  No, the genotypes of individual bugs do not change as they age. The genotypes are fixed at birth and are inherited from their parents. However, the population's genotype distribution can change over time due to natural selection favoring certain traits (such as better camouflage) and through mutations in the offspring.
+
+**7. Increasing the “max-mutation-step” makes bug offspring less like their parents. How do you think this will influence the speed of adaptation of the bugs?**  
+Increasing the mutation step introduces greater genetic variability into the population. This can speed up adaptation by providing more opportunities for new beneficial traits to arise. However, it can also produce non-adaptive traits that may decrease the fitness of individuals. The overall effect on adaptation speed will depend on how many of the mutations are beneficial in the given environment.
+
+## Teaching Tips
+
+- **Concept Reinforcement**: Frequently remind students of the evolutionary principles at play. Point out how the simulation reflects real-world dynamics, such as how organisms evolve to evade predators or increase predation efficiency.
+- **Model Flexibility**: Depending on student progress, you may encourage them to modify other sliders (e.g., mutation rate) to explore more complex evolutionary dynamics.
+- **Connecting Theory to Simulation**: Help students relate their observations in the simulation to theoretical principles, such as the definition of evolution as "change in heritable traits over generations."
+
+
+## Common Pitfalls
+
+- **Misinterpreting Graphs**: Students may struggle to understand the relationship between color changes and hunting efficiency. Emphasise that selection pressure favors bugs that are harder to see, and this trait is passed on to future generations.
+- **Technical Issues with NetLogo**: Ensure students are comfortable with the UCloud setup or have downloaded NetLogo in advance.
+
+
+
+
+
+## Additional Resources
+- Read more about the model here: [NetLogo Bug Hunt Camouflage](http://ccl.northwestern.edu/netlogo/models/BugHuntCamouflage).
