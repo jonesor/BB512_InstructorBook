@@ -1,7 +1,5 @@
 # Deeper into logistic growth
 
-# Instructor Notes: Deeper into Logistic Growth
-
 This exercise helps students dive deeper into understanding the relationship between exponential (or geometric) and logistic growth models and how mathematical models can be explored from different perspectives. By experimenting with the Excel worksheet, students will observe how the logistic growth model can be modified and visualized in various ways. The exercise is designed to strengthen students’ competence in using Excel for mathematical modeling and to enhance their understanding of population dynamics.
 
 ## Key Concepts
@@ -23,8 +21,6 @@ $$ \frac{\delta N}{\delta t} = r_m N $$
 
 ## Learning Outcomes
 
-Students will achieve the following learning outcomes:
-
 - Increased competence in using Excel formulae for mathematical modeling.
 - Understanding the relationship between exponential and logistic growth models.
 - Ability to modify mathematical models to explore different phenomena, such as time lags.
@@ -34,6 +30,7 @@ Students will achieve the following learning outcomes:
 ## Activity Overview
 
 Suggested timings:
+
 - **5 minutes**: Introduce the exercise and explain the relationship between exponential and logistic growth models.
 - **10 minutes**: Students explore different views of the logistic growth model in Excel.
 - **20-30 minutes**: Students experiment with $r_m$, $K$, and the time lag in the Excel worksheet to observe changes in the population dynamics.
@@ -65,7 +62,7 @@ Students will answer the following questions:
 
 ## Teaching Tips
 
-- **Clarify the Relationship Between Exponential and Logistic Growth**: Make sure students understand how the logistic model becomes the exponential model when $K$ is removed.
+- **Clarify the Relationship Between Exponential and Logistic Growth**: Make sure students understand how the logistic model becomes the exponential model when $K$ is removed (i.e. when it is infinity).
 - **Highlight the Role of $r_m$**: Encourage students to experiment with different $r_m$ values to understand the transition from stable growth to chaotic dynamics.
 - **Time Lags and Cyclic Behavior**: Some students may struggle to grasp how time lags cause population cycles. Show them step-by-step how changing the reference population size (e.g., $N_{t-1}$) affects the dynamics.
 - **Connect to Real-World Applications**: Discuss how these models apply to real-world populations, such as predator-prey systems or species with delayed reproductive responses.
