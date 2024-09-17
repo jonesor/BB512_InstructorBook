@@ -1,3 +1,94 @@
 # Deeper into logistic growth
 
-Coming soon...
+# Instructor Notes: Deeper into Logistic Growth
+
+This exercise helps students dive deeper into understanding the relationship between exponential (or geometric) and logistic growth models and how mathematical models can be explored from different perspectives. By experimenting with the Excel worksheet, students will observe how the logistic growth model can be modified and visualized in various ways. The exercise is designed to strengthen students’ competence in using Excel for mathematical modeling and to enhance their understanding of population dynamics.
+
+## Key Concepts
+
+This exercise covers the following key concepts:
+
+- **Exponential Growth Model**: A simple population growth model where the population grows continuously without any limiting factors.
+- **Logistic Growth Model**: A model that accounts for environmental constraints, introducing a carrying capacity ($K$) that limits population growth.
+- **Carrying Capacity ($K$)**: The maximum population size that an environment can sustain long-term.
+- **Intrinsic Rate of Increase ($r_m$)**: The maximum per capita population growth rate under ideal conditions.
+- **Time Lag in Population Growth**: A delay in how population size at a previous time step influences current growth dynamics, which can lead to cyclic behavior.
+- **Per Capita Growth Rate ($r$)**: The rate of population growth per individual as a function of population size.
+  
+Mathematically, the logistic growth equation is:
+$$ \frac{\delta N}{\delta t} = r_m N \left(1 - \frac{N}{K}\right) $$
+
+If $K$ is set to infinity, the logistic model reduces to the exponential growth model:
+$$ \frac{\delta N}{\delta t} = r_m N $$
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Increased competence in using Excel formulae for mathematical modeling.
+- Understanding the relationship between exponential and logistic growth models.
+- Ability to modify mathematical models to explore different phenomena, such as time lags.
+- Understanding how and why model outputs can be explored from different perspectives.
+- Practical skills in using Excel to strengthen their understanding of biological processes, specifically population dynamics.
+
+## Activity Overview
+
+Suggested timings:
+- **5 minutes**: Introduce the exercise and explain the relationship between exponential and logistic growth models.
+- **10 minutes**: Students explore different views of the logistic growth model in Excel.
+- **20-30 minutes**: Students experiment with $r_m$, $K$, and the time lag in the Excel worksheet to observe changes in the population dynamics.
+- **5 minutes**: Wrap up by discussing how exponential growth differs from logistic growth and how time lags affect population dynamics.
+
+## Instructions for Facilitating
+
+1. Start by explaining the connection between exponential and logistic growth models, using the example of $K$ approaching infinity to show how the logistic model reduces to the geometric growth equation.
+2. Walk students through the Excel worksheet, particularly focusing on the `BasicLogistic` tab where they can manipulate $r_m$ and $K$ values.
+3. Guide students through the analysis of **Figure 1** (population size over time), **Figure 2** (per capita growth rate vs. population size), and **Figure 3** (population growth rate vs. population size).
+4. Encourage students to predict population dynamics as they adjust parameters, such as $r_m$ and $K$.
+5. Introduce the concept of time lags and direct students to the `TimeLag` tab to observe how introducing a delay in population feedback influences the system’s dynamics.
+
+## Questions & Model Answers
+
+Students will answer the following questions:
+
+1. **What dynamics do you observe in Figure 1 as you change $r_m$?**
+   - With small $r_m$ values, the population grows smoothly and stabilizes at $K$. As $r_m$ increases, the system shows oscillations, damped oscillations, and eventually chaotic or unpredictable behavior.
+   
+2. **What do you notice about the intercepts in Figure 2?**
+   - The intercept on the x-axis occurs at $K$, while the intercept on the y-axis depends on $r_m$. As $K$ and $r_m$ change, the shape of the graph shifts, indicating changes in how population size affects per capita growth rate.
+
+3. **How does adding a time lag affect the population dynamics?**
+   - Adding a time lag can introduce cycling into the system, even when the intrinsic growth rate ($r_m$) is small. This shows that delayed responses in population feedback can lead to fluctuations in population size, despite stable conditions.
+
+4. **How do the figures for exponential growth differ from those for logistic growth?**
+   - For exponential growth, population size increases without any upper limit in Figure 1, the per capita growth rate remains constant in Figure 2, and the population growth rate rises continuously with population size in Figure 3. In contrast, logistic growth levels off as the population approaches $K$.
+
+## Teaching Tips
+
+- **Clarify the Relationship Between Exponential and Logistic Growth**: Make sure students understand how the logistic model becomes the exponential model when $K$ is removed.
+- **Highlight the Role of $r_m$**: Encourage students to experiment with different $r_m$ values to understand the transition from stable growth to chaotic dynamics.
+- **Time Lags and Cyclic Behavior**: Some students may struggle to grasp how time lags cause population cycles. Show them step-by-step how changing the reference population size (e.g., $N_{t-1}$) affects the dynamics.
+- **Connect to Real-World Applications**: Discuss how these models apply to real-world populations, such as predator-prey systems or species with delayed reproductive responses.
+
+## Common Pitfalls
+
+- **Overlooking the Impact of Time Lags**: Students might expect that small changes in the model have minimal effects. Emphasize that even slight time delays can drastically alter population dynamics.
+- **Misinterpreting Figure 2**: Some students may find it confusing that the per capita growth rate decreases as population size approaches $K$. Reinforce the concept that as resources become limited, growth slows.
+- **Excel Formula Errors**: Students may struggle with modifying Excel formulas, especially when introducing time lags. Ensure they understand how to correctly reference previous population sizes.
+
+## Concrete Real-World Examples
+
+### 1. **Insect Population Control (e.g., Mosquitoes)**
+   - **Scenario**: Mosquito populations often experience delayed responses to environmental changes, such as seasonal rainfall.
+   - **Time Lag**: Adding a time lag to the logistic growth model demonstrates how insect populations might cyclically fluctuate before stabilizing, helping to predict pest outbreaks.
+
+### 2. **Conservation of Slow-Reproducing Species (e.g., Elephants)**
+   - **Scenario**: For species with long gestation periods, the impact of population growth may be delayed.
+   - **Application of Time Lag**: Introducing time lags helps model how long-term population growth might respond to conservation efforts, showing periods of slow recovery followed by more rapid growth.
+
+### 3. **Fisheries Management**
+   - **Scenario**: Fish stocks often experience delayed population responses to overfishing or recovery efforts.
+   - **Time Lag in Growth Models**: Managers use time-lagged models to account for the slow recovery of fish populations, ensuring sustainable harvest rates.
+
+These examples help students understand how the logistic growth model, with or without time lags, can be applied to real-world population management and conservation challenges.
+
