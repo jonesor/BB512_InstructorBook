@@ -1,3 +1,97 @@
 # Basic logistic population growth
 
-Coming soon...
+## Introduction
+
+This exercise allows students to explore the logistic population growth model by manipulating parameters in an Excel spreadsheet and analyzing the resulting population dynamics. Students will apply the model to observe how population growth behaves under different conditions, deepening their understanding of ecological processes such as carrying capacity, population regulation, and deterministic chaos. The exercise will strengthen their ability to use Excel for modeling and analysis, while also helping them to grasp the mathematical principles behind population ecology and biological conservation.
+
+## Key Concepts
+
+The exercise involves the following key concepts:
+
+- **Logistic Growth Model**: A population growth model that accounts for environmental limitations, leading to a stabilization at the carrying capacity ($K$).
+- **Carrying Capacity ($K$)**: The maximum population size that an environment can support long-term, based on resources and other limiting factors.
+- **Intrinsic Rate of Increase ($r_m$)**: The maximum per capita growth rate under ideal conditions, which determines how fast a population grows.
+- **Deterministic Chaos**: A concept where slight changes in initial conditions can lead to drastically different outcomes, making long-term predictions challenging.
+  
+Mathematically, the logistic growth equation is given by:
+$$ N_{t+1} = N_{t} + r_{m} N_{t} \left(1 - \frac{N_{t}}{K}\right) $$
+
+This equation shows that as population size approaches the carrying capacity, the growth rate decreases until the population stabilizes at $K$.
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Increased competence in using Excel for mathematical modeling of biological processes.
+- Understanding the parameters of the logistic population growth model, particularly how $r_m$ and $K$ affect population dynamics.
+- Ability to explain how population dynamics vary with changes in the population growth rate, from stable to chaotic dynamics.
+- Understanding the concept of deterministic chaos and its difference from randomness.
+- Practical experience using mathematical models in ecology and conservation.
+
+## Activity Overview
+
+Suggested timings:
+- **5 minutes**: Introduce the exercise and demonstrate how to use the Excel spreadsheet.
+- **5 minutes**: Students familiarize themselves with the Excel sheet and instructions.
+- **20-30 minutes**: Students complete the exercise by experimenting with different parameter values and analyzing the graphs.
+- **5 minutes**: Wrap up by discussing the key findings and concepts.
+
+## Instructions for Facilitating
+
+1. Begin by introducing the logistic growth model and its relevance in ecology.
+2. Walk students through the Excel spreadsheet, highlighting the areas they will interact with (the pink block) and the three graphs.
+3. Encourage students to change the initial population size, growth rate ($r_m$), and carrying capacity ($K$) and observe the results on the graphs.
+4. Ask students to predict outcomes before modifying parameters, fostering engagement with the model’s underlying logic.
+5. Guide students through the additional questions to reinforce theoretical understanding.
+
+## Questions & Model Answers
+
+Students will answer the following questions:
+
+1. **What is the maximum population size?**
+   - Focus on comparing the maximum population size with the carrying capacity ($K$). Students should observe that when $r_m$ is around 1 or lower, the maximum population size matches $K$. For higher values of $r_m$ the population size can overshoot carrying capacity.
+   
+2. **What do you predict will happen if you increase $K$ to 300?**
+   - The population will adjust, and the new maximum population size will equal the increased $K$.
+   
+3. **What happens if you reduce $r_m$ to 0.4?**
+   - The time to reach the maximum population size will increase, as a lower growth rate slows down the population’s approach to $K$.
+
+4. **What happens if you set $r_m$ to 1.8?**
+   - The population will overshoot $K$ and oscillate around it with damped oscillations. The dynamics will show a period of fluctuation before stabilizing.
+
+5. **What do you observe when you set $r_m$ to 2.8 or higher?**
+   - The population will display chaotic dynamics, with irregular fluctuations around $K$. The system becomes harder to predict as $r_m$ increases beyond 2.57.
+
+## Teaching Tips
+
+- **Clarify the Concept of Carrying Capacity ($K$)**: Students may confuse carrying capacity with a fixed limit on growth rather than an equilibrium point.
+- **Demonstrate the Importance of $r_m$**: Encourage students to try different values of $r_m$ to understand the transition from stable growth to chaotic behavior.
+- **Excel Skills**: Some students may need assistance with basic Excel functions, particularly using formulas and interpreting graph outputs.
+- **Connect to Real-World Applications**: Relate the logistic model to real-world population management scenarios, such as pest control or endangered species conservation.
+
+## Common Pitfalls
+
+- **Misunderstanding Population Oscillations**: Students may assume that overshooting $K$ means the model is broken. Explain that oscillations are a natural result of high growth rates and density dependence.
+- **Confusion Between Chaos and Randomness**: Students might think chaotic dynamics are purely random. Emphasize that chaotic systems are deterministic but highly sensitive to initial conditions.
+- **Excel Formula Errors**: Watch for common Excel mistakes, such as incorrect cell references when entering formulas in the pink block.
+
+## Concrete Real-World Examples
+
+### 1. **Pest Control (e.g., Locusts)**
+   - **Scenario**: Locusts have a high growth rate and can quickly overrun an area during favorable conditions.
+   - **Logistic Model**: Locusts overshoot the carrying capacity, leading to resource depletion and population crashes. The model helps predict outbreaks and plan timely interventions.
+   
+### 2. **Endangered Species Conservation (e.g., California Condor)**
+   - **Scenario**: Conservation efforts focus on increasing populations without exceeding $K$.
+   - **Logistic Model**: The model helps determine sustainable population levels, ensuring growth without resource depletion.
+
+### 3. **Fisheries Management (e.g., Atlantic Cod)**
+   - **Scenario**: Overfishing can drive populations below the sustainable level.
+   - **Logistic Model**: Managers use the model to balance fish harvest with population growth, ensuring long-term viability.
+
+### 4. **Invasive Species Management (e.g., Cane Toads in Australia)**
+   - **Scenario**: Cane toads expand rapidly without natural predators, surpassing $K$ and impacting ecosystems.
+   - **Logistic Model**: Predicts rapid expansion and highlights the need for quick control measures to manage invasive populations.
+
+By using these real-world examples, students can see how the logistic growth model is a practical tool for predicting and managing population dynamics in various environmental and conservation contexts.
