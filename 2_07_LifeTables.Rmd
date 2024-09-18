@@ -1,3 +1,91 @@
-# Life tables and survivorship types
+# Life Tables and Survivorship Types
 
-Coming soon...
+## Introduction
+
+This exercise allows students to **work with life tables** and **explore survivorship curves** by applying **Excel-based modeling techniques**. It reinforces concepts of **life expectancy, mortality patterns**, and **population dynamics**. Students will learn how to calculate **survivorship ($l_x$), survival probabilities ($g_x$),** and other critical life table metrics, as well as how to construct and interpret **survivorship curves (Type I, II, III)**. These skills are relevant for understanding population biology, demography, and ecology, with applications in **conservation biology**, **public health**, and **policy-making**.
+
+## Key Concepts
+
+The exercise covers the following key concepts:
+
+- **Life Table Calculations**: Life tables provide a systematic approach to tracking the survival and reproduction of individuals within a cohort, revealing age-specific risks, life expectancy, and population growth rates.
+- **Survivorship ($l_x$)**: The probability of surviving to a particular age, calculated from the proportion of individuals still alive.
+- **Survivorship Types**:
+  - **Type I**: Low early-life mortality, high mortality later (e.g., humans).
+  - **Type II**: Constant mortality rate across all ages (e.g., birds).
+  - **Type III**: High early-life mortality, low mortality later (e.g., fish, plants).
+- **Survival Probability ($g_x$)**: The probability of surviving the current age class, calculated as $g_x = l_{x+1}/l_x$.
+- **Force of Selection**: The concept that events earlier in life (reproduction, mortality) have a larger effect on population growth ($R_0$, $r$) than later-life events.
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Increased competence in using Excel formulae for mathematical modeling.
+- Competence in using mathematical models in Excel to strengthen understanding of biological processes.
+- Understanding how life tables are calculated.
+- Understanding the three types of survivorship curves and how they relate to mortality and survival probabilities.
+- Understanding the decline in the "force of selection" and how it impacts population growth.
+
+## Activity Overview
+
+Suggested timings:
+
+- **5 minutes**: Introduce the exercise and background concepts.
+- **10 minutes**: Students read instructions and download Excel file.
+- **20-30 minutes**: Students complete the life table and survivorship curve tasks.
+- **5 minutes**: Wrap up and discuss key findings.
+
+## Instructions for Facilitating
+
+1. Introduce life tables, explaining their relevance in population biology and mortality studies.
+2. Guide students through downloading the Excel file and briefly explain the worksheets: **Life table**, **Survivorship Curves**, and **Gotelli Table 3.1 example**.
+3. Explain survivorship ($l_x$), survival probability ($g_x$), and probability of death ($q_x$), emphasizing their importance in understanding population dynamics.
+4. Encourage students to experiment with altering reproduction rates to observe the **force of selection**.
+5. Facilitate discussions on survivorship curves, ensuring students understand the differences between Types I, II, and III.
+
+## Questions & Model Answers
+
+
+1. **What are the three main types of survivorship curves, and which organisms typically exhibit each type?**
+
+Type I curves indicate high survival in early life and high mortality at older ages (e.g., humans and other long-lived mammals). Type II curves show constant mortality throughout life (e.g., many birds). Type III curves represent high juvenile mortality with survivors living long lives (e.g., marine fish, plants).
+
+2. **What does a net reproductive rate (R0) of less than 1 signify for a population?**
+
+An R0 of less than 1 indicates that, on average, each individual in the population is replaced by fewer than one offspring, suggesting that the population is declining over time.
+ 
+3. **How does the shape of a survivorship curve reflect trade-offs in life history strategies, typically? **
+
+Type I curves suggest investment in offspring with low juvenile mortality, typical in species with fewer offspring and greater parental care. Type III curves reflect species that produce many offspring but provide little care, leading to high early mortality.
+
+4. **How is survivorship ($l_x$) different from survival probability ($g_x$)?**
+
+Survivorship ($l_x$) and survival probability ($g_x$) are related concepts in life tables, but they measure different aspects of survival in a population.
+
+- **Survivorship ($l_x$)**: This is the proportion of individuals that survive from birth (or the start of an age class) to a specific age class $x$. It provides a cumulative measure of survival across multiple age classes. For example, if $l_0 = 1$ (all individuals alive at birth), then $l_1$ might be 0.8 (indicating that 80% of individuals survive to the first age class). $l_x$ declines with increasing age as more individuals die.
+
+- **Survival Probability ($g_x$)**: This is the probability that an individual who is alive at age class $x$ will survive to age class $x+1$. It measures survival over a single time step, unlike survivorship, which is cumulative. For example, if 80% of individuals survive from age 1 to age 2, then $g_1 = 0.8$.
+
+In short, **survivorship** tracks the cumulative proportion of individuals surviving to a given age class, while **survival probability** reflects the likelihood of surviving just one more time step.
+
+5. **How does altering reproduction or survival/mortality at different ages affect $R_0$ and population growth rate**
+
+Changes early in life have a larger impact on $R_0$ and population growth rate than changes later in life, due to the declining force of selection.
+   
+## Teaching Tips
+
+To help students successfully complete the exercise, consider these teaching tips:
+
+- **Excel Skills**: Ensure students understand the use of the `$` symbol for absolute references in Excel formulae. Demonstrate how to drag formulas to fill columns efficiently.
+- **Understanding Survivorship Curves**: Explain the importance of log-transforming survivorship data ($\ln(l_x)$) to reveal the distinct shapes of Type I, II, and III curves. Encourage students to relate survivorship curves to real-life biological strategies (e.g., high parental care vs. high offspring production).
+- **Force of Selection Experiment**: Emphasize the biological significance of reproductive changes at different life stages. Guide students in interpreting graphs of age vs. change in $R_0$ to observe how early-life events have more impact on population growth.
+
+## Common Pitfalls
+
+Watch out for these common pitfalls:
+
+- **Confusing $l_x$ and $g_x$**: Students may confuse **survivorship** ($l_x$) with **age-specific survival probability** ($g_x$). Reinforce that $l_x$ refers to survival up to an age, while $g_x$ is the probability of surviving from one age to the next.
+- **Excel Formula Errors**: Students may forget to lock cells when copying formulas (using `$` in Excel). Remind them to check their formulas carefully.
+- **Misinterpreting Survivorship Curves**: Students might struggle to distinguish between the three survivorship types. Ensure they understand that Type I has a convex curve, Type II a straight line, and Type III a concave curve on a log scale.
+

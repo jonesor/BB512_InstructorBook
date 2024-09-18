@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Deeper into logistic growth | BB512 - Instructor Resources</title>
+  <title>11 Instructor Notes: Matrix Population Modelling Exercise | BB512 - Instructor Resources</title>
   <meta name="description" content="Instructors Resources for BB512 at the Biology Department, University of Southern Denmark" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Deeper into logistic growth | BB512 - Instructor Resources" />
+  <meta property="og:title" content="11 Instructor Notes: Matrix Population Modelling Exercise | BB512 - Instructor Resources" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Instructors Resources for BB512 at the Biology Department, University of Southern Denmark" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Deeper into logistic growth | BB512 - Instructor Resources" />
+  <meta name="twitter:title" content="11 Instructor Notes: Matrix Population Modelling Exercise | BB512 - Instructor Resources" />
   
   <meta name="twitter:description" content="Instructors Resources for BB512 at the Biology Department, University of Southern Denmark" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="basic-logistic-population-growth.html"/>
-<link rel="next" href="life-tables-and-survivorship-types.html"/>
+<link rel="prev" href="matrix-population-modelling.html"/>
+<link rel="next" href="pre--and-post-reproduction-census.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -306,119 +306,89 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="deeper-into-logistic-growth" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">8</span> Deeper into logistic growth<a href="deeper-into-logistic-growth.html#deeper-into-logistic-growth" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This exercise helps students dive deeper into understanding the relationship between exponential (or geometric) and logistic growth models and how mathematical models can be explored from different perspectives. By experimenting with the Excel worksheet, students will observe how the logistic growth model can be modified and visualized in various ways. The exercise is designed to strengthen students’ competence in using Excel for mathematical modeling and to enhance their understanding of population dynamics.</p>
-<div id="key-concepts-6" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Key Concepts<a href="deeper-into-logistic-growth.html#key-concepts-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This exercise covers the following key concepts:</p>
-<ul>
-<li><strong>Exponential Growth Model</strong>: A simple population growth model where the population grows continuously without any limiting factors.</li>
-<li><strong>Logistic Growth Model</strong>: A model that accounts for environmental constraints, introducing a carrying capacity (<span class="math inline">\(K\)</span>) that limits population growth.</li>
-<li><strong>Carrying Capacity (<span class="math inline">\(K\)</span>)</strong>: The maximum population size that an environment can sustain long-term.</li>
-<li><strong>Intrinsic Rate of Increase (<span class="math inline">\(r_m\)</span>)</strong>: The maximum per capita population growth rate under ideal conditions.</li>
-<li><strong>Time Lag in Population Growth</strong>: A delay in how population size at a previous time step influences current growth dynamics, which can lead to cyclic behavior.</li>
-<li><strong>Per Capita Growth Rate (<span class="math inline">\(r\)</span>)</strong>: The rate of population growth per individual as a function of population size.</li>
-</ul>
-<p>Mathematically, the logistic growth equation is:
-<span class="math display">\[ \frac{\delta N}{\delta t} = r_m N \left(1 - \frac{N}{K}\right) \]</span></p>
-<p>If <span class="math inline">\(K\)</span> is set to infinity, the logistic model reduces to the exponential growth model:
-<span class="math display">\[ \frac{\delta N}{\delta t} = r_m N \]</span></p>
+<div id="instructor-notes-matrix-population-modelling-exercise" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> Instructor Notes: Matrix Population Modelling Exercise<a href="instructor-notes-matrix-population-modelling-exercise.html#instructor-notes-matrix-population-modelling-exercise" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-7" class="section level3 hasAnchor" number="11.0.1">
+<h3><span class="header-section-number">11.0.1</span> Introduction<a href="instructor-notes-matrix-population-modelling-exercise.html#introduction-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This exercise introduces students to <strong>matrix population models</strong>, which are vital in population ecology for studying structured populations. Unlike simple models, these account for variation in life stages (e.g., seedling, juvenile, adult) by using transition matrices to represent relationships between life stages and transitions over time. The practical involves building life-cycle diagrams, converting them into matrix models, and using <strong>R</strong> to simulate population projections, calculate population growth rates (<span class="math inline">\(\lambda\)</span>), and explore <strong>elasticity</strong> and <strong>LTRE</strong> (life table response experiments).</p>
+<p>This exercise equips students with the ability to construct and analyze matrix population models, understand demographic impacts on populations, and perform simulations to address management and conservation questions.</p>
 </div>
-<div id="learning-outcomes-6" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Learning Outcomes<a href="deeper-into-logistic-growth.html#learning-outcomes-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="key-concepts-8" class="section level3 hasAnchor" number="11.0.2">
+<h3><span class="header-section-number">11.0.2</span> Key Concepts<a href="instructor-notes-matrix-population-modelling-exercise.html#key-concepts-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>Increased competence in using Excel formulae for mathematical modeling.</li>
-<li>Understanding the relationship between exponential and logistic growth models.</li>
-<li>Ability to modify mathematical models to explore different phenomena, such as time lags.</li>
-<li>Understanding how and why model outputs can be explored from different perspectives.</li>
-<li>Practical skills in using Excel to strengthen their understanding of biological processes, specifically population dynamics.</li>
+<li><strong>Matrix Population Models</strong>: Frameworks for studying populations with distinct life stages, using transition matrices for survival and fecundity.</li>
+<li><strong>Population Growth Rate (<span class="math inline">\(\lambda\)</span>)</strong>: The dominant eigenvalue of the matrix, representing long-term population growth or decline.</li>
+<li><strong>Elasticity Analysis</strong>: Measures the sensitivity of population growth to changes in vital rates, helping identify key transitions in a species’ life cycle for conservation or management.</li>
+<li><strong>Life Table Response Experiment (LTRE)</strong>: A method of running “in silico” experiments by modifying matrix elements to predict effects on population dynamics.</li>
 </ul>
 </div>
-<div id="activity-overview-6" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Activity Overview<a href="deeper-into-logistic-growth.html#activity-overview-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Suggested timings:</p>
-<ul>
-<li><strong>5 minutes</strong>: Introduce the exercise and explain the relationship between exponential and logistic growth models.</li>
-<li><strong>10 minutes</strong>: Students explore different views of the logistic growth model in Excel.</li>
-<li><strong>20-30 minutes</strong>: Students experiment with <span class="math inline">\(r_m\)</span>, <span class="math inline">\(K\)</span>, and the time lag in the Excel worksheet to observe changes in the population dynamics.</li>
-<li><strong>5 minutes</strong>: Wrap up by discussing how exponential growth differs from logistic growth and how time lags affect population dynamics.</li>
-</ul>
+<div id="learning-outcomes-8" class="section level3 hasAnchor" number="11.0.3">
+<h3><span class="header-section-number">11.0.3</span> Learning Outcomes<a href="instructor-notes-matrix-population-modelling-exercise.html#learning-outcomes-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>By the end of this exercise, students will:
+- Construct life cycle diagrams representing life stages of organisms.
+- Parameterize life-cycle diagrams and convert them into matrix population models.
+- Use R to calculate population growth rates and project population sizes.
+- Link population projections to biological and management questions.
+- Perform in silico experiments to explore the effects of demographic changes on population dynamics.</p>
 </div>
-<div id="instructions-for-facilitating-6" class="section level2 hasAnchor" number="8.4">
-<h2><span class="header-section-number">8.4</span> Instructions for Facilitating<a href="deeper-into-logistic-growth.html#instructions-for-facilitating-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="activity-overview-8" class="section level3 hasAnchor" number="11.0.4">
+<h3><span class="header-section-number">11.0.4</span> Activity Overview<a href="instructor-notes-matrix-population-modelling-exercise.html#activity-overview-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Suggested Timings</strong>:
+- 5 minutes: Introduce matrix population models and provide background.
+- 10 minutes: Students think about an organism and design a life cycle diagram.
+- 20-30 minutes: Create and analyze matrix models, calculate population growth, and run elasticity and LTRE analyses.
+- 5 minutes: Wrap-up and discuss answers.</p>
+</div>
+<div id="instructions-for-facilitating-8" class="section level3 hasAnchor" number="11.0.5">
+<h3><span class="header-section-number">11.0.5</span> Instructions for Facilitating<a href="instructor-notes-matrix-population-modelling-exercise.html#instructions-for-facilitating-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>Start by explaining the connection between exponential and logistic growth models, using the example of <span class="math inline">\(K\)</span> approaching infinity to show how the logistic model reduces to the geometric growth equation.</li>
-<li>Walk students through the Excel worksheet, particularly focusing on the <code>BasicLogistic</code> tab where they can manipulate <span class="math inline">\(r_m\)</span> and <span class="math inline">\(K\)</span> values.</li>
-<li>Guide students through the analysis of <strong>Figure 1</strong> (population size over time), <strong>Figure 2</strong> (per capita growth rate vs. population size), and <strong>Figure 3</strong> (population growth rate vs. population size).</li>
-<li>Encourage students to predict population dynamics as they adjust parameters, such as <span class="math inline">\(r_m\)</span> and <span class="math inline">\(K\)</span>.</li>
-<li>Introduce the concept of time lags and direct students to the <code>TimeLag</code> tab to observe how introducing a delay in population feedback influences the system’s dynamics.</li>
+<li>Introduce matrix population models, emphasizing their application in ecology and conservation.</li>
+<li>Guide students in selecting an organism and drawing a simplified life cycle diagram.</li>
+<li>Ensure students assign plausible survival and fecundity rates to the life stages.</li>
+<li>Assist students in translating their life cycle diagram into a matrix model.</li>
+<li>Walk through how to use <strong>R</strong> for projecting population growth and analyzing <span class="math inline">\(\lambda\)</span> and elasticity.</li>
+<li>Encourage students to perform LTRE by modifying vital rates and interpreting the results.</li>
 </ol>
 </div>
-<div id="questions-model-answers-5" class="section level2 hasAnchor" number="8.5">
-<h2><span class="header-section-number">8.5</span> Questions &amp; Model Answers<a href="deeper-into-logistic-growth.html#questions-model-answers-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Students will answer the following questions:</p>
+<div id="questions-model-answers-7" class="section level3 hasAnchor" number="11.0.6">
+<h3><span class="header-section-number">11.0.6</span> Questions &amp; Model Answers<a href="instructor-notes-matrix-population-modelling-exercise.html#questions-model-answers-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li><strong>What dynamics do you observe in Figure 1 as you change <span class="math inline">\(r_m\)</span>?</strong>
+<li><strong>In the graph showing log-transformed population size through time, what is the significance of the lines being straight after the transient phase?</strong>
 <ul>
-<li>With small <span class="math inline">\(r_m\)</span> values, the population grows smoothly and stabilizes at <span class="math inline">\(K\)</span>. As <span class="math inline">\(r_m\)</span> increases, the system shows oscillations, damped oscillations, and eventually chaotic or unpredictable behavior.</li>
+<li>A straight line in the log-transformed population size graph indicates exponential population growth, meaning the population growth rate has stabilized.</li>
 </ul></li>
-<li><strong>What do you notice about the intercepts in Figure 2?</strong>
+<li><strong>Explain how an elasticity analysis of a matrix model can be used to inform the management of a threatened species.</strong>
 <ul>
-<li>The intercept on the x-axis occurs at <span class="math inline">\(K\)</span>, while the intercept on the y-axis depends on <span class="math inline">\(r_m\)</span>. As <span class="math inline">\(K\)</span> and <span class="math inline">\(r_m\)</span> change, the shape of the graph shifts, indicating changes in how population size affects per capita growth rate.</li>
+<li>Elasticity analysis highlights which life stages have the greatest effect on population growth. Managers can focus conservation efforts on stages with the highest elasticity, such as enhancing survival rates of critical stages.</li>
 </ul></li>
-<li><strong>How does adding a time lag affect the population dynamics?</strong>
+<li><strong>What are some of the assumptions of a matrix population model?</strong>
 <ul>
-<li>Adding a time lag can introduce cycling into the system, even when the intrinsic growth rate (<span class="math inline">\(r_m\)</span>) is small. This shows that delayed responses in population feedback can lead to fluctuations in population size, despite stable conditions.</li>
-</ul></li>
-<li><strong>How do the figures for exponential growth differ from those for logistic growth?</strong>
-<ul>
-<li>For exponential growth, population size increases without any upper limit in Figure 1, the per capita growth rate remains constant in Figure 2, and the population growth rate rises continuously with population size in Figure 3. In contrast, logistic growth levels off as the population approaches <span class="math inline">\(K\)</span>.</li>
+<li>Constant vital rates, stable environments, closed populations (no immigration or emigration), and absence of density dependence, similar to assumptions in exponential growth models.</li>
 </ul></li>
 </ol>
 </div>
-<div id="teaching-tips-6" class="section level2 hasAnchor" number="8.6">
-<h2><span class="header-section-number">8.6</span> Teaching Tips<a href="deeper-into-logistic-growth.html#teaching-tips-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="teaching-tips-8" class="section level3 hasAnchor" number="11.0.7">
+<h3><span class="header-section-number">11.0.7</span> Teaching Tips<a href="instructor-notes-matrix-population-modelling-exercise.html#teaching-tips-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><strong>Clarify the Relationship Between Exponential and Logistic Growth</strong>: Make sure students understand how the logistic model becomes the exponential model when <span class="math inline">\(K\)</span> is removed (i.e. when it is infinity).</li>
-<li><strong>Highlight the Role of <span class="math inline">\(r_m\)</span></strong>: Encourage students to experiment with different <span class="math inline">\(r_m\)</span> values to understand the transition from stable growth to chaotic dynamics.</li>
-<li><strong>Time Lags and Cyclic Behavior</strong>: Some students may struggle to grasp how time lags cause population cycles. Show them step-by-step how changing the reference population size (e.g., <span class="math inline">\(N_{t-1}\)</span>) affects the dynamics.</li>
-<li><strong>Connect to Real-World Applications</strong>: Discuss how these models apply to real-world populations, such as predator-prey systems or species with delayed reproductive responses.</li>
+<li><strong>Ensure familiarity with matrix population models</strong>: Many students may need a refresher on basic matrix operations and their role in population dynamics.</li>
+<li><strong>R skills</strong>: Some students may struggle with R coding. Encourage them to ask questions if they face difficulties with syntax or package installations.</li>
+<li><strong>Connecting models to management</strong>: Help students understand how matrix models inform real-world conservation efforts, such as targeted interventions based on elasticity results.</li>
 </ul>
 </div>
-<div id="common-pitfalls-4" class="section level2 hasAnchor" number="8.7">
-<h2><span class="header-section-number">8.7</span> Common Pitfalls<a href="deeper-into-logistic-growth.html#common-pitfalls-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="common-pitfalls-6" class="section level3 hasAnchor" number="11.0.8">
+<h3><span class="header-section-number">11.0.8</span> Common Pitfalls<a href="instructor-notes-matrix-population-modelling-exercise.html#common-pitfalls-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><strong>Overlooking the Impact of Time Lags</strong>: Students might expect that small changes in the model have minimal effects. Emphasize that even slight time delays can drastically alter population dynamics.</li>
-<li><strong>Misinterpreting Figure 2</strong>: Some students may find it confusing that the per capita growth rate decreases as population size approaches <span class="math inline">\(K\)</span>. Reinforce the concept that as resources become limited, growth slows.</li>
-<li><strong>Excel Formula Errors</strong>: Students may struggle with modifying Excel formulas, especially when introducing time lags. Ensure they understand how to correctly reference previous population sizes.</li>
-</ul>
-</div>
-<div id="concrete-real-world-examples-1" class="section level2 hasAnchor" number="8.8">
-<h2><span class="header-section-number">8.8</span> Concrete Real-World Examples<a href="deeper-into-logistic-growth.html#concrete-real-world-examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="insect-population-control-e.g.-mosquitoes" class="section level3 hasAnchor" number="8.8.1">
-<h3><span class="header-section-number">8.8.1</span> 1. <strong>Insect Population Control (e.g., Mosquitoes)</strong><a href="deeper-into-logistic-growth.html#insect-population-control-e.g.-mosquitoes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<li><p><strong>Incorrect matrix dimensions</strong>: Students may input matrices with the wrong number of rows and columns. Remind them that the matrix must have dimensions matching the number of life stages.</p></li>
+<li><p><strong>Misinterpreting eigenvalues</strong>: Ensure students understand that <span class="math inline">\(\lambda\)</span> represents the long-term population growth rate and that it’s the dominant eigenvalue. Emphasize the significance of elasticity results for identifying key transitions.</p></li>
+<li><p><strong>Rounding errors</strong>: When assigning survival and fecundity rates, students may enter values that lead to rounding mistakes in the matrix, particularly when dealing with small decimal values. Encourage students to double-check their values before running projections.</p></li>
+<li><p><strong>Mathematically infeasible models</strong>:</p>
 <ul>
-<li><strong>Scenario</strong>: Mosquito populations often experience delayed responses to environmental changes, such as seasonal rainfall.</li>
-<li><strong>Time Lag</strong>: Adding a time lag to the logistic growth model demonstrates how insect populations might cyclically fluctuate before stabilizing, helping to predict pest outbreaks.</li>
+<li><p><strong>Sum of transition probabilities &gt;1</strong>: Students may assign transition values that, when summed, exceed 1 for a given stage. For example, if an organism can transition from <strong>Stage A</strong> to <strong>Stage B</strong> and <strong>Stage A</strong> to <strong>Stage C</strong>, the sum of these transitions cannot exceed 1, since survival rates and transitions are probabilities. Ensure students understand that the total probability of transitioning out of any stage cannot be greater than 1.</p></li>
+<li><p><strong>Non-ergodic models</strong>: Sometimes students may create non-ergodic matrices, where certain stages are isolated or disconnected from others. Instruct students to verify that all stages are reachable either directly or indirectly from any other stage to ensure the matrix is realistic.</p></li>
+</ul></li>
 </ul>
-</div>
-<div id="conservation-of-slow-reproducing-species-e.g.-elephants" class="section level3 hasAnchor" number="8.8.2">
-<h3><span class="header-section-number">8.8.2</span> 2. <strong>Conservation of Slow-Reproducing Species (e.g., Elephants)</strong><a href="deeper-into-logistic-growth.html#conservation-of-slow-reproducing-species-e.g.-elephants" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>Scenario</strong>: For species with long gestation periods, the impact of population growth may be delayed.</li>
-<li><strong>Application of Time Lag</strong>: Introducing time lags helps model how long-term population growth might respond to conservation efforts, showing periods of slow recovery followed by more rapid growth.</li>
-</ul>
-</div>
-<div id="fisheries-management" class="section level3 hasAnchor" number="8.8.3">
-<h3><span class="header-section-number">8.8.3</span> 3. <strong>Fisheries Management</strong><a href="deeper-into-logistic-growth.html#fisheries-management" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>Scenario</strong>: Fish stocks often experience delayed population responses to overfishing or recovery efforts.</li>
-<li><strong>Time Lag in Growth Models</strong>: Managers use time-lagged models to account for the slow recovery of fish populations, ensuring sustainable harvest rates.</li>
-</ul>
-<p>These examples help students understand how the logistic growth model, with or without time lags, can be applied to real-world population management and conservation challenges.</p>
+<p>Emphasize that matrix elements, as well as their sums, must adhere to biological and mathematical constraints, helping students build feasible models that accurately represent population dynamics.</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -426,8 +396,8 @@
           </div>
         </div>
       </div>
-<a href="basic-logistic-population-growth.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="life-tables-and-survivorship-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="matrix-population-modelling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pre--and-post-reproduction-census.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -458,7 +428,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jonesor/BB512_Instructor/edit/master/2_06_DeeperIntoLogistic.Rmd",
+"link": "https://github.com/jonesor/BB512_Instructor/edit/master/2_07.5_matrixModels.Rmd",
 "text": "Edit"
 },
 "history": {

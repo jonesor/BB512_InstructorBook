@@ -1,3 +1,67 @@
 # Matrix population modelling
 
-Coming soon...
+# Instructor Notes: Matrix Population Modelling Exercise
+
+### Introduction
+This exercise introduces students to **matrix population models**, which are vital in population ecology for studying structured populations. Unlike simple models, these account for variation in life stages (e.g., seedling, juvenile, adult) by using transition matrices to represent relationships between life stages and transitions over time. The practical involves building life-cycle diagrams, converting them into matrix models, and using **R** to simulate population projections, calculate population growth rates ($\lambda$), and explore **elasticity** and **LTRE** (life table response experiments).
+
+This exercise equips students with the ability to construct and analyze matrix population models, understand demographic impacts on populations, and perform simulations to address management and conservation questions.
+
+### Key Concepts
+- **Matrix Population Models**: Frameworks for studying populations with distinct life stages, using transition matrices for survival and fecundity.
+- **Population Growth Rate ($\lambda$)**: The dominant eigenvalue of the matrix, representing long-term population growth or decline.
+- **Elasticity Analysis**: Measures the sensitivity of population growth to changes in vital rates, helping identify key transitions in a species’ life cycle for conservation or management.
+- **Life Table Response Experiment (LTRE)**: A method of running "in silico" experiments by modifying matrix elements to predict effects on population dynamics.
+
+### Learning Outcomes
+By the end of this exercise, students will:
+- Construct life cycle diagrams representing life stages of organisms.
+- Parameterize life-cycle diagrams and convert them into matrix population models.
+- Use R to calculate population growth rates and project population sizes.
+- Link population projections to biological and management questions.
+- Perform in silico experiments to explore the effects of demographic changes on population dynamics.
+
+### Activity Overview
+**Suggested Timings**:
+- 5 minutes: Introduce matrix population models and provide background.
+- 10 minutes: Students think about an organism and design a life cycle diagram.
+- 20-30 minutes: Create and analyze matrix models, calculate population growth, and run elasticity and LTRE analyses.
+- 5 minutes: Wrap-up and discuss answers.
+
+### Instructions for Facilitating
+1. Introduce matrix population models, emphasizing their application in ecology and conservation.
+2. Guide students in selecting an organism and drawing a simplified life cycle diagram.
+3. Ensure students assign plausible survival and fecundity rates to the life stages.
+4. Assist students in translating their life cycle diagram into a matrix model.
+5. Walk through how to use **R** for projecting population growth and analyzing $\lambda$ and elasticity.
+6. Encourage students to perform LTRE by modifying vital rates and interpreting the results.
+
+### Questions & Model Answers
+1. **In the graph showing log-transformed population size through time, what is the significance of the lines being straight after the transient phase?**
+   - A straight line in the log-transformed population size graph indicates exponential population growth, meaning the population growth rate has stabilized.
+
+2. **Explain how an elasticity analysis of a matrix model can be used to inform the management of a threatened species.**
+   - Elasticity analysis highlights which life stages have the greatest effect on population growth. Managers can focus conservation efforts on stages with the highest elasticity, such as enhancing survival rates of critical stages.
+
+3. **What are some of the assumptions of a matrix population model?**
+   - Constant vital rates, stable environments, closed populations (no immigration or emigration), and absence of density dependence, similar to assumptions in exponential growth models.
+
+### Teaching Tips
+- **Ensure familiarity with matrix population models**: Many students may need a refresher on basic matrix operations and their role in population dynamics.
+- **R skills**: Some students may struggle with R coding. Encourage them to ask questions if they face difficulties with syntax or package installations.
+- **Connecting models to management**: Help students understand how matrix models inform real-world conservation efforts, such as targeted interventions based on elasticity results.
+
+### Common Pitfalls
+
+- **Incorrect matrix dimensions**: Students may input matrices with the wrong number of rows and columns. Remind them that the matrix must have dimensions matching the number of life stages.
+
+- **Misinterpreting eigenvalues**: Ensure students understand that $\lambda$ represents the long-term population growth rate and that it’s the dominant eigenvalue. Emphasize the significance of elasticity results for identifying key transitions.
+
+- **Rounding errors**: When assigning survival and fecundity rates, students may enter values that lead to rounding mistakes in the matrix, particularly when dealing with small decimal values. Encourage students to double-check their values before running projections.
+
+- **Mathematically infeasible models**:
+  - **Sum of transition probabilities >1**: Students may assign transition values that, when summed, exceed 1 for a given stage. For example, if an organism can transition from **Stage A** to **Stage B** and **Stage A** to **Stage C**, the sum of these transitions cannot exceed 1, since survival rates and transitions are probabilities. Ensure students understand that the total probability of transitioning out of any stage cannot be greater than 1.
+  
+  - **Non-ergodic models**: Sometimes students may create non-ergodic matrices, where certain stages are isolated or disconnected from others. Instruct students to verify that all stages are reachable either directly or indirectly from any other stage to ensure the matrix is realistic.
+
+Emphasize that matrix elements, as well as their sums, must adhere to biological and mathematical constraints, helping students build feasible models that accurately represent population dynamics.

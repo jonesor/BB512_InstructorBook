@@ -1,3 +1,75 @@
 # How many eggs should a bird lay?
 
-Coming soon...
+## Introduction
+
+This exercise introduces students to life-history trade-offs, a key concept in evolutionary ecology. By analyzing data on the *Bigus canarius*, students will explore how birds balance clutch size and chick survival, reinforcing the idea that biological trade-offs often result in intermediate trait values. Specifically, students will model how increasing the number of eggs affects the survival probability of offspring and identify the optimal clutch size to maximize reproductive success.
+
+Through this activity, students will learn to:
+- Understand life-history trade-offs, specifically clutch size versus offspring survival.
+- Use data analysis in Excel to generate graphs and calculate expected values for survival.
+- Evaluate and interpret graphical results to determine optimal biological strategies.
+
+## Key Concepts
+
+The exercise covers several important theoretical concepts, including:
+
+- **Life-history trade-offs**: Organisms allocate limited resources to reproduction, growth, and survival. Increasing one aspect (like clutch size) often decreases another (like offspring survival), creating an evolutionary trade-off.
+  
+- **Lack's clutch size trade-off**: British ornithologist David Lack proposed that birds optimize clutch size by balancing the benefits of producing more offspring with the decreasing probability of each chick's survival. It is a classic example of a life-history trade-off.
+
+- **Chick survival probability**: As clutch size increases, the likelihood of parental care for each chick decreases, lowering the chances of chick survival.
+
+- **Expected number of surviving chicks**: Students will calculate this value using the equation:
+  $\text{Expected number of surviving chicks} = \text{Clutch size} \times \text{Survival probability per chick}$
+  
+  The goal is to identify the clutch size that maximizes this value.
+
+## Learning Outcomes
+
+- Understand the concept of life-history trade-offs in evolutionary ecology.
+- Analyze how clutch size affects offspring survival and identify optimal reproductive strategies.
+- Use Excel to create graphs and interpret data on biological trade-offs.
+
+## Activity Overview
+Suggested timings:
+- 5 minutes: Introduce the exercise and explain the biological context of trade-offs.
+- 5 minutes: Students read through the background material and examine the survival data.
+- 20-25 minutes: Students use Excel to calculate the expected number of surviving chicks and generate corresponding graphs.
+- 5-10 minutes: Wrap up and discuss the concept of optimal clutch size and other factors that might influence this decision.
+
+## Instructions for Facilitating
+
+1. Begin by explaining the concept of life-history trade-offs, specifically Lack's clutch size hypothesis.
+2. Ensure students understand the relationship between clutch size and chick survival by reviewing the provided data.
+3. Guide students as they enter data into Excel and plot graphs for survival probability and the expected number of surviving chicks.
+4. Help students think critically about the results by asking questions about the optimal clutch size and how changing parameters might affect it.
+
+## Questions & Model Answers
+
+1. **What is Lack's clutch size trade-off, and why is it considered a fundamental concept in evolutionary ecology?**
+   - Lack's clutch size trade-off proposes that birds optimize the number of eggs they lay by balancing the benefits of producing more offspring with the limitations on parental resources. This concept is fundamental because it highlights the evolutionary strategies organisms use to maximize reproductive success. It is a trade-off between quality and quantity off offspring: should there be many poorly-surviving offspring, or few well-surviving offspring?
+
+2. **How does the trade-off between clutch size and offspring quality manifest in different bird species, and what factors influence their clutch size decisions?**
+   - The trade-off occurs because as clutch size increases, individual offspring may receive less parental care or resources, reducing their chances of survival. Factors influencing clutch size decisions include food availability, environmental stability, and parental ability to care for offspring.
+
+3. **What are the potential advantages and disadvantages of producing larger clutches with smaller-sized eggs compared to smaller clutches with larger-sized eggs?**
+   - Larger clutches may increase the number of surviving offspring, but each chick may be smaller and weaker, reducing individual survival chances. Smaller clutches with larger eggs might lead to fewer but stronger and better-cared-for chicks, enhancing individual survival chances.
+
+## Teaching Tips
+
+To help students successfully complete the exercise, consider these teaching tips:
+
+- **Ensure students understand the relationship between clutch size and survival**: Explain that as clutch size increases, the survival probability decreases due to resource limitations. The number of mouths to feed per parent.
+  
+- **Excel graphing skills**: If students are unfamiliar with Excel, demonstrate how to input data/equations, plot graphs, and create a secondary axis for the expected number of surviving chicks.
+
+- **Encourage critical thinking**: Ask students how changing environmental conditions or parental abilities might shift the optimal clutch size, and if this trade-off applies to other species.
+
+## Common Pitfalls
+
+Watch out for these common pitfalls:
+
+- **Confusion about survival probability**: Students may struggle to grasp that the survival probability applies to *each* chick, and not to the whole clutch. Clarify that they should calculate the survival for each chick and multiply it by the total number of eggs.
+  
+- **Excel formula errors**: Ensure students correctly input formulas in Excel, particularly when calculating the expected number of surviving chicks. Remind them to use relative references when copying formulas across multiple rows.
+

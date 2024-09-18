@@ -52,13 +52,26 @@ Students will answer the following questions:
    - With small $r_m$ values, the population grows smoothly and stabilizes at $K$. As $r_m$ increases, the system shows oscillations, damped oscillations, and eventually chaotic or unpredictable behavior.
    
 2. **What do you notice about the intercepts in Figure 2?**
-   - The intercept on the x-axis occurs at $K$, while the intercept on the y-axis depends on $r_m$. As $K$ and $r_m$ change, the shape of the graph shifts, indicating changes in how population size affects per capita growth rate.
+   - The intercept on the x-axis occurs at $K$, while the intercept on the y-axis is $r_m$. Therefore, a plot of N vs. per capita growth rate can tell us what $K$ and $r_m$ are. 
 
 3. **How does adding a time lag affect the population dynamics?**
    - Adding a time lag can introduce cycling into the system, even when the intrinsic growth rate ($r_m$) is small. This shows that delayed responses in population feedback can lead to fluctuations in population size, despite stable conditions.
 
 4. **How do the figures for exponential growth differ from those for logistic growth?**
-   - For exponential growth, population size increases without any upper limit in Figure 1, the per capita growth rate remains constant in Figure 2, and the population growth rate rises continuously with population size in Figure 3. In contrast, logistic growth levels off as the population approaches $K$.
+
+**Figure 1: Population Size Through Time**
+- **Exponential Growth:** The population shows a **J-shaped curve**, growing rapidly without limit, suggesting **unlimited resources**.
+- **Logistic Growth:**  The population typically follows an S-shaped curve, with growth slowing as it approaches carrying capacity (K). However, at higher population growth rates, the dynamics can become more complex, including oscillations or chaotic behaviour, rather than simply leveling off. The exact trajectory depends on the growth rate and can lead to unpredictable, fluctuating patterns around K.
+
+**Figure 2: Per Capita Growth Rate vs. N**
+- **Exponential Growth:** The per capita growth rate is **constant**, unaffected by population size, indicating no resource constraints.
+- **Logistic Growth:** The per capita growth rate **declines linearly** as population increases, reflecting **density dependence** and resource limitation as N approaches K.
+
+ **Figure 3: Relationship Between dN/dt and N**
+- **Exponential Growth:** The relationship is **linear**, with dN/dt increasing proportionally as population size grows.
+- **Logistic Growth:** dN/dt forms a **parabolic curve**, increasing initially but declining as N approaches K, reaching zero at carrying capacity.
+
+
 
 ## Teaching Tips
 
