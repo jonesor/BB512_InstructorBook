@@ -1,19 +1,20 @@
 # Matrix population modelling
 
-# Instructor Notes: Matrix Population Modelling Exercise
+## Introduction
 
-### Introduction
 This exercise introduces students to **matrix population models**, which are vital in population ecology for studying structured populations. Unlike simple models, these account for variation in life stages (e.g., seedling, juvenile, adult) by using transition matrices to represent relationships between life stages and transitions over time. The practical involves building life-cycle diagrams, converting them into matrix models, and using **R** to simulate population projections, calculate population growth rates ($\lambda$), and explore **elasticity** and **LTRE** (life table response experiments).
 
 This exercise equips students with the ability to construct and analyze matrix population models, understand demographic impacts on populations, and perform simulations to address management and conservation questions.
 
-### Key Concepts
+## Key Concepts
+
 - **Matrix Population Models**: Frameworks for studying populations with distinct life stages, using transition matrices for survival and fecundity.
 - **Population Growth Rate ($\lambda$)**: The dominant eigenvalue of the matrix, representing long-term population growth or decline.
 - **Elasticity Analysis**: Measures the sensitivity of population growth to changes in vital rates, helping identify key transitions in a species’ life cycle for conservation or management.
 - **Life Table Response Experiment (LTRE)**: A method of running "in silico" experiments by modifying matrix elements to predict effects on population dynamics.
 
-### Learning Outcomes
+## Learning Outcomes
+
 By the end of this exercise, students will:
 - Construct life cycle diagrams representing life stages of organisms.
 - Parameterize life-cycle diagrams and convert them into matrix population models.
@@ -21,14 +22,16 @@ By the end of this exercise, students will:
 - Link population projections to biological and management questions.
 - Perform in silico experiments to explore the effects of demographic changes on population dynamics.
 
-### Activity Overview
+## Activity Overview
+
 **Suggested Timings**:
 - 5 minutes: Introduce matrix population models and provide background.
 - 10 minutes: Students think about an organism and design a life cycle diagram.
 - 20-30 minutes: Create and analyze matrix models, calculate population growth, and run elasticity and LTRE analyses.
 - 5 minutes: Wrap-up and discuss answers.
 
-### Instructions for Facilitating
+## Instructions for Facilitating
+
 1. Introduce matrix population models, emphasizing their application in ecology and conservation.
 2. Guide students in selecting an organism and drawing a simplified life cycle diagram.
 3. Ensure students assign plausible survival and fecundity rates to the life stages.
@@ -36,7 +39,8 @@ By the end of this exercise, students will:
 5. Walk through how to use **R** for projecting population growth and analyzing $\lambda$ and elasticity.
 6. Encourage students to perform LTRE by modifying vital rates and interpreting the results.
 
-### Questions & Model Answers
+## Questions & Model Answers
+
 1. **In the graph showing log-transformed population size through time, what is the significance of the lines being straight after the transient phase?**
    - A straight line in the log-transformed population size graph indicates exponential population growth, meaning the population growth rate has stabilized.
 
@@ -46,12 +50,13 @@ By the end of this exercise, students will:
 3. **What are some of the assumptions of a matrix population model?**
    - Constant vital rates, stable environments, closed populations (no immigration or emigration), and absence of density dependence, similar to assumptions in exponential growth models.
 
-### Teaching Tips
+## Teaching Tips
+
 - **Ensure familiarity with matrix population models**: Many students may need a refresher on basic matrix operations and their role in population dynamics.
 - **R skills**: Some students may struggle with R coding. Encourage them to ask questions if they face difficulties with syntax or package installations.
 - **Connecting models to management**: Help students understand how matrix models inform real-world conservation efforts, such as targeted interventions based on elasticity results.
 
-### Common Pitfalls
+## Common Pitfalls
 
 - **Incorrect matrix dimensions**: Students may input matrices with the wrong number of rows and columns. Remind them that the matrix must have dimensions matching the number of life stages.
 

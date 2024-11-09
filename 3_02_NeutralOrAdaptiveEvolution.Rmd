@@ -1,3 +1,150 @@
 # Neutral or Adaptive Evolution in Humans: What Drives Evolution of Our Traits?
 
-Coming soon...
+## Introduction
+
+This exercise engages students in exploring the evolutionary mechanisms—natural selection and genetic drift—that shape human traits. By categorizing various human characteristics based on the strength of natural selection acting upon them in different environments, students will develop a nuanced understanding of how adaptive and neutral evolution influence our biology.
+
+## Key Concepts
+
+- **Adaptive Evolution**: The process by which traits that enhance survival and reproduction become more common in a population due to natural selection.
+
+- **Neutral Evolution**: The change in allele frequencies within a population due to random genetic drift, rather than selective pressures.
+
+- **Natural Selection**: The differential survival and reproduction of individuals due to differences in phenotype, leading to adaptive evolution.
+
+- **Genetic Drift**: Random fluctuations in allele frequencies within a population, which can lead to neutral evolution, especially in small populations.
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Interpret the influence of selection pressure: Categorize traits based on the level of natural selection acting upon them and articulate reasons for their categorization.
+
+- Distinguish between adaptive and neutral evolution: Differentiate traits evolving due to adaptive evolution from those likely evolving through genetic drift.
+
+- Apply terminology accurately: Utilize correct scientific terminology to articulate viewpoints about trait evolution in different populations.
+
+- Evaluate environmental factors: Assess how different environments (e.g., hunter-gatherer societies vs. modern industrialized countries) impact the strength of natural selection on various traits.
+
+- Engage in collaborative argumentation: Collaboratively argue and defend their categorization of traits, providing evidence or logical reasoning for their views.
+
+- Engage in critical thinking: Develop analytical skills in evaluating the role of selection and drift in trait evolution.
+
+## Activity Overview
+
+Suggested timings:
+
+- 5 minutes: Introduce the exercise and explain key concepts.
+
+- 5 minutes: Students write the traits on Post-it notes.
+
+- 10 minutes: In small groups, students discuss and categorize traits based on the strength of natural selection in hunter-gatherer societies.
+
+- 15 minutes: Repeat the categorization for modern industrialized societies like Denmark.
+
+- 10 minutes: Class discussion to compare categorizations and reflect on differences.
+
+## Instructions for Facilitating
+
+1. **Introduction**: Begin by explaining the concepts of adaptive and neutral evolution, natural selection, and genetic drift.
+
+2. **Trait Preparation**: Provide students with the list of traits and instruct them to write each trait on a separate Post-it note.
+
+3. **Group Discussion**: Divide students into small groups and have them categorize the traits based on the strength of natural selection in hunter-gatherer societies.
+
+4. **Modern Context**: Instruct groups to repeat the categorization for modern industrialized societies, noting any differences.
+
+5. **Class Discussion**: Facilitate a discussion where groups share their categorizations and reasoning, highlighting how environmental contexts influence evolutionary pressures.
+
+## Questions & Model Answers
+
+Students will answer the following questions:
+
+1. **Were there any traits that were categorized differently between the two types of societies? Why?**
+
+Here's how each trait might be categorized in hunter-gatherer societies compared to modern post-industrial societies:
+
+**Metabolic Efficiency**: 
+   - *Hunter-Gatherer*: High metabolic efficiency would be advantageous for survival during food shortages, leading to strong positive selection.
+   - *Modern Post-Industrial*: With abundant food supply and sedentary lifestyles, high metabolic efficiency can contribute to obesity and related health issues, so the selection pressure would be weaker or possibly negative.
+
+**Face Symmetry**: 
+   - *Hunter-Gatherer*: Facial symmetry may have been associated with health and genetic quality, leading to some degree of selection related to mate choice.
+   - *Modern Post-Industrial*: While facial symmetry still influences attractiveness, it has a lesser impact on survival and reproduction, so selection pressures are primarily social rather than environmental.
+
+**Amount of Body Hair**: 
+   - *Hunter-Gatherer*: Body hair might have provided insulation in cold environments or protection from insects, leading to context-dependent selection pressures.
+   - *Modern Post-Industrial*: Body hair has little impact on survival due to clothing and technology, and preferences are more influenced by cultural norms, resulting in weak or neutral selection.
+
+**Running Speed**: 
+   - *Hunter-Gatherer*: High running speed would have been crucial for hunting and escaping predators, likely under strong positive selection.
+   - *Modern Post-Industrial*: Running speed is far less important for daily survival, so selection pressure is minimal, except in specific contexts like sports.
+
+**Singing Ability**: 
+   - *Hunter-Gatherer*: Singing ability may have played a role in social cohesion, communication, or mate attraction, contributing to weak but present selection pressure.
+   - *Modern Post-Industrial*: While still valued in cultural and social settings, singing ability has little impact on overall fitness, so selection pressure is neutral or purely social.
+
+**Height**: 
+   - *Hunter-Gatherer*: Height could have been selected for based on environmental factors, such as taller individuals being better suited for open environments or shorter individuals for dense forests.
+   - *Modern Post-Industrial*: Height influences social and sexual attractiveness but is less tied to survival, so selection is primarily driven by mate preferences rather than environmental pressures.
+
+**Intelligence**: 
+   - *Hunter-Gatherer*: Cognitive abilities like problem-solving and planning would have been highly advantageous for survival, leading to strong selection.
+   - *Modern Post-Industrial*: Intelligence remains important for navigating complex social and technological environments, so selection pressure persists but is expressed differently, with an emphasis on academic and professional success.
+
+**Resistance to Bubonic Plague**: 
+   - *Hunter-Gatherer*: This trait would not have been relevant, as the bubonic plague is a more recent selective pressure in human history.
+   - *Modern Post-Industrial*: The selection pressure for resistance has diminished due to advancements in medicine and public health, also making it less significant than e.g. in the middle ages.
+
+**Iris Structure**: 
+   - *Hunter-Gatherer*: The structure of the iris likely had little impact on fitness, resulting in neutral selection pressure.
+   - *Modern Post-Industrial*: Iris structure remains under neutral selection, primarily serving as a trait for individual identification rather than affecting survival or reproduction.
+
+**Sense of Smell**: 
+   - *Hunter-Gatherer*: A keen sense of smell would have been important for detecting food (and food quality), predators, or environmental hazards, leading to some positive selection.
+   - *Modern Post-Industrial*: The sense of smell is less critical for daily survival, so selection pressure has likely weakened, except in contexts related to food and social interaction.
+
+**Sperm Motility**: 
+   - *Hunter-Gatherer*: High sperm motility would have been under strong selection pressure to increase reproductive success.
+   - *Modern Post-Industrial*: While reproductive fitness remains important, medical interventions and assisted reproductive technologies reduce the impact of natural selection on this trait.
+
+**Resistance to Common Cold**: 
+   - *Hunter-Gatherer*: Resistance to common infections would have been advantageous, though the cold viruses we know today may not have been widespread. Lots of uncertainty here!
+   - *Modern Post-Industrial*: While still beneficial, selection pressure is moderate due to medical treatments and the relatively low mortality associated with common colds.
+
+**Muscle Strength**: 
+   - *Hunter-Gatherer*: Muscle strength would have been critical for hunting, gathering, and defense, making it subject to strong selection.
+   - *Modern Post-Industrial*: Physical strength is less crucial for survival, so selection pressure is significantly weaker, except in specific contexts like athletic performance.
+
+**Eyesight Acuity**: 
+   - *Hunter-Gatherer*: Sharp eyesight would have been essential for hunting and avoiding predators, leading to strong selection pressure.
+   - *Modern Post-Industrial*: With the advent of corrective lenses and modern technology, selection pressure on eyesight acuity has lessened considerably, though good vision is still advantageous.
+
+These comparisons illustrate how the selective pressures on traits can change dramatically with shifts in lifestyle, technology, and societal norms.
+
+
+2. **Did the exercise challenge any preconceived notions you had about trait evolution?**
+
+   - Students may realize that not all traits are solely the result of adaptive evolution; some may be influenced by genetic drift, especially in different environmental contexts. It is important that they grasp the difference between genetic drift and natural selection. It may also be useful to talk about how population size (typically small in hunter gatherers) could increase the importance of drift.
+
+3. **Can you think of any other traits that would be interesting to add to this exercise?**
+
+   - This is rather open and gives the students a chance to think about a range of human traits. Traits like lactose tolerance, alcohol metabolism, skin pigmentation, sweat gland density, and dietary adaptations could provide additional insights into how environmental pressures shape human evolution.
+
+## Teaching Tips
+
+- **Clarify Concepts**: Ensure students understand the difference between adaptive and neutral evolution, and how natural selection and genetic drift operate.
+
+- **Encourage Critical Thinking**: Prompt students to consider how environmental changes over time influence the evolutionary pressures on different traits.
+
+- **Facilitate Discussion**: Encourage groups to share their reasoning and engage in constructive debate to deepen understanding. Ask them if they think modern humans are still evolving (they are, but natural selection is likely less important than genetic drift).
+
+## Common Pitfalls
+
+- **Overemphasis on Natural Selection**: Students may assume all traits are a result of adaptive evolution. Emphasize the role of genetic drift and neutral evolution.
+
+- **Assuming a simple driver for traits**: Students may mistakenly think that traits evolved for a single reason. Emphasize that many traits are shaped by multiple, interacting factors (e.g., both genetic and cultural influences on traits like height or intelligence).
+
+- **Modern bias**: Students may project modern views and values onto hunter-gatherer societies, leading to misconceptions about what traits would have been advantageous. Encourage them to think critically about the survival challenges faced by ancient humans and how these differ from modern environments.
+
+- **Environmental Context Overlooked**: Students might not consider how different environments affect selection pressures. Highlight the importance of context in evolutionary biology.

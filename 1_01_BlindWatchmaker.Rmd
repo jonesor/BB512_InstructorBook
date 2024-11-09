@@ -11,6 +11,7 @@ This exercise simulates evolutionary processes using an algorithm inspired by *T
 - **Stochasticity vs Determinism**: Evolution combines random mutations and deterministic selection, resulting in gradual adaptation toward a specific goal (in this case, a predefined phrase).
 
 ## Learning outcomes
+
 - Greater understanding of adaptive evolution via natural selection.
 - Understanding that random change does NOT result in disorder, if paired with selection.
 - Use of R for exploring biological phenomenon.

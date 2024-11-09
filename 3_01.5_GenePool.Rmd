@@ -1,3 +1,78 @@
 # The Gene Pool Model
 
-Coming soon...
+## Introduction
+
+This exercise introduces students to the concept of genetic drift and its impact on allele frequencies within a population. By utilizing the R programming language, students will simulate how allele frequencies change over generations, providing a practical understanding of evolutionary processes. This hands-on approach reinforces concepts such as genetic drift, population size effects, and the stochastic nature of allele frequency changes.
+
+## Key Concepts
+
+- **Genetic Drift**: The random fluctuation of allele frequencies in a population due to chance events, which can lead to significant genetic changes over time, especially in small populations. Evolution can occur via this mechanism, even without natural selection operating.
+
+- **Allele Frequency**: The proportion of a specific allele among all allele copies in a population.
+
+- **Population Size**: The number of individuals in a population, which influences the magnitude of genetic drift; smaller populations experience more pronounced effects.
+
+- **Stochastic Processes**: Random processes that introduce variability into genetic outcomes, highlighting the role of chance in evolution.
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Understand the concept of genetic drift and its impact on allele frequencies.
+
+- Comprehend how population size influences the magnitude of genetic drift.
+
+- Develop proficiency in using R as a simulation tool.
+
+## Activity Overview
+
+Suggested timings:
+
+- 5 minutes: Introduce the exercise and review key concepts.
+
+- 5 minutes: Students read through instructions and set up the initial gene pool in R.
+
+- 20-30 minutes: Students run simulations to observe allele frequency changes over generations.
+
+- 5 minutes: Wrap up and discuss findings.
+
+## Instructions for Facilitating
+
+1. **Introduction**: Begin by explaining genetic drift and its significance in evolutionary biology.
+
+2. **R Setup**: Ensure students have R and RStudio installed. Guide them through setting up the initial gene pool using the provided code snippets.
+
+3. **Simulation Execution**: Instruct students to run simulations, varying population sizes to observe the effects on allele frequency changes.
+
+4. **Discussion**: Facilitate a discussion on the results, focusing on how population size affects genetic drift and the implications for genetic diversity.
+
+## Questions & Model Answers
+
+Students will answer the following questions:
+
+1. **How does population size affect the magnitude of genetic drift?**
+
+   - Smaller populations experience more significant fluctuations in allele frequencies due to genetic drift, while larger populations exhibit more stable allele frequencies over time.
+
+2. **What is the impact of genetic drift on genetic diversity within a population?**
+
+   - Genetic drift can lead to a reduction in genetic diversity, especially in small populations, as certain alleles may become fixed or lost purely by chance.
+
+3. **How does the initial allele frequency influence the outcome of genetic drift?**
+
+   - Alleles with higher initial frequencies are more likely to become fixed, while those with lower frequencies are more susceptible to loss due to genetic drift.
+
+## Teaching Tips
+
+- **R Proficiency**: Ensure students are comfortable, or at least understand, the basic R operations used by the code. This includes setting up vectors, loops, and using functions like `sample()`.
+
+- **Conceptual Emphasis**: Highlight the real-world implications of genetic drift, such as its role in the evolution of small isolated populations. Make the link to endangered species that typically have small populations and where drift is an important factor.
+
+- **Visualization**: Encourage students to plot allele frequency changes over time to visualize the stochastic nature of genetic drift and how parameters like allele frequency and population size play a role in the outcome.
+
+## Common Pitfalls
+
+- **Misunderstanding Stochasticity**: Students may expect deterministic outcomes. Emphasize that genetic drift is a random process, leading to different results in each simulation run.
+
+- **Overlooking Population Size Effects**: Students might not fully grasp how population size influences genetic drift. Encourage them to compare results from simulations with varying population sizes to observe the differences.
+

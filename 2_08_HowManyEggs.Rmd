@@ -31,6 +31,7 @@ The exercise covers several important theoretical concepts, including:
 - Use Excel to create graphs and interpret data on biological trade-offs.
 
 ## Activity Overview
+
 Suggested timings:
 - 5 minutes: Introduce the exercise and explain the biological context of trade-offs.
 - 5 minutes: Students read through the background material and examine the survival data.

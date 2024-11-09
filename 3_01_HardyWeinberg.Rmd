@@ -1,3 +1,82 @@
 # Hardy-Weinberg equilibrium
 
-Coming soon...
+
+## Introduction
+
+This exercise introduces students to the Hardy-Weinberg Equilibrium (HWE), a fundamental principle in population genetics that describes the genetic variation in a population under ideal conditions. Students will engage with problems that involve calculating allele and genotype frequencies, understanding the assumptions of HWE, and exploring factors that can cause deviations from equilibrium. This exercise reinforces concepts such as genetic drift, mutation, migration, and selection, and their roles in evolutionary biology.
+
+## Key Concepts
+
+- **Hardy-Weinberg Equilibrium (HWE)**: A principle stating that allele and genotype frequencies in a population remain constant from generation to generation in the absence of evolutionary influences.
+
+- **Allele Frequency**: The proportion of a specific allele among all allele copies in a population.
+
+- **Genotype Frequency**: The proportion of a specific genotype among all individuals in a population.
+
+- **Assumptions of HWE**: The conditions under which HWE holds true, including random mating, no mutations, large population size, no migration, and no natural selection.
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Understand the concept of Hardy-Weinberg Equilibrium and its significance in population genetics.
+
+- Calculate allele and genotype frequencies and apply the Hardy-Weinberg equation.
+
+- Identify and explain factors that can cause deviations from Hardy-Weinberg Equilibrium.
+
+## Activity Overview
+
+Suggested timings:
+
+- 5 minutes: Introduce the exercise and review key concepts.
+
+- 10 minutes: Students read through instructions and familiarize themselves with the problems.
+
+- 20-30 minutes: Students work on the problems individually or in groups.
+
+- 5 minutes: Wrap up and answer any questions the students have.
+
+## Instructions for Facilitating
+
+1. **Introduction**: Begin by explaining the significance of Hardy-Weinberg Equilibrium in understanding genetic variation and evolution. Emphasise that it is a null model and often used to identify if interesting processes are happening in a population (i.e. if the population is not at HWE, perhaps selection is operating).
+
+2. **Review Key Concepts**: Discuss allele and genotype frequencies, the Hardy-Weinberg equation, and the assumptions underlying the equilibrium.
+
+3. **Problem-Solving**: Let students tackle the problems. Guide them through one of the provided problems to illustrate general methods.
+
+4. **Discussion**: Facilitate a discussion on the results, focusing on how deviations from HWE can indicate evolutionary forces at work.
+
+**Questions & Model Answers**
+
+Students will answer the following questions:
+
+1. **What are the key assumptions of Hardy-Weinberg Equilibrium?**
+
+   - The key assumptions are random mating, no mutations, large population size, no migration, and no natural selection.
+
+2. **How can you calculate allele frequencies from genotype frequencies?**
+
+   - Allele frequencies can be calculated by adding the frequency of the homozygous genotype for that allele to half the frequency of the heterozygous genotype.
+
+3. **What factors can cause a population to deviate from Hardy-Weinberg Equilibrium?**
+
+   - Factors include non-random mating, mutations, genetic drift (especially in small populations), gene flow (migration), and natural selection.
+
+**Teaching Tips**
+
+- **Clarify Assumptions**: Ensure students understand each assumption of HWE and why deviations from these assumptions can lead to evolutionary change.
+
+- **Use Real-World Examples**: Provide examples of populations where HWE is applied, such as in predicting carrier frequencies for genetic diseases.
+
+- **Encourage Critical Thinking**: Prompt students to think about how real populations might differ from the idealized conditions of HWE and what that means for genetic diversity.
+
+**Common Pitfalls**
+
+- **Confusing Allele and Genotype Frequencies**: Students may mix up these concepts. Reinforce the difference: allele frequencies refer to the proportion of a specific allele, while genotype frequencies refer to the proportion of a specific genotype.
+
+- **Basic maths issues**: Students may not know how to get $p$ from $p^2$ etc. Guide them through the logic of solving variations of the HWE equation.
+
+- **Overlooking Assumptions**: Students might forget that HWE relies on specific assumptions. Emphasize that real populations often violate these assumptions, leading to evolution.
+
+

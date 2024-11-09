@@ -1,4 +1,69 @@
-# Trade-offs and the declining force of selection
+# Trade-offs and the Declining Force of Selection
 
-Coming soon...
+## Introduction
+
+This exercise enables students to explore the concept of life history trade-offs, particularly between early reproduction and late-life survival, and understand how the declining force of selection with age influences these trade-offs. By engaging with a simplified life table and manipulating reproductive and survival parameters, students will gain insights into the evolutionary mechanisms shaping aging patterns and life history strategies.
+
+## Key Concepts
+
+- **Life History Trade-offs**: The allocation of limited resources between competing biological functions, such as reproduction and maintenance, leading to compromises in one area to benefit another.
+
+- **Force of Selection**: The influence of natural selection on the prevalence of specific traits within a population, which typically diminishes with age, making early-life traits more subject to selection pressures than late-life traits.
+
+- **Net Reproductive Rate ($R_0$)**: A measure of the average number of offspring produced by an individual over its lifetime, indicating the fitness of a life history strategy.
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Understand the concept of life history trade-offs.
+
+- Comprehend the force of selection, its age-related decline, and the implications for late-life deleterious genes.
+
+## Activity Overview
+
+Suggested timings:
+
+- 5 minutes: Introduce the exercise.
+
+- 5-10 minutes: Students read through instructions and familiarize themselves with the Excel file.
+
+- 25 minutes: Students complete the exercise, exploring different life history strategies.
+
+- 5 minutes: Wrap up and discuss findings.
+
+**Instructions for Facilitating**
+
+1. **Introduction**: Begin by explaining the concepts of life history trade-offs and the declining force of selection.
+
+2. **Excel File Familiarization**: Guide students to open the provided Excel file, which contains a simplified life table for a fictional species.
+
+3. **Exercise Execution**: Instruct students to manipulate reproductive and survival parameters in the Excel sheet to observe their effects on $R_0$ and understand the balance between early reproduction and late-life survival. Focus on how changes early in life are more important than later in life.
+
+4. **Discussion**: Facilitate a discussion on how changes in early and late-life traits impact fitness and the evolutionary implications of these trade-offs. e.g. in human's the declining force of selection is a good explanation for the existence age-related health problems.
+
+**Questions & Model Answers**
+
+Students will answer the following questions:
+
+1. **What is the force of selection, and why does it decline with age?**
+
+   - The force of selection refers to the extent to which natural selection influences traits in a population. It declines with age because individuals have already passed on their genes by reproducing early in life, making late-life traits less subject to selection pressures.
+
+2. **How do early-life and late-life trade-offs influence aging patterns in organisms?**
+
+   - Trade-offs between early reproduction and late-life survival can lead to increased reproductive success at younger ages but may result in higher mortality or decreased fitness in later life, influencing the aging patterns observed in different species.
+
+**Teaching Tips**
+
+- **Excel Proficiency**: Ensure students are comfortable using Excel, particularly in manipulating data and interpreting graphs. 
+
+- **Conceptual Emphasis**: Highlight the real-world implications of life history trade-offs, such as how they can explain variations in aging and longevity across species and how they can explain age-related health problems in humans.
+
+**Common Pitfalls**
+
+- **Overlooking the Declining Force of Selection**: Students may not fully grasp why late-life traits are less influenced by natural selection. Emphasize the reproductive timeline and its impact on selection pressures.
+
+- **Misinterpreting $R_0$**: Clarify that $R_0$ represents the net reproductive rate and is a key indicator of the fitness of a life history strategy.
+
 
