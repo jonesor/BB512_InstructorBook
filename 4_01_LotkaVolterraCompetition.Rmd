@@ -1,4 +1,83 @@
 # Lotka-Volterra competition
 
-Coming soon...
+## Introduction
+
+This exercise, which should be run over TWO sessions, involves programming the Lotka-Volterra competition model in a spreadsheet (e.g., Excel) to simulate interspecific competition between two species. Students will manually create a spreadsheet model from scratch, entering formulae and parameters to investigate the conditions under which species coexist or exclude each other. This hands-on activity enhances understanding of mathematical modeling in ecology, emphasising the relationship between competition coefficients, carrying capacities, and species interactions.
+
+## Key Concepts
+
+- **Lotka-Volterra Competition Model**: This model uses differential equations to describe the population dynamics of two competing species. The equations incorporate competition coefficients that quantify the impact of each species on the other's population growth.
+
+- **Interspecific Competition**: Describes the interaction between species that compete for the same resources, affecting population sizes and influencing species coexistence.
+
+- **Competitive Exclusion Principle**: A key ecological principle derived from the model, which states that two species cannot coexist indefinitely if they compete for the same limited resources unless they differ significantly in their use of these resources.
+
+- **Zero Net Growth Isoclines (ZNGIs)**: Graphical representations where the population growth rate of a species is zero. These lines are used to determine conditions for species coexistence or exclusion.
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Experience programming a population biology model (Lotka-Volterra Competition model) in a spreadsheet and using it to explore population dynamics.
+- Understand and explain the competitive exclusion principle and its ecological significance.
+- Analyse the effects of different competition coefficients, carrying capacities, and initial population sizes on species interactions.
+- Visualise and interpret phase diagrams and population trajectories to identify conditions for species coexistence or competitive exclusion.
+
+## Activity Overview
+
+Suggested timings:
+
+- 5 minutes: Introduce the exercise and explain the objectives.
+- 10 minutes: Students review the provided detailed instructions on creating the spreadsheet.
+- 20-30 minutes: Students set up and complete the spreadsheet, entering data, formulae, and creating graphs.
+- 5 minutes: Wrap up with a discussion about their findings and the ecological implications of the model.
+
+**Instructions for Facilitating**
+
+1. **Introduction**: Start by discussing the importance of understanding species interactions in ecology and the role of mathematical models like Lotka-Volterra in predicting outcomes of competition.
+
+2. **Spreadsheet Setup**:
+   - Guide students to download the instructions PDF for setting up their spreadsheet.
+   - Explain that they will build the model step-by-step, entering population parameters, setting up a time series, and programming the Lotka-Volterra equations.
+   - Clarify that they will be able to modify model parameters to explore their impact on the population processes.
+
+3. **Entering Formulae**: 
+   - Assist students in using absolute and relative cell references as specified in the instructions to avoid errors.
+   - Explain the equations and ensure students understand how parameters like carrying capacity (K) and competition coefficients ($\alpha_{12}$ and $\alpha_{21}$) are used.
+
+4. **Graphing**:
+   - Guide students in creating two types of graphs: (1) Population sizes over time, and (2) a phase diagram showing ZNGIs and population trajectories.
+   - Emphasise proper labeling of axes and data points to aid in interpretation.
+
+5. **Analysis and Interpretation**: Facilitate discussions on how changing model parameters (e.g., competition coefficients) affects the outcomes, leading to coexistence or competitive exclusion. Use the PowerPoint or mirror your screen to the projector to show examples using the completed spreadsheet.
+
+6. **Wrap-Up**: Discuss real-world examples of interspecific competition and how such models are used in ecological research and conservation.
+
+**Questions & Model Answers**
+
+Students will answer the following questions:
+
+1. **What parameter values will cause species 1 to exclude species 2 from the habitat? What do these values mean ecologically?**
+   - High competition coefficient ($\alpha_{12}$) values indicate strong negative impacts from species 2 on species 1, leading to exclusion. These values represent a scenario where species 1 is outcompeted for resources.
+
+2. **What parameter values will reverse this outcome?**
+   - Lowering $\alpha_{12}$ or increasing $\alpha_{21}$ may favor species 2 over species 1, reversing the exclusion outcome. Ecologically, this represents a shift where species 2 becomes the stronger competitor.
+
+3. **Under what conditions can the two species coexist stably?**
+   - Coexistence is possible when the competition coefficients are such that each species limits its own population growth more than it limits the other's. This requires $\alpha_{12} < 1$ and $\alpha_{21} < 1$, meaning intraspecific competition is stronger than interspecific competition.
+
+4. **Are there parameter values that make the outcome depend on initial population sizes?**
+   - Yes, in cases where the system has multiple stable equilibria, initial conditions can determine which equilibrium the system approaches. Ecologically, this suggests that historical population sizes can influence competitive outcomes.
+
+**Teaching Tips**
+
+- **Formula Entry**: Remind students to double-check formulae for errors and use proper cell references. Provide assistance as needed to ensure accuracy.
+- **Graph Interpretation**: Spend time discussing how to interpret ZNGIs and the significance of phase diagrams in understanding population dynamics.
+- **Parameter Sensitivity**: Encourage students to experiment with different values to observe how sensitive the model is to changes in competition coefficients and carrying capacities.
+
+**Common Pitfalls**
+
+- **Formula Errors**: Students may struggle with using correct formulae and cell references. Encourage careful entry and checking of formulae.
+- **Confusing Parameters**: Clarify the distinction between intraspecific and interspecific competition to avoid misunderstandings.
+- **Misinterpreting Graphs**: Ensure students understand how to read and interpret the graphs, especially the phase diagrams, and what they reveal about species interactions.
 

@@ -1,4 +1,94 @@
 # Lotka-Volterra predator-prey dynamics
 
-Coming soon...
+## Introduction
+
+This exercise guides students through building a spreadsheet model from scratch to simulate the Lotka-Volterra predator-prey dynamics. Students will explore how predator and prey populations interact, modify the model to include prey refuges and carrying capacities, and analyse the effects of various parameters on population stability. The activity introduces foundational concepts in population ecology and demonstrates how mathematical models can capture complex biological interactions.
+
+## Key Concepts
+
+- **Lotka-Volterra Predator-Prey Model**: A mathematical model using differential equations to describe the oscillatory dynamics between predator and prey populations. The model predicts population cycles resulting from the interactions between prey availability and predator abundance.
+  
+- **Equilibrium Points**: States at which predator and prey populations remain constant. Understanding these points provides insights into the conditions under which both populations can coexist or one species may face extinction.
+  
+- **Model Modifications**: The exercise includes modifications to account for factors like prey refuges and carrying capacities, adding ecological realism to the model.
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Practice constructing spreadsheets model to simulate biological processes and using them to boost their understanding.
+- Understanding of predator-prey dynamics described by the Lotka-Volterra equations.
+- Understand and explain how model parameters (e.g., prey growth rate, predator attack rate) influence population stability and oscillations.
+- Understanding how models can be modified to include additional ecological features such as prey refuges and carrying capacities.
+- Interpret the results and evaluate the model’s applicability to real-world predator-prey interactions.
+
+## Activity Overview
+
+Suggested timings:
+
+- 5 minutes: Introduce the exercise and discuss the ecological significance of predator-prey dynamics.
+- 10 minutes: Students review the provided PDF instructions for creating the spreadsheet.
+- 20-30 minutes: Students set up the spreadsheet, input formulas, and generate graphs.
+- 5 minutes: Wrap up with a discussion on model results and implications.
+
+## Instructions for Facilitating
+
+1. **Introduction**: Explain the purpose of modelling predator-prey interactions and the significance of understanding these dynamics in ecology. Highlight how the Lotka-Volterra model forms the basis of more complex ecological models.
+
+2. **Spreadsheet Setup**:
+   - Direct students to the detailed PDF instructions for setting up their spreadsheet.
+   - Explain the process of creating a linear time series, entering initial values for prey and predator populations, and defining parameters such as prey growth rate (R), predator attack rate (a), and predator starvation rate (q).
+   - Ensure students understand how the model uses these parameters to simulate population changes over discrete time intervals.
+
+3. **Entering Formulas**:
+   - Guide students in inputting the equations for prey and predator population changes, using the Lotka-Volterra equations (though this should be clear from the PDF instructions):
+     - Prey population: $V_{t+1} = V_t + R \times V_t - a \times C_t \times V_t$
+     - Predator population: $C_{t+1} = C_t + f \times a \times V_t \times C_t - q \times C_t$
+   - Use absolute and relative cell references where necessary and explain the importance of using the `IF` function to prevent negative population sizes. 
+
+4. **Graphing**:
+   - Help students create graphs to visualise predator and prey populations over time, using separate y-axes for clarity.
+   - Guide them in plotting phase diagrams (prey population on the x-axis and predator population on the y-axis) to observe the cyclical nature of the interactions.
+
+5. **Model Modifications**:
+   - Instruct students on how to modify the model to include prey refuges, adjusting the prey equation to ensure a minimum number of prey individuals always survive.
+   - Later, guide them through adding a carrying capacity for the prey population and discuss how this changes the model dynamics.
+
+6. **Analysis and Discussion**:
+   - Facilitate discussions on the ecological implications of the model. Ask students to experiment with different parameter values and observe how these changes affect population stability and cycles.
+   - Encourage critical thinking about the model's assumptions and limitations, such as the exclusion of environmental variability or alternative prey-predator behaviours.
+
+
+## Questions & Model Answers
+
+1. **Does a larger prey population growth rate (R) increase or decrease the stability of the predator-prey interaction?**
+   - A higher prey growth rate generally leads to more pronounced population cycles, which may destabilise the interaction.
+
+2. **What happens if the predators starve more quickly? Less quickly?**
+   - Faster predator starvation reduces predator numbers, potentially allowing the prey population to grow unchecked. Slower starvation increases predator pressure on the prey population.
+
+3. **What happens if the predator is more efficient at converting prey into offspring? Less efficient?**
+   - Higher efficiency leads to faster predator population growth, intensifying predation pressure. Lower efficiency reduces predator growth, potentially stabilising the system.
+
+4. **What happens if the predator is better at finding prey? Worse?**
+   - A higher attack rate increases predation pressure, which may drive the prey population lower and lead to predator-prey instability. A lower attack rate reduces predation, allowing the prey population to increase.
+
+5. **Is the behaviour of the model sensitive to starting populations?**
+   - Yes, initial conditions can influence the trajectory of population cycles, especially when populations start near equilibrium points.
+
+6. **What factors not included in the model may explain differences between predictions and real-world observations?**
+   - Real ecosystems include additional factors such as environmental variability, multiple prey and predator species, and resource limitations that the simple model does not account for.
+
+## Teaching Tips
+
+- **Formula Accuracy**: Emphasise the importance of correctly entering formulas and using absolute references. Double-check formulas to ensure the model runs as expected.
+- **Graph Interpretation**: Spend time explaining how to interpret the graphs, especially the significance of phase diagrams in understanding population cycles.
+- **Model Assumptions**: Discuss the simplifying assumptions of the model and how they may limit its application to real-world scenarios.
+
+## Common Pitfalls
+
+- **Incorrect Formulae**: Students may input formulas incorrectly, leading to unrealistic results. Encourage careful formula entry and cross-verification.
+- **Language issues**: Excel commands vary between English and Danish localisations (e.g. `HVIS` or `IF`). Check the students are using the right ones. 
+- **Misunderstanding Parameters**: Clarify the roles of parameters like attack rate and conversion efficiency to avoid confusion.
+- **Understanding Graphs**: Ensure students can understand what the graphs are showing.
 

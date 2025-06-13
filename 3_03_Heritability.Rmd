@@ -1,4 +1,101 @@
 # Heritability from a linear regression
 
-Coming soon...
+## Introduction**
+
+This exercise enables students to estimate heritability by analyzing the relationship between parent and offspring trait values through linear regression. By plotting these values and fitting a linear model, students will learn to interpret the slope as an estimate of heritability. This process reinforces concepts in quantitative genetics and statistical analysis, providing practical skills in data manipulation and interpretation.
+
+## Key Concepts
+
+- **Heritability**: A measure of how much of the variation in a trait is due to genetic factors. In this exercise, heritability is estimated by the slope of the regression line between parent and offspring trait values.
+
+- **Linear Regression**: A statistical method used to model the relationship between two continuous variables. Here, it helps determine the strength and direction of the relationship between parent and offspring traits.
+
+## Learning Outcomes
+
+Students will achieve the following learning outcomes:
+
+- Learn to import and manipulate data in R or Excel for the purpose of heritability estimation.
+
+- Develop a conceptual understanding of heritability and its importance in trait evolution.
+
+- Gain practical skills in performing linear regression analysis to estimate heritability.
+
+## Activity Overview
+
+Suggested timings:
+
+- 5 minutes: Introduce the exercise
+
+- 10 minutes: Students read through instructions
+
+- 20-30 minutes: Students complete the exercise
+
+- 5 minutes: Wrap up and discuss answers
+
+## Instructions for Facilitating
+
+1. **Introduction**: Briefly explain the purpose of the exercise and its relevance to understanding genetic inheritance.
+
+2. **Data Import**: Guide students in importing the provided datasets into R or Excel.
+
+3. **Data Visualization**: Assist students in plotting parent trait values on the x-axis and offspring trait values on the y-axis.
+
+4. **Linear Regression**: Help students fit a linear regression model to the data and interpret the slope as the heritability estimate.
+
+5. **Comparative Analysis**: Encourage students to repeat the analysis with the second dataset and compare results.
+
+6. **Discussion**: Facilitate a discussion on the implications of the findings and the assumptions underlying the methods used.
+
+## Questions & Model Answers
+
+Students will answer the following questions:
+
+1. **What does the heritability tell us about the amount of variation explained by genetic factors?**
+
+   - Heritability indicates the proportion of total variation in a trait that is attributable to genetic differences among individuals.
+
+2. **What other factors might explain the remaining variation?**
+
+   - Environmental influences, measurement errors, and gene-environment interactions can contribute to the remaining variation.
+
+3. **How would the heritability estimate change if you used a different trait (e.g., beak length instead of wing length)?**
+
+   - The heritability estimate may differ because different traits can have varying degrees of genetic and environmental influences.
+
+4. **What does the heritability tell us about how fast a trait might change due to selection?**
+
+   - Higher heritability suggests that a trait can respond more rapidly to selection pressures, leading to faster evolutionary change. This is related to the Breeders Equation ($R = h^2 \times S$)
+
+5. **You can calculate \(V_P\) from the phenotype values. Use this information to calculate \(V_A\) based on the equation \(V_A = h^2 \times V_P\).**
+
+   - By calculating the total phenotypic variance (\(V_P\)) and knowing the heritability (\(h^2\)), students can estimate the additive genetic variance (\(V_A\)).
+
+6. **What does the heritability tell us this time?**
+
+   - Comparing heritability estimates between datasets can reveal differences in genetic and environmental contributions to trait variation across populations.
+
+7. **Can you identify any environmental factors that might explain the difference?**
+
+   - Differences in habitat, diet, climate, or other environmental conditions between populations could account for variations in heritability estimates.
+
+8. **Can you think of any real-world applications where understanding heritability would be important?**
+
+   - Applications include selective breeding programs, conservation genetics, and understanding the genetic basis of diseases in humans.
+
+## Teaching Tips
+
+- **Data Handling**: Ensure students are comfortable with importing and manipulating datasets in R or Excel. Provide guidance as needed.
+
+- **Statistical Concepts**: Clarify the interpretation of the regression slope as an estimate of heritability and discuss the assumptions of linear regression.
+
+- **Assumptions Discussion**: Emphasize the importance of understanding the assumptions underlying heritability estimation, such as additive genetic effects and the absence of shared environmental influences.
+
+## Common Pitfalls
+
+- **Misinterpreting Heritability**: Students may confuse heritability with the proportion of a trait caused by genes in an individual. Clarify that heritability refers to variation within a population.
+
+- **Overlooking Assumptions**: Failing to consider the assumptions of linear regression and heritability estimation can lead to incorrect conclusions. Encourage critical evaluation of these assumptions.
+
+- **Data Entry Errors**: Mistakes in data import or manipulation can affect results. Advise students to double-check their data handling processes. In particular, importing data into R is a common headache.
+
 
