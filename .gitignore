@@ -8,6 +8,9 @@ Temp.Rmd
 _site
 CourseData/
 
+# Rendered book output (now built and published by GitHub Actions)
+docs/
+
 # Session Data files
 .RData
 
