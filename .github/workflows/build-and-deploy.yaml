@@ -1,10 +1,14 @@
 name: Build and deploy book
 
-# Builds the bookdown gitbook and publishes docs/ to GitHub Pages.
+# On push to main: build the bookdown gitbook and publish docs/ to GitHub Pages.
+# On pull requests to main: build only (no deploy) as a validation check, so a
+# render breakage cannot reach main.
 # Requires: Settings > Pages > "Build and deployment" > Source = "GitHub Actions".
 
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
@@ -13,9 +17,10 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment; don't cancel an in-progress production deploy.
+# Serialise per ref so a PR build and a production deploy don't block each other.
+# Never cancel an in-progress production deploy.
 concurrency:
-  group: pages
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -57,15 +62,36 @@ jobs:
       - name: Render book
         run: Rscript -e 'bookdown::render_book("index.Rmd", output_format = "bookdown::gitbook")'
 
+      # Guard against silent truncation: bookdown merges all chapters into one
+      # document before rendering, so a formatting error (e.g. an unclosed code
+      # fence) can drop every following chapter yet still "succeed". Compare the
+      # number of chapter pages produced against the number of chapter files
+      # listed in _bookdown.yml (excluding index and the X_00 part dividers,
+      # which produce no page of their own).
+      - name: Check render is complete
+        run: |
+          expected=$(grep -oE '"[0-9][^"]*\.Rmd"' _bookdown.yml | grep -vcE '_00\.Rmd"')
+          produced=$(find docs -maxdepth 1 -name '*.html' ! -name '404.html' ! -name 'index.html' | wc -l)
+          echo "Expected at least $expected chapter pages; produced $produced."
+          if [ "$produced" -lt "$expected" ]; then
+            echo "::error::Render produced $produced chapter pages but expected $expected. Chapters were dropped — check for an unclosed code fence or other formatting error in a chapter .Rmd."
+            exit 1
+          fi
+
       - name: Setup Pages
+        if: github.event_name == 'push'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
+        if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
 
   deploy:
+    # Deploy only for pushes to main; pull requests run the build job above as a
+    # check and stop there.
+    if: github.event_name == 'push'
     needs: build
     runs-on: ubuntu-latest
     environment:
