@@ -1,4 +1,4 @@
-# Deeper into logistic growth
+# Deeper into Logistic Growth
 
 This exercise helps students dive deeper into understanding the relationship between exponential (or geometric) and logistic growth models and how mathematical models can be explored from different perspectives. By experimenting with the Excel worksheet, students will observe how the logistic growth model can be modified and visualized in various ways. The exercise is designed to strengthen students’ competence in using Excel for mathematical modeling and to enhance their understanding of population dynamics.
 

@@ -1,0 +1,90 @@
+# Continuous traits from discrete genes
+
+## Introduction
+
+This is a fast, hands-on classroom simulation showing how **many small
+additive genetic effects** combine to produce a **continuous,
+approximately normal trait distribution**. It corresponds to the appendix
+chapter *Continuous traits from discrete genes* in the main book and
+connects to the *Heritability from a linear regression* exercise
+(additive genetic variance).
+
+Each student acts as a single gene that is either ON (1) or OFF (0). With
+a baseline trait value and one unit added per ON gene, the class-wide
+distribution of trait values is bell-shaped — an intuitive route into
+quantitative genetics.
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Explain how additive genetic effects create continuous trait variation.
+- Compare a physical classroom simulation with a simple R simulation.
+- Relate the spread of trait values to additive genetic variance.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Introduce the idea (polygenic traits, additive effects).
+- 10 minutes: Run the classroom "each student is a gene" simulation and
+  record trait values for ≥30 individuals.
+- 10 minutes: Reproduce it in R and compare histograms.
+- 5 minutes: Link to additive genetic variance and heritability.
+
+## Instructions for Facilitating
+
+1. Set a baseline trait value (e.g. 35) and rule: add 1 for each ON gene.
+2. For each "individual", have students randomly be ON/OFF (coin flip,
+   50:50) and total the trait value; repeat for at least 30 individuals.
+3. Plot a quick histogram of the observed values and describe the shape
+   (roughly symmetric, peaked near the expected value).
+4. Reproduce in R for 100 individuals and 25 genes, then compare:
+
+   ```r
+   set.seed(123)
+   baseline <- 35
+   n_genes <- 25
+   n_individuals <- 100
+   gene_on <- rbinom(n_individuals, size = n_genes, prob = 0.5)
+   trait_value <- baseline + gene_on
+   hist(trait_value, breaks = 12, col = "gray80",
+        main = "Trait values", xlab = "Trait")
+   ```
+5. Discuss why the distribution is continuous and bell-shaped despite the
+   genes being discrete.
+
+## Questions & Model Answers
+
+1. **What is the expected trait value, and why?**
+   - With 25 genes at 50:50, the expected number ON is $25 \times 0.5 =
+     12.5$, so the expected trait value is $35 + 12.5 = 47.5$. Individual
+     values vary around this because each gene is ON/OFF stochastically.
+
+2. **Why is the distribution continuous and approximately normal?**
+   - Summing many small independent contributions produces an
+     approximately normal distribution (central limit theorem). Even
+     though each gene is discrete, adding many of them yields a smooth,
+     bell-shaped spread of totals.
+
+3. **How does this relate to additive genetic variance?**
+   - The variance among individuals here arises entirely from the additive
+     genetic contributions (all environments identical). This is the
+     conceptual basis of additive genetic variance and links directly to
+     the heritability exercise.
+
+## Teaching Tips
+
+- **Physical first, then R**: the coin-flip version makes the abstraction
+  concrete before the code reproduces it at scale.
+- **Vary the gene count**: more genes → smoother, narrower-relative
+  distribution; a nice illustration of how polygenic traits behave.
+- **Set a seed** in R so results are reproducible when comparing to the
+  classroom histogram.
+
+## Common Pitfalls
+
+- **Expecting a bimodal or flat distribution** because the genes are
+  binary — emphasise that it is the *sum* that matters.
+- **Too few individuals**: with fewer than ~30 the bell shape is hard to
+  see; encourage larger samples.
+- **Confusing the trait mean with a single gene's effect** — the mean
+  comes from the expected number of ON genes, not from any one gene.

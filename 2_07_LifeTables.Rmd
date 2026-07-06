@@ -1,4 +1,4 @@
-# Life Tables and Survivorship Types
+# Life tables and survivorship types
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Trade-offs and the Declining Force of Selection
+# Trade-offs and the declining force of selection
 
 ## Introduction
 

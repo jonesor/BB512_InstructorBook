@@ -1,0 +1,124 @@
+# Continuous-time Lotka-Volterra Predator-Prey Model in R
+
+## Introduction
+
+This exercise is the R-based companion to the Excel predator-prey
+practical. Students program the **continuous-time** Lotka-Volterra
+predator-prey model using the `deSolve` package, then vary the parameters
+to explore oscillations, equilibria, and zero net growth isoclines
+(ZNGIs) in the phase plane. It corresponds to the student chapter
+*Continuous-time Lotka-Volterra Predator-Prey Model in R* in the main
+book and follows on from the *Lotka-Volterra predator-prey dynamics*
+exercise.
+
+The model equations are:
+$$\frac{dV}{dt} = RV - aVC, \qquad \frac{dC}{dt} = afVC - qC$$
+where $R$ is the victim (prey) growth rate, $a$ the attack rate, $f$ the
+conversion efficiency, and $q$ the consumer (predator) death rate.
+
+## Key Concepts
+
+- **Neutral stability**: with ideal parameters the continuous-time model
+  produces sustained, undamped cycles (closed orbits), unlike the
+  discrete-time version.
+- **Coexistence equilibrium**: $V^{*} = q/(af)$ and $C^{*} = R/a$.
+- **Amplitude and period**: amplitude is half the peak-to-trough range;
+  period is the peak-to-peak time. Both depend on the parameters.
+- **ZNGIs**: the predator ZNGI is a vertical line at $V = q/(af)$; the prey
+  ZNGI is a horizontal line at $C = R/a$; their intersection is the
+  coexistence equilibrium.
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Implement a system of ODEs in R using `deSolve::ode()`.
+- Investigate how each parameter affects amplitude, period, and equilibria.
+- Draw and interpret the phase plane and ZNGIs.
+- Contrast neutrally stable continuous-time cycles with the unstable
+  discrete-time model.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Recap the predator-prey equations and parameter meanings.
+- 5 minutes: Install/load `deSolve`; set up the model function.
+- 20–25 minutes: Simulate, plot time series and phase plane, then vary
+  parameters and answer the questions.
+- 5 minutes: Wrap-up on neutral stability and real-world caveats.
+
+## Instructions for Facilitating
+
+1. Make sure everyone can `install.packages("deSolve")` and `library(deSolve)`
+   before starting — this is the usual sticking point.
+2. Build the model function together, mapping each term in the code back
+   to a term in the equations.
+3. Run the default simulation and produce both plots (time series and
+   phase plane with ZNGIs) before changing anything.
+4. Assign different parameter changes to different students/groups so the
+   class collectively sees the full range of behaviour, then compare.
+
+## Questions & Model Answers
+
+1. **Oscillatory dynamics; effect of doubling initial $V$ or $C$.**
+   - Prey rise when predators are scarce; predators rise (with a lag) when
+     prey are abundant, then overshoot and crash the prey, and so on.
+     Changing only the *initial* values moves the system to a different
+     closed orbit (different amplitude) but does not change the equilibrium
+     or destroy the cycles.
+
+2. **Neutral stability when $q$ changes.**
+   - Oscillations persist without damping or amplifying — the hallmark of
+     neutral stability. Changing $q$ shifts the equilibrium ($V^{*}=q/(af)$)
+     and hence the orbit, but the cycles neither decay nor blow up.
+
+3. **Equilibrium points.**
+   - $V^{*} = q/(af)$ and $C^{*} = R/a$. With the default values
+     ($R=0.8, a=0.01, f=0.008, q=0.1$): $V^{*} = 0.1/(0.01\times0.008)=1250$
+     and $C^{*} = 0.8/0.01 = 80$. The simulated trajectory orbits these
+     values. Increasing $R$ raises $C^{*}$; increasing $a$ lowers both
+     $V^{*}$ and $C^{*}$.
+
+4. **Parameter sensitivity.**
+   - $R$: raising prey growth increases predator equilibrium and generally
+     the amplitude. $q$: raising predator death raises prey equilibrium.
+     $f$ and $a$: raising either lowers prey equilibrium. All four reshape
+     the orbit and change the period.
+
+5. **Phase-plane analysis.**
+   - The ZNGIs are the lines where each population's growth is zero; the
+     trajectory forms a closed loop around their intersection. Changing
+     parameters moves the isoclines and resizes the orbit; changing initial
+     sizes changes which orbit you sit on but not the isoclines.
+
+6. **Extinction scenarios.**
+   - In the *continuous-time* model, unless parameters are pushed to
+     extremes the neutral cycles prevent true extinction — a key contrast
+     with the discrete-time model. Very high $q$ or very low $a$ can shrink
+     the predator population toward zero.
+
+7. **Real-world relevance.**
+   - Real systems add density dependence, carrying capacity, time lags,
+     environmental noise, and functional-response saturation, all of which
+     tend to damp or destabilise the idealised neutral cycles.
+
+## Teaching Tips
+
+- **Package install first**: resolve `deSolve` installation before the
+  conceptual content so momentum is not lost.
+- **Link code to maths**: for every line of the model function, point to
+  the matching term in $dV/dt$ or $dC/dt$.
+- **Two views**: encourage students to read the time series and the phase
+  plane together — the closed orbit and the oscillations are the same
+  behaviour shown two ways.
+
+## Common Pitfalls
+
+- **Forgetting to install `deSolve`** (or attempting `library()` before
+  installation).
+- **Confusing amplitude and period** — define both explicitly.
+- **Over-interpreting initial conditions** — students often expect
+  different starting points to change the equilibrium; they change the
+  orbit, not the equilibrium.
+- **Time-step artefacts** — this is the continuous-time model; do not
+  conflate its neutral cycles with the discrete-time model's expanding
+  spirals.

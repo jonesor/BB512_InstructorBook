@@ -1,0 +1,100 @@
+# Building a phylogenetic tree
+
+## Introduction
+
+This activity builds intuition for **phylogenetic trees** using discrete
+**morphological characters**. It corresponds to the appendix chapter
+*Building a phylogenetic tree* in the main book and aligns with the
+macroevolution "build a tree" exercise guide
+(`supplemental/Macroevolution_Building_A_Tree/FylTree_ENG_2015.pdf` in the
+main-book materials).
+
+Students score a handful of organisms for several discrete characters,
+compute a pairwise difference table, and group the most similar organisms
+first — recovering the logic of tree-building by hand before (optionally)
+checking against an R clustering result.
+
+## Key Concepts
+
+- **Character table**: organisms (rows) scored for discrete characters
+  (columns), e.g. presence/absence.
+- **Pairwise difference (distance) table**: count of characters that
+  differ between each pair.
+- **Grouping rule**: join the closest pair first, then add progressively
+  deeper splits; internal nodes represent inferred most-recent common
+  ancestors.
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Build a character table for a set of organisms.
+- Compute pairwise differences and translate them into a tree.
+- Relate a morphology-based tree to the idea of evolutionary relatedness.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Introduce characters, character tables, and the grouping idea.
+- 15 minutes: Students score six organisms for seven characters and build
+  the pairwise difference table.
+- 10 minutes: Draw the tree by grouping closest relatives first.
+- 5 minutes: Optional R check with `dist()` + `hclust()`; discussion.
+
+## Instructions for Facilitating
+
+1. Choose six organisms (use character cards if available, or invent six
+   with clear, contrasting traits).
+2. Agree on seven discrete characters that vary among them
+   (presence/absence, colour class, tail-length category, etc.).
+3. Fill in the character table, then compute the pairwise difference
+   (Manhattan/Hamming) table.
+4. Draw the tree by joining the closest pair first and working outward.
+5. Optionally compare with R:
+
+   ```r
+   characters <- data.frame(
+     row.names = c("A", "B", "C", "D", "E", "F"),
+     trait1 = c(1, 1, 0, 0, 0, 1),
+     trait2 = c(0, 1, 1, 0, 0, 1),
+     trait3 = c(1, 1, 1, 0, 0, 0)
+   )
+   dist_mat <- dist(characters, method = "manhattan")
+   tree <- hclust(dist_mat, method = "average")
+   plot(tree, main = "Tree from morphological characters")
+   ```
+
+## Questions & Model Answers
+
+1. **How do you decide which organisms are most closely related?**
+   - The pair with the *fewest* character differences (smallest distance)
+     is grouped first; these share the most character states and are
+     inferred to be most closely related.
+
+2. **What do the internal nodes represent?**
+   - Inferred most-recent common ancestors of the organisms in that
+     grouping, based on shared characters.
+
+3. **Why might a morphology tree differ from a molecular tree?**
+   - Convergent evolution and shared ancestral (rather than shared
+     derived) characters can mislead morphology-based grouping; molecular
+     data provide many more, more independent characters. A good prompt
+     for discussing homoplasy.
+
+## Teaching Tips
+
+- **By hand first**: build the tree manually before running `hclust()` so
+  students own the grouping logic rather than treating R as a black box.
+- **Choose contrasting organisms**: characters that clearly vary make the
+  groupings unambiguous and the exercise faster.
+- **Discuss ties and conflicts**: when two groupings are equally good, or
+  characters conflict, use it to introduce homoplasy and parsimony.
+
+## Common Pitfalls
+
+- **Characters that don't vary**: a character shared by all (or by none)
+  carries no grouping information — check for this before computing
+  distances.
+- **Confusing similarity with relatedness**: shared *ancestral* traits do
+  not indicate close relationship; only shared *derived* traits do.
+- **Reading the dendrogram height as time**: branch lengths from
+  `hclust()` reflect distance, not calibrated evolutionary time.
