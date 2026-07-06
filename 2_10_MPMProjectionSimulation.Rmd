@@ -1,0 +1,126 @@
+# Matrix Population Models (MPMs): Projection and Simulation
+
+## Introduction
+
+This exercise extends the basic **matrix population modelling** practical
+into two closely related uses of the same matrix: **projection** (pushing
+a population vector forward through time deterministically) and
+**simulation** (adding stochasticity and management interventions such as
+culling or reduced fecundity). It is the R-based companion to the
+student chapter *Matrix Population Models (MPMs): Projection and
+Simulation* in the main book, and it builds directly on the earlier
+*Matrix population modelling* exercise.
+
+The worked example uses a simple 3-stage (Juvenile → Subadult → Adult)
+Lefkovitch matrix. Students first project deterministically, extract the
+asymptotic growth rate $\lambda$ (the dominant eigenvalue), and then
+convert the deterministic model into a stochastic simulation using
+Poisson births and binomial survival/transitions.
+
+## Key Concepts
+
+- **Projection interval ($\Delta t$)**: the time step of the model. Vital
+  rates *must* match it (annual rates for a 1-year step, monthly rates for
+  a 1-month step). Mixing time scales is the most common conceptual error.
+- **Deterministic projection**: $\mathbf{n}_{t+\Delta t} = \mathbf{A}\,\mathbf{n}_t$, treated as exact expectations.
+- **Asymptotic growth rate ($\lambda$)**: the dominant eigenvalue of
+  $\mathbf{A}$; $>1$ growth, $=1$ stationary, $<1$ decline.
+- **Stochastic simulation**: demographic variation via `rpois()` for
+  births and `rbinom()` for survival/transitions; run many replicates and
+  summarise with a median and an interval (e.g. 10–90%).
+- **Management scenarios**: culling (removing individuals from a stage
+  before the demographic update) and contraception (reducing fecundity
+  from a given year).
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Build a projection matrix and project a population vector forward.
+- Extract and interpret $\lambda$ from the dominant eigenvalue.
+- Convert a deterministic matrix model into a stochastic simulation.
+- Compare management scenarios (culling vs contraception) using replicate
+  simulations and uncertainty bands.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Recap of the matrix model and the projection interval.
+- 10 minutes: Build $\mathbf{A}$, project deterministically, extract $\lambda$.
+- 20–25 minutes: Add stochasticity; run the culling and contraception
+  scenarios; compare replicate trajectories.
+- 5 minutes: Wrap-up and discussion of deterministic vs stochastic uses.
+
+## Instructions for Facilitating
+
+1. Emphasise from the outset that the vital rates must match the chosen
+   $\Delta t$. Ask students to state, in words, what $\Delta t = 1$ year
+   means for $P_A$ and $F_A$.
+2. Walk through building $\mathbf{A}$ with `matrix(..., byrow = TRUE)` and
+   checking the printed matrix against the life-cycle diagram (rows =
+   stage at $t+1$, columns = stage at $t$).
+3. Do the one-step projection `A %*% n0` by hand for one stage so students
+   see where the numbers come from, then run the multi-year loop.
+4. Show that the log of total population size becomes a straight line once
+   the stable stage structure is reached — that slope is $\log\lambda$.
+5. Introduce stochasticity: births are Poisson, survival/transitions are
+   binomial. Stress that one run is only *one* realisation.
+6. Run the culling scenario, then set the contraception treatment
+   (`F_A * 0.1` from year 10). Compare all scenarios in one figure.
+
+## Questions & Model Answers
+
+These map to the "Student exercises" section of the main-book chapter.
+
+1. **Projection-interval sanity check — what does $\Delta t = 1$ year mean, and what changes for monthly steps?**
+   - It means the matrix updates the population once per year, so every
+     rate is a *per-year* rate. For $\Delta t = 1$ month, $P_A$ becomes a
+     monthly survival probability (roughly the twelfth root of the annual
+     value under constant hazard) and $F_A$ becomes monthly recruitment.
+     Monthly steps are preferable when reproduction or mortality is
+     strongly seasonal or when the biology plays out within a year.
+
+2. **Change one vital rate: reduce $P_A$ from 0.80 to 0.70. Does the population still grow?**
+   - Rebuild $\mathbf{A}$, re-project, and recompute the eigenvalue. With
+     lower adult survival $\lambda$ drops below 1, so the deterministic
+     projection now declines (the log-total slopes downward). Students
+     should justify this from the eigenvalue, not just the plot.
+
+3. **Culling as management — cull 5 vs 10 adults/year; which stage matters most?**
+   - Heavier culling lowers the median trajectory and widens the
+     extinction-risk tail. Running the same intensity on each stage in
+     turn shows that removing the stage with the highest **elasticity**
+     (usually adults in a long-lived life cycle) has the largest effect,
+     which links back to elasticity analysis in the earlier matrix
+     exercise.
+
+4. **Contraception treatment (reduced fecundity) vs culling.**
+   - A 90% reduction in $F_A$ from year 10 (`F_A_t <- F_A * 0.1`) reduces
+     recruitment rather than standing individuals. Whether it beats
+     culling depends on which vital rate the growth rate is most elastic
+     to; for adult-dominated life cycles culling adults typically depresses
+     growth faster, whereas fecundity control is slower but less lethal.
+
+## Teaching Tips
+
+- **Reproducibility**: have students set `set.seed()` so their stochastic
+  runs are comparable and reproducible in discussion.
+- **One run ≠ the answer**: insist on replicate runs before drawing
+  conclusions; a single stochastic trajectory can mislead.
+- **Deterministic vs stochastic**: deterministic tools are best for
+  *structure* and *long-term* behaviour ($\lambda$, stable stage
+  structure, elasticity); simulation is best for *short-term variability*
+  and *scenario/risk* questions.
+
+## Common Pitfalls
+
+- **Mismatched time scales**: monthly survival combined with annual
+  fecundity. Check that every rate matches $\Delta t$.
+- **Conditional transition probabilities**: when a subadult can either
+  stay or grow, the "grow given survived-and-not-stayed" probability is
+  `G_S / (1 - P_S)`; students often forget to condition and double-count
+  survivors.
+- **Removing more individuals than exist**: culling code must use
+  `min(current, cull_n)` so a stage cannot go negative.
+- **Reading too much into realised $\lambda$**: a single-run geometric-mean
+  growth rate is a finite-horizon estimate, not the long-run stochastic
+  growth rate $\lambda_s$.

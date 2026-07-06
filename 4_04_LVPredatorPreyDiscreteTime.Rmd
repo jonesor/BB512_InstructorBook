@@ -1,0 +1,92 @@
+# Discrete-time Lotka-Volterra Predator-Prey Model in R
+
+## Introduction
+
+This exercise is the discrete-time counterpart to the continuous-time
+predator-prey practical, and corresponds to the student chapter
+*Discrete-time Lotka-Volterra Predator-Prey Model in R* in the main book.
+Students program the discrete-time model in R, adjust the time step
+($\Delta t$), and see how the implied time lag destabilises the system
+into expanding spirals and eventual extinction — in direct contrast to
+the neutrally stable continuous-time cycles.
+
+The update equations are:
+$$V_{t+1} = V_t + \Delta t\,(R V_t - a C_t V_t)$$
+$$C_{t+1} = C_t + \Delta t\,(a f V_t C_t - q C_t)$$
+With $\Delta t = 1$ this is the year-by-year model fitted in the Excel
+class, in which predators respond to prey abundance with a one-year lag.
+
+## Key Concepts
+
+- **Discretisation and time lag**: $\Delta t = 1$ embeds a one-step lag;
+  the larger the step, the stronger the destabilising lag.
+- **Expanding spirals**: in the phase plane the discrete model spirals
+  outward, unlike the closed orbits of the continuous model.
+- **Convergence to continuous behaviour**: as $\Delta t \to 0$ the discrete
+  model approaches the continuous-time dynamics.
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Implement a discrete-time predator-prey model with a `for` loop in R.
+- Explain how the time step introduces a lag that affects stability.
+- Compare discrete-time and continuous-time dynamics directly.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Recap the discrete update equations and the meaning of $\Delta t$.
+- 10 minutes: Build the model function and run the default simulation.
+- 15–20 minutes: Vary $\Delta t$ (0.1, 1, 2) and compare phase-plane
+  behaviour; relate to the continuous-time results.
+- 5 minutes: Wrap-up on why discretisation matters.
+
+## Instructions for Facilitating
+
+1. Build the `discrete_predator_prey_model()` function together, mapping
+   each line to a term in the update equations.
+2. Run with the defaults ($\Delta t = 1$) and produce the time-series and
+   phase-plane plots; point out the outward spiral.
+3. Have students change $\Delta t$ to 0.1 and then to 2, re-running each
+   time, and describe the change in stability.
+4. Put the discrete phase plane next to the continuous-time one from the
+   previous exercise for a side-by-side comparison.
+
+## Questions & Model Answers
+
+1. **Decrease $\Delta t$ to 0.1 and compare with $\Delta t = 1$.**
+   - With $\Delta t = 0.1$ the spirals expand much more slowly and the
+     trajectory stays close to a near-closed orbit — it approaches the
+     neutrally stable continuous-time behaviour. Smaller steps mean a
+     weaker lag.
+
+2. **Increase $\Delta t$ to 2 — does extinction happen faster?**
+   - Yes. A larger step strengthens the lag and the overshoot, so the
+     spiral expands more rapidly and the population reaches extinction
+     (a zero crossing) in fewer steps.
+
+3. **Why does the discrete model differ from the continuous one?**
+   - The finite time step means each population responds to the *previous*
+     step's abundances rather than instantaneously. This built-in lag
+     amplifies oscillations; the continuous model, with an infinitesimal
+     step, has no such lag and produces sustained neutral cycles.
+
+## Teaching Tips
+
+- **Same parameters, different world**: run the discrete and continuous
+  models with comparable parameters so the destabilising effect of
+  discretisation is unmistakable.
+- **Watch for negatives**: a large $\Delta t$ can push a population below
+  zero — a good hook for discussing where the model stops being
+  biologically meaningful.
+- **Connect to Excel**: remind students the $\Delta t = 1$ case is exactly
+  the year-by-year model they built in the spreadsheet.
+
+## Common Pitfalls
+
+- **Expecting closed orbits**: students who just did the continuous model
+  may be surprised by the spiral; make the contrast explicit.
+- **Interpreting negative populations literally**: these are numerical
+  artefacts of a large step, not biology.
+- **Loop indexing errors**: initial values go in `V[1]`/`C[1]`, and the
+  loop fills `V[t+1]`/`C[t+1]` — off-by-one mistakes are common.

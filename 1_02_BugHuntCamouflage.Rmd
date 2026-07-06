@@ -1,4 +1,4 @@
-# Bug Hunt Camouflage (NetLogo)
+# Bug hunt camouflage (NetLogo)
 
 ## Introduction 
 
