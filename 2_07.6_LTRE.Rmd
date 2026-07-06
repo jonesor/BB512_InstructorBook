@@ -1,3 +1,102 @@
 # Life Table Response Experiments
 
-Coming soon...
+## Introduction
+
+A **Life Table Response Experiment (LTRE)** decomposes the *difference* in
+population growth rate ($\lambda$) between two populations or treatments
+into contributions from each individual matrix element. Where elasticity
+analysis asks how sensitive $\lambda$ is to a small change in one rate
+(holding others constant), an LTRE attributes an *observed* difference
+between two real matrices to the specific transitions that drive it —
+making it well suited to comparing management scenarios or environmental
+treatments that change several vital rates at once.
+
+In the worked example, students compare a reference squirrel population
+(good conditions) with a treatment population (poorer spring conditions
+affecting juveniles and fecundity), and use `popbio::LTRE` to see which
+transition contributes most to the drop in $\lambda$.
+
+## Key Concepts
+
+- **LTRE**: decomposes a $\lambda$ difference into per-element contributions.
+- **Contributions have sign and magnitude**: some element differences push
+  $\lambda$ up, others down; the net is the observed difference.
+- **LTRE vs elasticity**: elasticity = sensitivity to small hypothetical
+  changes in one rate; LTRE = attribution of an actual, multi-rate
+  difference between scenarios.
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Explain the purpose of an LTRE and when it is useful.
+- Quantify how matrix-element changes contribute to $\lambda$ differences.
+- Interpret LTRE output in a biological or management context.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Motivate LTRE — "which change matters most?"
+- 10 minutes: Build `A_ref` and `A_treat`; compare element-wise and by $\lambda$.
+- 15 minutes: Run `popbio::LTRE`; interpret the contributions.
+- 5 minutes: Contrast with elasticity; discuss management implications.
+
+## Instructions for Facilitating
+
+1. Ensure `popbio` and `popdemo` are installed. The diagram packages
+   (`Rage`, `DiagrammeRsvg`, `rsvg`) are optional and only needed to
+   regenerate the life-cycle figure.
+2. Build the two 2×2 matrices and first compare them directly: `A_ref -
+   A_treat` shows three changed entries.
+3. Compute both growth rates (`popdemo::eigs`): ≈1.451 (reference) vs
+   ≈0.992 (treatment) — a ~32% reduction. Establish *that* there is a
+   difference before asking *where* it comes from.
+4. Run `popbio::LTRE(A_treat, A_ref)` and read the contribution matrix.
+   Point out that one element's change actually *helps* $\lambda$ but is
+   outweighed by the others.
+5. Identify the dominant contribution (the lower-left element — the
+   juvenile-to-adult transition) and connect it to management.
+
+## Questions & Model Answers
+
+1. **What does an LTRE tell you that a simple $\lambda$ comparison does not?**
+   - The $\lambda$ comparison says *how much* growth differs; the LTRE says
+     *which transitions* are responsible and in which direction. Here it
+     shows the juvenile→adult transition drives most of the decline.
+
+2. **Interpret the sign of the contributions.**
+   - Negative contributions reduce $\lambda$ in the treatment relative to
+     the reference; a positive contribution means that particular change
+     acted to raise $\lambda$, partially offsetting the others. The net of
+     all contributions equals the overall $\lambda$ difference.
+
+3. **Modify one element of `A_treat`, predict which contribution changes most, then re-run `popbio::LTRE`.**
+   - Students predict, then check. The contribution tied to the element
+     they changed should move most; direction and size depend on both the
+     change and that element's sensitivity.
+
+4. **When is LTRE preferable to elasticity analysis?**
+   - When several vital rates differ at once between real scenarios
+     (treatments, sites, management options). Elasticity assumes small,
+     one-at-a-time changes with everything else held constant, so it is
+     less suited to comparing multi-rate differences.
+
+## Teaching Tips
+
+- **Compare before decomposing**: subtracting the matrices and comparing
+  $\lambda$ first gives students the "what" before the LTRE gives the "why".
+- **Watch argument order**: `popbio::LTRE(A_treat, A_ref)` — treatment
+  first, reference second — determines the sign convention; keep it
+  consistent so interpretations don't flip.
+- **Tie to decisions**: frame the dominant contribution as "where would
+  you focus conservation effort?" to make the analysis concrete.
+
+## Common Pitfalls
+
+- **Packages not installed**: `popbio` (for `LTRE`) and `popdemo` (for
+  `eigs`) are both required.
+- **Reversing the matrices** in `LTRE`, which flips the sign of every
+  contribution and confuses interpretation.
+- **Conflating LTRE with elasticity**: they answer related but different
+  questions; students often blur the two.
+- **Ignoring the offsetting (positive) contribution** and so
+  mis-explaining why the net change is smaller than the largest single term.

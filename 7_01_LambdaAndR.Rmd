@@ -1,4 +1,97 @@
 # Exponential growth in detail
 
-Coming soon...
+## Introduction
 
+This appendix chapter is a reference/derivation exercise that underpins
+much of the population-growth part of the course. It builds the
+exponential (geometric) growth model from first principles in both
+**discrete** and **continuous** time, defines the key parameters and their
+relationships, and shows how to estimate the growth rate from real data by
+linear regression on log-transformed counts. Because different textbooks
+use different symbols, a nomenclature table is essential and worth
+foregrounding.
+
+Students fit the model to a short real time series (breeding pairs of
+Merlin, *Falco columbarius*, 1970–1982) and read the growth rate off the
+regression slope.
+
+## Key Concepts
+
+- **Per-capita rate of increase, $R = b - d$**: births minus deaths per
+  individual per time step.
+- **Finite rate of increase (multiplication rate), $\lambda = R + 1 =
+  N_{t+1}/N_t$**.
+- **Projection**: $N_t = \lambda^{t} N_0$; on a log scale this is a
+  straight line with slope $\ln\lambda$.
+- **Intrinsic rate of increase, $r = \ln\lambda$** (continuous time);
+  $\lambda = e^{r}$.
+- **Nomenclature varies** across Neal, Gotelli, etc. — $R$, $R_m$, $r$,
+  $r_c$, $R_0$ mean different things; keep the table visible.
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- State the equations underpinning exponential growth.
+- Distinguish discrete and continuous time models.
+- Interpret $R$, $\lambda$, $r$ and $R_0$ and the relationships among them.
+- Estimate a growth rate from real data using regression on $\ln N$.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 10 minutes: Derive the discrete model ($N_{t+1} = \lambda N_t$;
+  $N_t = \lambda^{t} N_0$).
+- 5 minutes: Show that $\ln N$ vs time is linear with slope $\ln\lambda$.
+- 15 minutes: Fit the Merlin data in R; extract $\lambda$, $r$, $R$.
+- 5 minutes: Continuous-time model and the $r = \ln\lambda$ relationship.
+
+## Instructions for Facilitating
+
+1. Walk through the derivation step by step (eqns 1–9), factoring out
+   $N_t$ to reach $\lambda = R + 1$ and then $N_t = \lambda^{t} N_0$.
+2. Log-transform to linearise: $\ln N_t = \ln(\lambda)\,t + \ln N_0$, and
+   map it onto $y = ax + b$ (slope $=\ln\lambda$, intercept $=\ln N_0$).
+3. Enter the Merlin series in R, plot on natural and log scales, and fit
+   `lm(logN ~ year)`.
+4. Convert the slope: $\lambda = e^{\text{slope}}$, $r = \text{slope}$,
+   $R = \lambda - 1$.
+5. Close with the continuous-time model and the zero-growth special case.
+
+## Questions & Model Answers
+
+1. **From the Merlin regression (slope ≈ 0.236), what are $\lambda$, $r$, and $R$?**
+   - $r = \text{slope} = 0.236$; $\lambda = e^{0.236} \approx 1.266$;
+     $R = \lambda - 1 \approx 0.266$. The population grows ~27% per year.
+
+2. **Why do we log-transform the counts before fitting a line?**
+   - Because $N_t = \lambda^{t} N_0$ is exponential; taking logs makes it
+     linear in $t$ ($\ln N_t = \ln(\lambda)\,t + \ln N_0$), so ordinary
+     linear regression estimates $\ln\lambda$ directly as the slope.
+
+3. **When does $\lambda = r + 1$ hold?**
+   - Only at zero growth ($r = 0$, $\lambda = 1$). In general
+     $\lambda = e^{r}$, **not** $r + 1$ — a very common student error.
+     ($R = \lambda - 1$ is the exact discrete relationship; $r = \ln\lambda$.)
+
+4. **What does a straight line on the log-scale plot indicate?**
+   - Constant per-step growth rate — i.e. genuine exponential/geometric
+     growth over that period.
+
+## Teaching Tips
+
+- **Symbols first**: agree on notation using the nomenclature table before
+  deriving anything; cross-textbook symbol clashes cause most confusion.
+- **Guard against $\lambda = r + 1$**: state explicitly that this holds
+  only at zero growth; the general relationship is $\lambda = e^{r}$.
+- **Interpret the fit**: link the regression slope back to biology (annual
+  multiplication rate) rather than leaving it as an abstract coefficient.
+
+## Common Pitfalls
+
+- **Confusing $R$, $r$, and $\lambda$** — especially assuming $\lambda = r + 1$
+  in general.
+- **Forgetting to log-transform** before fitting, then trying to force a
+  line through exponential data.
+- **Mixing textbook notations** ($R$ vs $R_m$ vs $r_c$) without noticing.
+- **Over-reading a short series**: the Merlin data are noisy; the fit
+  illustrates method, not a precise long-term rate.

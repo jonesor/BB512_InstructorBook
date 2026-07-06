@@ -1,3 +1,102 @@
 # Pre- and Post-reproduction census
 
-Coming soon...
+## Introduction
+
+This exercise addresses a subtle but important point in matrix population
+modelling: the population growth rate ($\lambda$) you estimate depends on
+**when the census is taken relative to reproduction**. A *pre-breeding*
+census counts individuals just before reproduction; a *post-breeding*
+census counts them just after. The underlying biology is identical, so a
+*correctly done* conversion between the two gives the **same** $\lambda$ —
+census timing is a bookkeeping convention, not a biological difference.
+The catch is that the conversion is easy to get partly wrong, and a
+mis-specified fecundity or survival term **does** change $\lambda$.
+
+Students build a post-breeding matrix, convert it correctly to a
+pre-breeding matrix (same $\lambda$), and then see how a common
+conversion mistake produces a badly biased $\lambda$. It uses the `eigs`
+function from the `popdemo` package.
+
+## Key Concepts
+
+- **Post-breeding census**: individuals counted just after breeding, so a
+  stage's fecundity term is scaled by *that stage's own* annual survival.
+- **Pre-breeding census**: individuals counted just before breeding, so
+  survival transitions shift by one stage and fecundity is scaled by the
+  **offspring's** survival ($p_0$), not the parent's.
+- **Invariance of $\lambda$**: a consistent conversion changes only *how*
+  the same survival and reproduction are represented — not the biology —
+  so $\lambda$ is unchanged.
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Explain the difference between pre- and post-breeding census models.
+- Convert a post-breeding matrix to a pre-breeding matrix correctly.
+- Recognise that a correct conversion leaves $\lambda$ unchanged, and say why.
+- Identify how a mis-specified survival or fecundity term biases $\lambda$.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Motivate the problem — why census timing appears in the matrix.
+- 10 minutes: Build the post-breeding matrix (`A1`) and the correct
+  pre-breeding matrix (`A2`); compare $\lambda$.
+- 10–15 minutes: Introduce the common mistake (`A3`); compare and discuss.
+- 5 minutes: Wrap-up on why the correct conversion is $\lambda$-invariant.
+
+## Instructions for Facilitating
+
+1. Start from the post-breeding matrix, with fecundity scaled by the
+   parent stage's survival (`m2*p1`, `m3*p2`).
+2. Convert to the pre-breeding matrix together, stressing the **two**
+   changes: survival transitions shift by one stage, **and** fecundity is
+   re-scaled by offspring survival `p0` (`m2*p0`, `m3*p0`).
+3. Compute both growth rates with `popdemo::eigs(A, what = "lambda")` and
+   confirm they match (≈1.0703 with the worked values).
+4. Now introduce `A3` — survival shifted correctly but fecundity *left*
+   scaled by the parent's survival — and show $\lambda$ jumps to ≈1.86.
+5. Have students identify exactly which entries differ between `A2` and
+   `A3`, and why that one slip matters so much.
+
+## Questions & Model Answers
+
+1. **Why should a correct change of census timing leave $\lambda$ unchanged?**
+   - Because it only re-expresses the same births and deaths in a
+     different bookkeeping frame. The organism's actual survival and
+     reproduction are unchanged, so its real growth rate cannot change.
+     `A1` and `A2` therefore give the same $\lambda$ (to rounding).
+
+2. **Which entries differ between `A2` (correct) and `A3` (mistake), and why is the error so large?**
+   - Only the top (fecundity) row differs: `A2` scales fecundity by
+     offspring survival `p0` (0.2), while `A3` keeps the parent-survival
+     scaling (`p1`, `p2` = 0.9, 0.6). Because `p1`/`p2` are much larger
+     than `p0`, the fecundity terms are inflated several-fold, pushing
+     $\lambda$ far above the correct value.
+
+3. **Change a survival probability (e.g. `p1`) and rebuild all three. Does the correct pair still agree? Does the error grow or shrink?**
+   - `A1` and `A2` continue to agree (the invariance is general). The size
+     of the `A2`-vs-`A3` discrepancy depends on how different the
+     mis-used survival term is from `p0`, so it changes as you vary the
+     rates — a good prompt for students to reason about, then test.
+
+## Teaching Tips
+
+- **Two changes, not one**: the most durable takeaway is that the
+  pre-breeding conversion changes *both* the survival positions *and* the
+  fecundity scaling. Students who remember only the survival shift make
+  exactly the `A3` error.
+- **Let the numbers surprise them**: predicting $\lambda$ before running
+  `eigs()` makes the size of the `A3` error more memorable.
+- **Generalise the lesson**: the point extends beyond census timing — the
+  method used to compute any stage-specific rate matters, even when the
+  matrix "looks" reasonable.
+
+## Common Pitfalls
+
+- **Forgetting to re-scale fecundity** by offspring survival when moving
+  to a pre-breeding census (the `A3` mistake).
+- **Shifting survival to the wrong stage** when converting.
+- **Treating a different $\lambda$ as a biological result** rather than a
+  symptom of an inconsistent conversion.
+- **Package not installed**: `popdemo` must be available for `eigs()`.

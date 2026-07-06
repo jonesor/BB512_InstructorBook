@@ -24,8 +24,8 @@ _Last reconciled: 2026-07-06 against `BB512_Book@master`._
 | 8 Deeper into Logistic Growth | `2_06_DeeperIntoLogistic.Rmd` | ✅ matched |
 | 9 Life tables and survivorship types | `2_07_LifeTables.Rmd` | ✅ matched |
 | 10 Matrix population modelling | `2_07.5_matrixModels.Rmd` | ✅ matched |
-| 11 Pre- and Post-reproduction census | `2_07.55_prePostBreeding.Rmd` | ✅ matched |
-| 12 Life Table Response Experiments | `2_07.6_LTRE.Rmd` | ✅ matched |
+| 11 Pre- and Post-reproduction census | `2_07.55_prePostBreeding.Rmd` | 🆕 drafted (was "Coming soon" stub) |
+| 12 Life Table Response Experiments | `2_07.6_LTRE.Rmd` | 🆕 drafted (was "Coming soon" stub) |
 | 13 How many eggs should a bird lay? | `2_08_HowManyEggs.Rmd` | ✅ matched |
 | 14 Trade-offs and the declining force of selection | `2_09_TradeOffsForceOfSelection.Rmd` | ✅ matched |
 | 15 Matrix Population Models (MPMs): Projection and Simulation | `2_10_MPMProjectionSimulation.Rmd` | 🆕 added (draft) |
@@ -37,17 +37,27 @@ _Last reconciled: 2026-07-06 against `BB512_Book@master`._
 | 21 Lotka-Volterra predator-prey dynamics | `4_02_LotkaVolterraPredatorPrey.Rmd` | ✅ matched |
 | 22 Continuous-time Lotka-Volterra Predator-Prey Model in R | `4_03_LVPredatorPreyContinuousTime.Rmd` | 🆕 added (draft) |
 | 23 Discrete-time Lotka-Volterra Predator-Prey Model in R | `4_04_LVPredatorPreyDiscreteTime.Rmd` | 🆕 added (draft) |
-| 24 Game theory: Hawks and doves | `5_01_HawkDoveCardGame.Rmd` | ✅ matched |
+| 24 Game theory: Hawks and doves | `5_01_HawkDoveCardGame.Rmd` | 🆕 drafted (was "Coming soon" stub) |
 | 25 Solutions and "take-home" messages | _(n/a — student-facing solutions)_ | ➖ no instructor chapter needed |
 | 26 Results of the hawk-dove games | _(n/a — student-facing solutions)_ | ➖ no instructor chapter needed |
-| 27 Exponential growth in detail | `7_01_LambdaAndR.Rmd` | ✅ matched |
-| 28 The legend of Ambalappuzha | `7_02_Ambalapuzha.Rmd` | ✅ matched |
-| 29 From population biology to fitness | `7_03_FromPopulationToEvolution.Rmd` | ✅ matched |
+| 27 Exponential growth in detail | `7_01_LambdaAndR.Rmd` | 🆕 drafted (was "Coming soon" stub) |
+| 28 The legend of Ambalappuzha | `7_02_Ambalapuzha.Rmd` | 🆕 drafted (was "Coming soon" stub) |
+| 29 From population biology to fitness | `7_03_FromPopulationToEvolution.Rmd` | 🆕 drafted (was "Coming soon" stub) |
 | 30 From plain English to a matrix model | `7_04_MatrixFromEnglish.Rmd` | 🆕 added (draft) |
 | 31 Continuous traits from discrete genes | `7_05_DiscreteGenes.Rmd` | 🆕 added (draft) |
 | 32 Building a phylogenetic tree | `7_06_Phylogeny.Rmd` | 🆕 added (draft) |
 
-## Changes made in this pass (2026-07-06)
+## Changes made (2026-07-06, second pass)
+
+**Filled six "Coming soon" stub chapters.** These existed as files (so the
+table previously showed them as matched) but contained only a heading and
+"Coming soon...". They have now been drafted from the corresponding
+main-book chapters, in the standard instructor format:
+`2_07.55_prePostBreeding.Rmd`, `2_07.6_LTRE.Rmd`, `5_01_HawkDoveCardGame.Rmd`,
+`7_01_LambdaAndR.Rmd`, `7_02_Ambalapuzha.Rmd`,
+`7_03_FromPopulationToEvolution.Rmd`. All are **drafts for review**.
+
+## Changes made in this pass (2026-07-06, first pass)
 
 **New instructor chapters** drafted for the six main-book activities that
 previously had no instructor support (marked 🆕 above). Each follows the

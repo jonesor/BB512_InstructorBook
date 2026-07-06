@@ -1,4 +1,126 @@
 # Game theory: Hawks and doves
 
-Coming soon...
+## Introduction
 
+This is a whole-class, card-based game-theory activity. Students play the
+**Hawk–Dove** game — first with a *single repeated partner* (Game One),
+then with a *new partner every round* (Game Two) — and enter results into
+one shared, live spreadsheet so the class can watch the round-by-round
+patterns emerge on screen. With benefit $B > $ cost $C$, Hawk is the
+dominant strategy in a one-off encounter, but mutual Hawk–Hawk is worse
+for both players than mutual Dove–Dove: the game has the structure of the
+Prisoner's Dilemma, and repeated interaction with the same partner
+changes the incentives.
+
+The pedagogical core is that students **write down a prediction before
+playing** and then test it against real, live class data.
+
+## Key Concepts
+
+- **Payoff table** (payoff to Player 1): Hawk vs Hawk $= (B-C)/2$; Hawk vs
+  Dove $= B$; Dove vs Hawk $= 0$; Dove vs Dove $= B/2$. With $B=4, C=3$:
+  0.5, 4, 0, 2.
+- **Dominant strategy**: with $B>C$, Hawk beats Dove regardless of the
+  opponent — theory predicts all-Hawk in one-off play.
+- **Repeated interaction**: with the same partner, retaliation makes
+  persistent Hawk–Hawk costly, favouring cooperation (Dove).
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Explain the basic concepts of game theory and strategic interaction.
+- Apply the Hawk–Dove model to biological and social examples.
+- Appreciate how a simple model illuminates complex decision-making.
+- Generate a testable prediction *before* collecting data and check it
+  against live class results.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Introduce game theory and the payoff table.
+- 5 minutes: Students work through "what does theory predict?" and record
+  predictions for both games.
+- 15 minutes: Game One (repeated partner, 15 rounds).
+- 15 minutes: Game Two (rotating partners, 15 rounds).
+- 10 minutes: Compare live charts with predictions; discuss.
+
+## Instructor setup (before class)
+
+1. **Duplicate the "Hawk-Dove Live Results" spreadsheet** (one copy per
+   year). It needs three tabs:
+   - **Game1_Data** — one row per pair (`Pair ID` pre-filled), two
+     `H`/`D` entry columns per round, plus formula-computed benefit and
+     total columns. Keep `B` and `C` in named cells the formulas refer to.
+   - **Game2_Data** — one row per student (`Player ID` pre-filled), same
+     per-round and total columns.
+   - **Live_Dashboard** — a "% Hawk by round" line chart and a "mean
+     hawkishness vs total benefit" scatter, wired to the data tabs.
+2. **Share for editing** ("anyone with the link can edit") and project the
+   Live_Dashboard throughout.
+3. **Assign Pair IDs / Player IDs in advance** (by seat or attendance) —
+   do not let students invent labels; the IDs are what let the data line
+   up automatically.
+4. **Keep the spreadsheet after class** as the year's archived dataset for
+   the "Results of the hawk-dove games" chapter.
+
+## Instructions for Facilitating
+
+1. Hand out Hawk/Dove card pairs; make sure each pair/player knows their ID.
+2. **Game One**: partners conceal cards, reveal on your signal, agree on
+   what was played, and enter both letters in their row. Repeat 15 rounds.
+3. **Game Two**: use a rotating inner/outer circle so partners change each
+   round with no time lost finding a partner; call "rotate" between rounds.
+4. Pause after each game to read the two live charts together.
+5. Have a paper fallback ready ("no wifi": jot results, enter at the end).
+
+## Questions & Model Answers
+
+1. **With $B>C$, what is the best strategy in a single anonymous encounter?**
+   - Hawk. Against a Dove you get $B$ (4) vs 2 for playing Dove; against a
+     Hawk you get $(B-C)/2$ (0.5) vs 0. Hawk dominates, so theory predicts
+     everyone plays Hawk.
+
+2. **Why might Game One (same partner) differ from Game Two (new partners)?**
+   - Against a fixed partner, playing Hawk invites retaliation; getting
+     stuck in Hawk–Hawk (0.5 each) is worse than settling into Dove–Dove
+     (2 each). So cooperation can pay when interactions repeat, whereas
+     changing partners each round rewards Hawk.
+
+3. **What is the experimental hypothesis?**
+   - Hawkish play becomes *less* frequent and *less* profitable between
+     repeated partners (Game One), and *more* frequent and *more*
+     profitable with changing partners (Game Two). The null hypothesis is
+     no systematic difference between the two settings.
+
+4. **What happens if you raise $C$ relative to $B$ (e.g. $C>B$)?**
+   - Hawk is no longer strictly dominant; when the cost of a Hawk–Hawk
+     fight exceeds the benefit, a mix of strategies (or more Dove play)
+     can be favoured. A good discussion prompt about evolutionarily stable
+     strategies.
+
+## Teaching Tips
+
+- **Prediction first**: insist students record predictions before Game One
+  — the payoff of the exercise is comparing prediction with live data.
+- **IDs, not names**: pre-assigned Pair/Player IDs prevent the
+  name-matching mess that free-text labels caused in past years.
+- **Use the live charts**: pausing to read the projected charts after each
+  game keeps the theory–data link immediate.
+- The full analysis of the class data is worked through in the "Results of
+  the hawk-dove games" chapter.
+
+## Common Pitfalls
+
+- **Skipping the prediction step**, which removes the point of the activity.
+- **Students choosing their own labels**, breaking automatic data
+  aggregation.
+- **Confusing the two games' setups** — repeated vs rotating partner —
+  when entering data.
+- **Reading "Hawk wins" too broadly**: it dominates only in one-off
+  encounters and only while $B>C$; repetition and payoff changes flip the
+  conclusion.
+
+## Acknowledgement
+
+This exercise is adapted from
+<https://www.jove.com/science-education/10611/group-behaviour>.
