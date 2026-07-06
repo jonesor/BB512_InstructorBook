@@ -1,4 +1,87 @@
 # The legend of Ambalappuzha
 
-Coming soon...
+## Introduction
 
+This short appendix activity uses the classic "rice on a chessboard"
+legend (the Ambalappuzha temple story) to build intuition for the sheer
+speed of **exponential/geometric growth**. Students use an Excel sheet
+(and optionally R) to compute the number of grains when each of the 64
+squares doubles the previous one, convert the total to a weight, and then
+relate the doubling process to real population growth and why it cannot
+continue unchecked.
+
+## Key Concepts
+
+- **Doubling is multiplicative**: each square is $2\times$ the previous, so
+  the total over 64 squares is $2^{64}-1 \approx 1.84\times10^{19}$ grains.
+- **Scale intuition**: at 25 mg/grain that is ~461 gigatonnes — hundreds
+  of times annual global rice production.
+- **From rice to populations**: unchecked doubling is a stand-in for
+  density-independent growth; real populations are limited by survival <
+  100%, density dependence, carrying capacity, and stochasticity.
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Use Excel formulae for a simple mathematical model.
+- Explain the multiplicative nature of exponential/geometric growth.
+- Articulate why simple doubling is unrealistic for real populations.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Tell the legend and set up the doubling rule.
+- 10 minutes: Students compute grains per square and the total in Excel
+  (`RiceOnAChessboard.xlsx`), then convert to kg.
+- 5 minutes: Optional R version.
+- 10 minutes: Discussion — link doubling to population growth and its limits.
+
+## Instructions for Facilitating
+
+1. Have students open `RiceOnAChessboard.xlsx` and build the doubling
+   column (each cell = previous cell × 2), then sum all 64 squares.
+2. Convert grains to weight: at 25 mg (0.000025 kg) per grain, the total
+   is ≈ 461,168,601,842,739 kg (~461 Gt).
+3. Optionally reproduce in R with a simple loop and `sum()`.
+4. Pivot to biology: pose the great-tit ("musvit") thought experiment
+   (~100 breeding pairs, ~6 eggs/female/year, 50:50 sex ratio) — first
+   with 100% survival, then relaxing that assumption.
+5. Use the discussion prompts to draw out what makes real growth
+   sub-exponential.
+
+## Questions & Model Answers
+
+1. **How many grains in total, and how much does that weigh?**
+   - $2^{64}-1 \approx 1.84\times10^{19}$ grains; at 25 mg each,
+     ≈ 461 gigatonnes — far more than the king (or the world) could supply,
+     which is the point of the legend.
+
+2. **With 100% survival, how many female great tits after 5 years, and what changes when you relax that?**
+   - Under pure doubling the number explodes geometrically; introducing
+     realistic survival < 100%, recruitment, and density dependence
+     dramatically lowers and eventually flattens the trajectory. Exact
+     numbers depend on the assumed rates — the aim is the contrast.
+
+3. **Why is the simple doubling model unrealistic for real populations?**
+   - Survival is below 100% and is age/stage-specific; resources,
+     territories, disease and predation impose density dependence and a
+     carrying capacity; good and bad years add stochasticity; and
+     dispersal moves individuals in and out. All push growth below the
+     geometric ideal.
+
+## Teaching Tips
+
+- **Let the number land**: converting grains to gigatonnes (and comparing
+  to world rice production) is what makes exponential growth visceral.
+- **Bridge to the course**: use the great-tit prompt to connect the legend
+  to the population models students have already built.
+- **Excel technique**: this is a natural place to reinforce relative vs
+  absolute cell references and dragging formulae down a column.
+
+## Common Pitfalls
+
+- **Underestimating the total** before computing it — worth asking for a
+  guess first, then revealing the answer.
+- **Unit slips** when converting grains → mg → kg → tonnes.
+- **Taking doubling literally** for real populations instead of treating it
+  as an idealised, unchecked case.

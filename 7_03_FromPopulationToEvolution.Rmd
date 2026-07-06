@@ -1,4 +1,97 @@
 # From population biology to fitness
 
-Coming soon...
+## Introduction
 
+This practical is the bridge between the two halves of the course: it uses
+the **matrix population models** from the population-biology part to make
+the concept of **fitness** concrete in the evolution part. The key idea is
+that fitness is closely tied to population growth rate ($\lambda$): a
+genotype whose life history yields a higher $\lambda$ will increase in
+frequency — it is fitter. Students then meet an evolutionary **trade-off**
+and test whether a benefit (higher juvenile survival) is worth its cost
+(lower adult survival). It uses the `popdemo` package and mirrors the
+earlier matrix-modelling exercise.
+
+## Key Concepts
+
+- **Fitness ≈ population growth rate**: the genotype with the higher
+  $\lambda$ spreads.
+- **In silico selection**: encode two genotypes as two matrices, compare
+  their $\lambda$, and infer which increases in frequency.
+- **Trade-off**: a beneficial change (↑ juvenile survival) that carries a
+  cost (↓ old-adult survival); whether it is favoured depends on the net
+  effect on $\lambda$.
+
+## Learning Outcomes
+
+By the end of this exercise, students will be able to:
+- Explain the relationship between population growth rate and fitness.
+- Explain the concept of an evolutionary trade-off.
+- Use a matrix model to compare the fitness of alternative genotypes.
+
+## Activity Overview
+
+**Suggested Timings**:
+- 5 minutes: Recap MPMs and state the fitness–$\lambda$ link.
+- 10 minutes: Build the baseline 3-stage matrix; project and get $\lambda$
+  (≈1.166).
+- 10 minutes: "Caring" genotype — raise juvenile survival 0.10 → 0.11;
+  recompute $\lambda$ (≈1.192).
+- 10 minutes: Introduce the trade-off (↓ old-adult survival); decide if it
+  is favoured.
+
+## Instructions for Facilitating
+
+1. Load `popdemo` (`install.packages("popdemo")` if needed) and build the
+   baseline juvenile/adult/senescent matrix; read the entries aloud so
+   students can map each to a biological statement (fecundities in the top
+   row; survival/transition below).
+2. Project the population and show the transient period settling into
+   steady exponential growth; extract $\lambda \approx 1.166$ (~16.6%/yr).
+3. Introduce the "caring" genotype (juvenile survival 0.10 → 0.11) and show
+   $\lambda$ rises to ≈1.192 (~19.2%/yr); ask what happens to the
+   frequency of the two genotypes over time.
+4. Add a trade-off genotype: keep the juvenile-survival benefit but cut
+   old-adult survival (e.g. to 0.05); recompute $\lambda$ and decide
+   whether the benefit outweighs the cost.
+5. Have students probe prime-age adult survival: how far can it fall before
+   the trade-off stops being worthwhile?
+
+## Questions & Model Answers
+
+1. **Why will the "caring" genotype increase in frequency?**
+   - It gives a higher $\lambda$ (≈1.192 vs ≈1.166), so its sub-population
+     grows faster than the "ordinary" genotype's. Higher $\lambda$ = higher
+     fitness = rising frequency.
+
+2. **Is the trade-off genotype (↑ juvenile survival, ↓ old-adult survival) fitter than the original?**
+   - Compute its $\lambda$ and compare to the baseline ≈1.166. If its
+     $\lambda$ is higher it spreads; if lower it is selected against. The
+     answer depends on how large the old-adult-survival cost is relative
+     to the juvenile-survival benefit — the whole point of the exercise.
+
+3. **Why can a change that helps individual offspring still be selected against?**
+   - Because fitness is a whole-life-cycle property. A gain concentrated in
+     one transition can be outweighed by a loss in another; only the net
+     effect on $\lambda$ determines whether the genotype is favoured.
+
+## Teaching Tips
+
+- **$\lambda$ *is* the fitness readout**: keep returning to "which matrix
+  gives the bigger $\lambda$?" as the operational definition of fitness here.
+- **Elasticity intuition**: the exercise is a natural moment to recall that
+  $\lambda$ is more sensitive to some transitions than others, which is why
+  a small juvenile-survival change can matter and why the trade-off's
+  outcome is not obvious in advance.
+- **Encourage experimentation**: let students vary the cost to find the
+  break-even point where the trade-off stops paying.
+
+## Common Pitfalls
+
+- **`popdemo` not installed** before running the projections.
+- **Reading the matrix backwards**: entries are "from column-stage to
+  row-stage"; getting this wrong misplaces fecundity and survival.
+- **Judging a genotype by one vital rate** instead of by its overall
+  $\lambda$.
+- **Assuming any benefit is favoured**: without accounting for the cost,
+  students may wrongly conclude the trade-off genotype must win.
