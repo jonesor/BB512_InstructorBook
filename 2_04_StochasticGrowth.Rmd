@@ -101,6 +101,4 @@ This exercise introduces students to the stochastic version of population growth
    Students may confuse the effects of stochasticity with systematic trends. Clarify that stochasticity introduces random fluctuations that are just as likely to be negative as positive, not directional trends.
 
 - **R Familiarity:**  
-   If students are unfamiliar with R, they may find the simulation code challenging. Ensure they don’t modify critical parts of the script unnecessarily. 
-
-```
+   If students are unfamiliar with R, they may find the simulation code challenging. Ensure they don’t modify critical parts of the script unnecessarily.
